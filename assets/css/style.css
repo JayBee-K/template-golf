@@ -2,7 +2,7 @@
 ========== HEADING ==========
 */
 .section-heading {
-	margin-bottom: 30px;
+	margin-bottom: 40px;
 }
 
 .section-heading.section-heading_center {
@@ -382,9 +382,98 @@
 }
 
 /*
-========== SECTION TESTIMONIALS ==========
+========== SECTION PRODUCT ==========
 */
 
+.section-products {
+	background-image: url('../images/body-bg.png');
+	background-size: cover;
+	background-position: center;
+}
+
+.product-card .card-header {
+	position: relative;
+}
+
+.product-card .card-header img {
+	transition: var(--transition-default);
+}
+
+.product-card .card-header .card-action {
+	position: absolute;
+	top: 70%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: var(--transition-default);
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	z-index: 2;
+}
+
+.product-card .card-body {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.product-card .card-title {
+	text-align: center;
+}
+
+.product-card .card-title a {
+	font-size: 1.15em;
+	color: var(--gray-900);
+	font-weight: 600;
+	transition: var(--transition-default);
+	line-height: 1.2;
+}
+
+.product-card .card-stars {
+	text-align: center;
+	margin-top: 2px;
+	color: #F69323;
+	margin-bottom: 8px;
+	font-size: .8em;
+}
+
+.product-card .card-stars .checked ~ * {
+	color: var(--gray-400);
+}
+
+.product-card .card-price {
+	text-align: center;
+}
+
+.product-card .card-price ins {
+	text-decoration: none;
+	font-weight: 500;
+	color: var(--danger);
+	font-size: 1.2em;
+}
+
+.product-card .card-price del {
+	margin-left: 8px;
+	color: var(--gray-500);
+}
+
+.product-card:hover .card-header img {
+	opacity: .7;
+}
+
+.product-card:hover .card-header .card-action {
+	top: 50%;
+	opacity: 1;
+	visibility: visible;
+	pointer-events: auto;
+}
+
+.product-card .card-title a:hover {
+	color: var(--primary-color);
+}
+
+/*
+========== SECTION TESTIMONIALS ==========
+*/
 .section-testimonials {
 	background-color: #E5F2EF;
 }
