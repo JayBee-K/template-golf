@@ -8,13 +8,14 @@
 	--gray-300: #d1d5db;
 	--gray-200: #e5e7eb;
 	--gray-100: #f3f4f6;
+	--gray-separation: #e9e9e9;
 
 	--shadow-primary: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
 	--shadow-hover: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
 
-	--transition-default: .3s all ease-in-out;
-	--font-theme: "Work Sans", Arial, Helvetica, sans-serif;
-	--size-theme: 14px
+	--transition-default: 0.3s all ease-in-out;
+	--font-theme: 'Work Sans', Arial, Helvetica, sans-serif;
+	--size-theme: 14px;
 }
 
 html {
@@ -33,7 +34,9 @@ body {
 	line-height: 1.3;
 }
 
-a, a:hover, a:focus {
+a,
+a:hover,
+a:focus {
 	outline: none;
 	text-decoration: none;
 	cursor: pointer;
@@ -42,7 +45,9 @@ a, a:hover, a:focus {
 	-webkit-transition: var(--transition-default);
 }
 
-button, button:hover, button:focus {
+button,
+button:hover,
+button:focus {
 	-webkit-box-shadow: none !important;
 	box-shadow: none !important;
 	outline: none !important;
@@ -116,7 +121,7 @@ textarea:focus {
 .pseudo:before,
 .pseudo:after {
 	position: absolute;
-	content: "";
+	content: '';
 	display: block;
 }
 
@@ -130,7 +135,7 @@ textarea:focus {
 	margin-right: -5px;
 }
 
-.row-5 > [class*=col] {
+.row-5 > [class*='col'] {
 	padding: 5px;
 }
 
@@ -140,10 +145,9 @@ textarea:focus {
 	margin-right: -7.5px;
 }
 
-.row-75 > [class*=col] {
+.row-75 > [class*='col'] {
 	padding: 7.5px;
 }
-
 
 .row-10 {
 	margin-top: -10px;
@@ -151,7 +155,7 @@ textarea:focus {
 	margin-right: -10px;
 }
 
-.row-10 > [class*=col] {
+.row-10 > [class*='col'] {
 	padding: 10px;
 }
 
@@ -161,6 +165,38 @@ textarea:focus {
 	margin-right: -15px;
 }
 
-.row-15 > [class*=col] {
+.row-15 > [class*='col'] {
 	padding: 15px;
+}
+
+.limit {
+	--font-size: 1em;
+	--line-height: 1.3;
+	--line: 2;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: var(--line);
+	line-clamp: var(--line);
+	-webkit-box-orient: vertical;
+	height: calc(var(--line) * var(--font-size) * var(--line-height));
+}
+
+.ratio {
+	--aspect-ratio: calc(9 / 16 * 100%);
+	max-height: 0;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	padding-bottom: var(--aspect-ratio);
+}
+.ratio.ratio-4x3 {
+	--aspect-ratio: calc(3 / 4 * 100%);
+}
+.ratio > * {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
