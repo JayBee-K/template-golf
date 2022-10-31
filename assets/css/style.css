@@ -382,6 +382,27 @@
 }
 
 /*
+========== SECTION LEARNING ==========
+*/
+
+.section-learning {
+	padding: 100px 0;
+}
+
+.section-learning .section-heading {
+	margin-bottom: 0;
+}
+
+.section-learning .section-heading .section-heading_sub,
+.section-learning .section-heading .section-heading_title{
+	color: var(--white);
+}
+
+.section-learning .section-heading .section-heading_desc {
+	color: var(--gray-200);
+}
+
+/*
 ========== SECTION PRODUCT ==========
 */
 
