@@ -165,6 +165,23 @@
 				headerCart.removeClass('show');
 			}
 		});
+	};
+
+	const initSwiperBookingPreview = function () {
+		if ($('#booking-preview').length) {
+			new Swiper('#booking-preview .swiper', {
+				speed: 1000,
+				autoplay: {
+					delay: 8000,
+					disableOnInteraction: false,
+				},
+				loop: 1,
+				navigation: {
+					nextEl: '#booking-preview .swiper-button.next',
+					prevEl: '#booking-preview .swiper-button.prev',
+				},
+			});
+		}
 	}
 
 	$(function () {
@@ -174,8 +191,11 @@
 		addPaddingSinglePage();
 		handleWindowResize();
 
-		/* PAGE PRODUCT DETAIL */
+		// PAGE PRODUCT DETAIL
 		handleSlideProduct();
 		handleToggleCartList();
+
+		// PAGE BOOKING GOLF
+		initSwiperBookingPreview();
 	});
 })(jQuery);
