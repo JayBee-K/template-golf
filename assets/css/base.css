@@ -292,3 +292,23 @@ input[type='number'] {
 .hovered:hover .effect-text-primary {
     color: var(--primary-color);
 }
+
+.text-7 {
+    font-size: var(--size-theme-7);
+}
+
+.text-8 {
+    font-size: var(--size-theme-8);
+}
+
+.text-gray-900 {
+    color: var(--gray-900);
+}
+
+.text-gray-500 {
+    color: var(--gray-500);
+}
+
+.text-gray-400 {
+    color: var(--gray-400);
+}

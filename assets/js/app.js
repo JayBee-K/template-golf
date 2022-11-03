@@ -182,6 +182,12 @@
 				},
 			});
 		}
+	};
+
+	const showModalSearchUser = function () {
+		$('.checkout-guests .guest:not(:first)').on('click', function () {
+			$('#modal-add-user').modal('show');
+		});
 	}
 
 	$(function () {
@@ -197,5 +203,6 @@
 
 		// PAGE BOOKING GOLF
 		initSwiperBookingPreview();
+		showModalSearchUser();
 	});
 })(jQuery);
