@@ -188,7 +188,7 @@
 		$('.checkout-guests .guest:not(:first)').on('click', function () {
 			$('#modal-add-user').modal('show');
 		});
-	}
+	};
 
 	$(function () {
 		initSliderBanner();
@@ -204,5 +204,7 @@
 		// PAGE BOOKING GOLF
 		initSwiperBookingPreview();
 		showModalSearchUser();
+
+		$('#date-picker').flatpickr();
 	});
 })(jQuery);

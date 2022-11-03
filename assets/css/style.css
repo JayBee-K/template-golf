@@ -401,6 +401,9 @@
     margin: 15px 0;
     border-top: 1px solid #e3e7ed;
 }
+.header .header-profile .profile-actions > a {
+    cursor: pointer;
+}
 .header .header-profile .profile-actions > a + a {
     margin-top: 8px;
 }
@@ -1806,12 +1809,6 @@
     padding-bottom: 100px;
 }
 
-.page-auth .page-auth__wrapper {
-    display: grid;
-    grid-template-columns: 1fr 340px;
-    grid-gap: 60px;
-}
-
 .page-auth .page-auth__main {
     padding-top: 30px;
 }
@@ -1852,6 +1849,22 @@
     color: #ffffff;
     background-color: var(--primary-hover);
     border-color: var(--primary-hover);
+}
+
+.page-auth .page-auth__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    grid-gap: 60px;
+}
+
+.page-auth.page-auth__register .page-auth__wrapper {
+    grid-template-columns: 340px 1fr;
+}
+.page-auth.page-auth__register .page-auth__banner {
+    padding: 20px 80px;
+}
+.page-auth.page-auth__register .page-auth__subtitle {
+    margin-bottom: 30px;
 }
 
 /*======= THEME FORM =======*/
@@ -2094,4 +2107,11 @@
     position: absolute;
     top: 0.5rem;
     right: 0.5rem;
+}
+/*========== PAGE PAYMENT =========*/
+.page.page-single {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    overflow: hidden;
 }

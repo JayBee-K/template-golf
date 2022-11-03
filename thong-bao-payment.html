@@ -41,7 +41,7 @@
         }
     </style>
 </head>
-<body class="page page-light page-booking-golf">
+<body class="page page-light-2 page-single">
 <div id="header" class="header">
     <div class="container">
         <div class="row">
@@ -120,7 +120,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="header-actions">
+                    <div class="header-actions d-flex">
                         <div class="header-cart">
                             <button type="button" id="toggle-cart-list" class="header-cart__btn">
                                 <img src="./assets/images/icon/cart.png" alt="">
@@ -432,6 +432,49 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="dropdown header-profile" data-toggle="dropdown" aria-expanded="false">
+                            <a href="javascript:void(0)" class="header-profile__toggle">
+                                <img width="32" height="32" class="w-100 img-fluid"
+                                     src="./assets/images/checkout/nophotouser.jpg" alt="">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <div class="profile-wrapper">
+                                    <div class="profile-info">
+                                        <div class="profile-name text-7 font-weight-bold text-gray-900">Trần Văn A</div>
+                                        <div class="profile-email text-8 text-gray-500">example@example.com</div>
+                                    </div>
+                                    <div class="profile-actions">
+                                        <a href="" class="d-flex align-items-center text-gray-900 link-primary text-8">
+                                            <i class="far fa-clock"></i>
+                                            <span class="ml-3">Booking</span>
+                                        </a>
+                                        <a href="" class="d-flex align-items-center text-gray-900 link-primary text-8">
+                                            <i class="far fa-user"></i>
+                                            <span class="ml-3">Menbership</span>
+                                        </a>
+                                        <a href="" class="d-flex align-items-center text-gray-900 link-primary text-8">
+                                            <i class="far fa-chart-bar"></i>
+                                            <span class="ml-3">Handicap</span>
+                                        </a>
+
+                                        <div class="separation"></div>
+                                        <a href="" class="d-flex align-items-center text-gray-900 link-primary text-8">
+                                            <i class="far fa-lock"></i>
+                                            <span class="ml-3">Change password</span>
+                                        </a>
+                                        <a href="" class="d-flex align-items-center text-gray-900 link-primary text-8">
+                                            <i class="far fa-cog"></i>
+                                            <span class="ml-3">Acount setting</span>
+                                        </a>
+                                        <a href="" class="d-flex align-items-center text-gray-900 link-primary text-8">
+                                            <i class="far fa-sign-out"></i>
+                                            <span class="ml-3">Logout</span>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -440,451 +483,34 @@
 </div>
 
 <div id="main" class="main">
-    <div class="page-main">
-        <div class="nav-breadcrumb">
-            <div class="container">
-                <ol class="breadcrumb bg-transparent rounded-0 mb-0 p-0">
-                    <li class="breadcrumb-item">
-                        <a href="#">
-                            <i class="far fa-home"></i>
-                            <span>Trang chủ</span>
-                        </a>
-                    </li>
-                    <li class="breadcrumb-item">
-                        <a href="#">Booking sân golf</a>
-                    </li>
-                </ol>
-            </div>
-        </div>
-        <div class="page-main page-gap">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 offset-lg-4">
-                        <h2 class="page-title">ARMADA GOLF CLUB</h2>
-                        <div class="page-subtitle mb-20">Golfowa 3, 41-907 Bytom</div>
-                    </div>
+    <div class="page-main h-100 d-flex justify-content-center align-items-center">
+        <div class="container">
+            <div class="mx-auto" style="max-width: 450px;">
+                <div class="text-center mb-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="feather feather-check-square text-success" style="width:90px;height:90px;">
+                        <polyline points="9 11 12 14 22 4"></polyline>
+                        <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                    </svg>
                 </div>
-                <div class="row">
-                    <div class="col-lg-4">
-                        <form id="booking-golf" class="b-form bg-white mb-20">
-                            <div class="b-form__header">
-                                ONLINE BOOKING
-                            </div>
-                            <div class="b-form__body">
-                                <div class="b-form__state d-flex">
-                                    <div class="state state-date flex-shrink-0">
-                                        <i class="fas fa-calendar-alt"></i>
-                                        <span id="step-date">Thu, 03 Nov, 2022</span>
-                                    </div>
-                                    <div class="state state-time flex-shrink-0">
-                                        <i class="fas fa-golf-ball"></i>
-                                        <span id="step-time">9H</span>
-                                    </div>
-                                    <div class="state state-guests flex-shrink-0">
-                                        <i class="fas fa-user-friends"></i>
-                                        <span id="step-player">1</span>
-                                        <span>player</span>
-                                        <i class="fas fa-circle icon-dot"></i>
-                                    </div>
-                                    <div class="state state-hour flex-shrink-0">
-                                        <i class="fas fa-clock"></i>
-                                        <span id="step-hour">13:50</span>
-                                    </div>
-                                </div>
-                                <div class="b-form__servies">
-                                    <div id="accordion">
-                                        <div class="card overflow-hidden">
-                                            <div class="card-header rounded-0 p-0">
-                                                <h5 class="mb-0">
-                                                    <button type="button" data-toggle="collapse"
-                                                            data-target="#service-1" aria-expanded="true"
-                                                            aria-controls="service-1">
-                                                        <i class="fal fa-plus"></i>
-                                                        <span>DATE & PLAYER</span>
-                                                    </button>
-                                                </h5>
-                                            </div>
-                                            <div id="service-1" class="collapse show b-form__collapse"
-                                                 data-parent="#accordion">
-                                                <div class="card-body p-0">
-                                                    <div class="form-group">
-                                                        <label for="date">HOn what date would you like to play?</label>
-                                                        <input id="date-picker" class="form-control bg-white" type="text" readonly/>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="hole">How many holes do you want to play?</label>
-                                                        <input type="hidden" value="" id="hole">
-                                                        <div class="btn-group btn-group-hole d-flex">
-                                                            <button type="button" class="btn btn-hole active w-50">9H
-                                                            </button>
-                                                            <button type="button" class="btn btn-hole w-50">18H</button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="hole">How many golfers?</label>
-                                                        <input type="hidden" value="" id="golfers">
-                                                        <div class="btn-group btn-group-hole d-flex">
-                                                            <button type="button" class="btn btn-golfer active ww">1
-                                                            </button>
-                                                            <button type="button" class="btn btn-golfer ww">2</button>
-                                                            <button type="button" class="btn btn-golfer ww">3</button>
-                                                            <button type="button" class="btn btn-golfer ww">4</button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group mb-0">
-                                                        <button type="button"
-                                                                class="b-btn b-btn--outline b-btn-outline btn-time">
-                                                            Select tee time
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card overflow-hidden">
-                                            <div class="card-header rounded-0 p-0">
-                                                <h5 class="mb-0">
-                                                    <button type="button" data-toggle="collapse"
-                                                            data-target="#service-2" aria-expanded="false"
-                                                            aria-controls="service-2">
-                                                        <i class="fal fa-plus"></i>
-                                                        <span>TEE TIME</span>
-                                                    </button>
-                                                </h5>
-                                            </div>
-                                            <div id="service-2" class="collapse  b-form__collapse"
-                                                 data-parent="#accordion">
-                                                <div class="card-body p-0">
-                                                    <p>What time would you like to play?</p>
-                                                    <div class="teetime">
-                                                        <div class="row align-items-center">
-                                                            <div class="col-3 text-left">13:50</div>
-                                                            <div class="col-3 text-center">
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                            </div>
-                                                            <div class="col-6">
-                                                                <button type="button" class="b-btn active">
-                                                                    Book Now
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row align-items-center">
-                                                            <div class="col-3 text-left">13:50</div>
-                                                            <div class="col-3 text-center">
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                            </div>
-                                                            <div class="col-6">
-                                                                <button type="button" class="b-btn">
-                                                                    Book Now
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row align-items-center">
-                                                            <div class="col-3 text-left">13:50</div>
-                                                            <div class="col-3 text-center">
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                            </div>
-                                                            <div class="col-6">
-                                                                <button type="button" class="b-btn">
-                                                                    Book Now
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row align-items-center">
-                                                            <div class="col-3 text-left">13:50</div>
-                                                            <div class="col-3 text-center">
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                            </div>
-                                                            <div class="col-6">
-                                                                <button type="button" class="b-btn">
-                                                                    Book Now
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row align-items-center">
-                                                            <div class="col-3 text-left">13:50</div>
-                                                            <div class="col-3 text-center">
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                            </div>
-                                                            <div class="col-6">
-                                                                <button type="button" class="b-btn">
-                                                                    Book Now
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row align-items-center">
-                                                            <div class="col-3 text-left">13:50</div>
-                                                            <div class="col-3 text-center">
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                            </div>
-                                                            <div class="col-6">
-                                                                <button type="button" class="b-btn">
-                                                                    Book Now
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row align-items-center">
-                                                            <div class="col-3 text-left">13:50</div>
-                                                            <div class="col-3 text-center">
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                            </div>
-                                                            <div class="col-6">
-                                                                <button type="button" class="b-btn">
-                                                                    Book Now
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row align-items-center">
-                                                            <div class="col-3 text-left">13:50</div>
-                                                            <div class="col-3 text-center">
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                            </div>
-                                                            <div class="col-6">
-                                                                <button type="button" class="b-btn">
-                                                                    Book Now
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row align-items-center">
-                                                            <div class="col-3 text-left">13:50</div>
-                                                            <div class="col-3 text-center">
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                            </div>
-                                                            <div class="col-6">
-                                                                <button type="button" class="b-btn">
-                                                                    Book Now
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row align-items-center">
-                                                            <div class="col-3 text-left">13:50</div>
-                                                            <div class="col-3 text-center">
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                            </div>
-                                                            <div class="col-6">
-                                                                <button type="button" class="b-btn">
-                                                                    Book Now
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row align-items-center">
-                                                            <div class="col-3 text-left">13:50</div>
-                                                            <div class="col-3 text-center">
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                            </div>
-                                                            <div class="col-6">
-                                                                <button type="button" class="b-btn">
-                                                                    Book Now
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row align-items-center">
-                                                            <div class="col-3 text-left">13:50</div>
-                                                            <div class="col-3 text-center">
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                            </div>
-                                                            <div class="col-6">
-                                                                <button type="button" class="b-btn">
-                                                                    Book Now
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row align-items-center">
-                                                            <div class="col-3 text-left">13:50</div>
-                                                            <div class="col-3 text-center">
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                                <i class="fas fa-circle dot-person"></i>
-                                                            </div>
-                                                            <div class="col-6">
-                                                                <button type="button" class="b-btn">
-                                                                    Book Now
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="b-form__footer">
-                                    <button type="submit" class="b-btn b-btn--primary" disabled>
-                                        Conitnue
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                        <div class="b-form bg-white">
-                            <div class="b-form__header">
-                                CONTACT AND OPENING HOURS
-                            </div>
-                            <div class="b-form__body">
-                                <div class="row mb-20 align-items-center">
-                                    <div class="col-8">
-                                        <div class="d-flex align-items-center">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                                 stroke-linecap="round" stroke-linejoin="round"
-                                                 class="feather feather-smartphone">
-                                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-                                                <line x1="12" y1="18" x2="12" y2="18"></line>
-                                            </svg>
-                                            <span class="ml-2">
-                                                <a class="link" href="tel:0000000000">000 0000 0000</a>
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="col-4">
-                                        <a href="tel:0000000000" class="b-btn">
-                                            Call us
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="mb-20">
-                                    <row class="row mb-10">
-                                        <div class="col-7">Monday</div>
-                                        <div class="col-5 text-right">08:00 - 20:00
-                                        </div>
-                                    </row>
-                                    <row class="row mb-10">
-                                        <div class="col-7">Monday</div>
-                                        <div class="col-5 text-right">08:00 - 20:00
-                                        </div>
-                                    </row>
-                                    <row class="row mb-10">
-                                        <div class="col-7">Monday</div>
-                                        <div class="col-5 text-right">08:00 - 20:00
-                                        </div>
-                                    </row>
-                                    <row class="row mb-10">
-                                        <div class="col-7">Monday</div>
-                                        <div class="col-5 text-right">08:00 - 20:00
-                                        </div>
-                                    </row>
-                                    <row class="row mb-10">
-                                        <div class="col-7">Monday</div>
-                                        <div class="col-5 text-right">08:00 - 20:00
-                                        </div>
-                                    </row>
-                                    <row class="row mb-10">
-                                        <div class="col-7">Monday</div>
-                                        <div class="col-5 text-right">08:00 - 20:00
-                                        </div>
-                                    </row>
-                                </div>
-                                <div>More information:</div>
-                                <div class="hovered">
-                                    <a class="link-primary" href="">https://golfox.com</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-8">
-                        <div class="section-wrapper bg-white">
-                            <div class="b-preview position-relative" id="booking-preview">
-                                <div class="swiper">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <div class="ratio">
-                                                <img src="./assets/images/booking/banner-1.jpg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="ratio">
-                                                <img src="./assets/images/booking/banner-2.jpg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="ratio">
-                                                <img src="./assets/images/booking/banner-3.jpg" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <div class="ratio">
-                                                <img src="./assets/images/booking/banner-4.jpg" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-navigation">
-                                    <button class="swiper-button prev">
-                                        <i class="far fa-chevron-left"></i>
-                                    </button>
-                                    <button class="swiper-button next">
-                                        <i class="far fa-chevron-right"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="b-info mt-3 mb-4">
-                                <p>Opened in autumn 2013, Armada Golf Club in Bytom is located on the ground of the
-                                    former coal mine KWK Szombierki mine. It is the biggest post-industrial area
-                                    revitalization project in Poland. Industrial activity in this area was completed
-                                    several years ago. Currently, the varied topography of the area, post-mining ponds,
-                                    rich flora and fauna allow it to fulfill recreational functions. The element that
-                                    directly resembles the history of this place is still the 57-meter historic mine
-                                    tower “Krystyna”.</p>
-                                <p>Golfers coming to Armada Golf Club known also as Srebrne Stawy have at their disposal
-                                    a 9-hole golf course, a small clubhouse and a training area: driving range, putting
-                                    and chipping green.</p>
-                                <p>Driving range was opened in 2011. There are 9 covered stands and 20 250 m grass lawn
-                                    stands there. Golf course design was assigned to an experienced golf course
-                                    architect and also a member and regional representative of European Institute of
-                                    Golf Course Architects from Germany Christoph</p>
-                            </div>
-                            <div class="b-map">
-                                <div class="section-title">LOCATION</div>
-                                <div class="b-map__wrapper" data-label="Armada Golf Club">
-                                    <div class="ratio">
-                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.7038068948!2d105.75208071415575!3d10.041282275078695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0886c4798ea05%3A0x5e7045f5223b99d4!2zMTczIE5ndXnhu4VuIFRyaSBQaMawxqFuZywgUGjGsOG7nW5nIEFuIEtow6FuaCwgTmluaCBLaeG7gXUsIEPhuqduIFRoxqEgOTAwMDAwLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1665023172487!5m2!1svi!2s"
-                                                width="100%" height="450" style="border:0;" allowfullscreen=""
-                                                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="text-center page-title text-gray-900 font-weight-medium">Thank you for your order!</div>
+                <div class="text-center mb-30 text-gray-500 text-7 font-weight-medium">Booking #TT237265/2863247 is made.</div>
+                <div class="text-center text-8 text-gray-500 mb-30">
+                    <div>We have sent a confirmation message.</div>
+                    <div>If you haven't received any message, please check your spam folder</div>
+                </div>
+                <div class="text-center">
+                    <a href="" class="link-primary d-inline-flex align-items-center">
+                        <span>Go to my account</span>
+                        <i class="fal fa-angle-double-right ml-2"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 
 <footer id="footer" class="footer ecm-footer">
     <div class="footer-main">
