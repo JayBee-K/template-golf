@@ -152,6 +152,21 @@
 		handleZoomImageProduct($('#product-preview [data-fancybox="preview-box"]'), avatarPhoto, avatarThumb);
 	};
 
+	const handleToggleCartList = function () {
+		const btnToggle = $('#toggle-cart-list');
+		const headerCart = $('.header .header-cart');
+
+		btnToggle.on('click', function () {
+			headerCart.toggleClass('show');
+		});
+
+		$(document).on('click', function (event) {
+			if(!headerCart[0].contains(event.target)) {
+				headerCart.removeClass('show');
+			}
+		});
+	}
+
 	$(function () {
 		initSliderBanner();
 		initSliderTestimonials();
@@ -161,5 +176,6 @@
 
 		/* PAGE PRODUCT DETAIL */
 		handleSlideProduct();
+		handleToggleCartList();
 	});
 })(jQuery);

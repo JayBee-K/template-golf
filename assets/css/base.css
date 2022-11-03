@@ -15,6 +15,7 @@
 	--accent-color: #cd1b1c;
 	--accent-hover: #b01516;
 	--price-disable: #b2b2b2;
+	--footer-bg: #232629;
 
 	--shadow-primary: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
 	--shadow-hover: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
@@ -228,4 +229,31 @@ input::-webkit-inner-spin-button {
 
 input[type='number'] {
 	-moz-appearance: textfield;
+}
+
+.mb-20 {
+	margin-bottom: 20px;
+}
+
+.effect {
+	transition-timing-function: cubic-bezier(.215, .61, .355, 1);
+}
+
+.effect-zoom-out {
+	transform-origin: 50% 50%;
+	transform: scale3d(1, 1, 1);
+	transition-duration: 0.5s;
+	transition-property: transform;
+}
+
+.hovered:hover .effect-zoom-out {
+	transform: scale3d(1.1, 1.1, 1.1);
+}
+
+.effect-text-primary {
+	transition-property: color;
+}
+
+.hovered:hover .effect-text-primary {
+	color: var(--primary-color);
 }
