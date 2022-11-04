@@ -41,7 +41,7 @@
         }
     </style>
 </head>
-<body class="page page-light page-checkout-golf">
+<body class="page page-light-2 page-single">
 <div id="header" class="header">
     <div class="container">
         <div class="row">
@@ -59,9 +59,6 @@
                             </li>
                             <li>
                                 <a href="">GIỚI THIỆU</a>
-                            </li>
-                            <li>
-                                <a href="">PHÒNG KHÁCH SẠN</a>
                             </li>
                             <li>
                                 <a href="">CĂN HỘ CAO CẤP</a>
@@ -427,7 +424,7 @@
                                 </div>
                                 <div class="header-cart__payment flex-shrink-0">
                                     <a href="" class="button-theme w-100 rounded-0">
-                                        <span>THANH TOOÁN</span>
+                                        <span>THANH TOÁN</span>
                                     </a>
                                 </div>
                             </div>
@@ -483,286 +480,34 @@
 </div>
 
 <div id="main" class="main">
-    <div class="page-main">
-        <div class="nav-breadcrumb">
-            <div class="container">
-                <ol class="breadcrumb bg-transparent rounded-0 mb-0 p-0">
-                    <li class="breadcrumb-item">
-                        <a href="#">
-                            <i class="far fa-home"></i>
-                            <span>Trang chủ</span>
-                        </a>
-                    </li>
-                    <li class="breadcrumb-item">
-                        <a href="#">Checkout sân golf</a>
-                    </li>
-                </ol>
-            </div>
-        </div>
-        <form id="checkout-golf" class="page-main page-gap--xl theme-form">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8">
-                        <div class="row align-items-center">
-                            <div class="col flex-grow-1">
-                                <h1 class="page-title">TEE TIME RESERVATION</h1>
-                            </div>
-                            <div class="col flex-shrink-0 text-right">
-                                <a href="#" class="link-primary">
-                                    <i class="far fa-edit"></i>
-                                    <span>Edit booking</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+    <div class="page-main h-100 d-flex justify-content-center align-items-center">
+        <div class="container">
+            <div class="mx-auto" style="max-width: 450px;">
+                <div class="text-center mb-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="feather feather-check-square text-success" style="width:90px;height:90px;">
+                        <polyline points="9 11 12 14 22 4"></polyline>
+                        <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                    </svg>
                 </div>
-                <div class="row">
-                    <div class="col-lg-8">
-                        <div class="section-card checkout-guests bg-white mb-20">
-                            <div class="section-header">
-                                <h2 class="section-title text-uppercase">
-                                    YOUR BOOKING DETAILS
-                                </h2>
-                            </div>
-                            <div class="section-body">
-                                <div class="guest guest-offline">
-                                    <div class="guest-wrapper d-flex">
-                                        <div class="guest-avatar mr-3">
-                                            <img width="38" height="38" src="./assets/images/checkout/nophotouser.jpg"
-                                                 alt="">
-                                        </div>
-                                        <div class="guest-main">
-                                            <div class="guest-name text-uppercase">KHÁNH HỮU NGUYỄN</div>
-                                            <div class="guest-info">
-                                                <span>Visitor Rate</span>
-                                                <span class="ml-1">130.00 PLN</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="guest guest-online">
-                                    <div class="guest-wrapper d-flex">
-                                        <div class="guest-avatar mr-3">
-                                            <img width="38" height="38" src="./assets/images/checkout/nophotouser.jpg"
-                                                 alt="">
-                                        </div>
-                                        <div class="guest-main">
-                                            <div class="guest-name text-uppercase">KHÁNH HỮU NGUYỄN</div>
-                                            <div class="guest-info">
-                                                <span>Visitor Rate</span>
-                                                <span class="ml-1">130.00 PLN</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="guest guest-offline">
-                                    <div class="guest-wrapper d-flex">
-                                        <div class="guest-avatar mr-3">
-                                            <img width="38" height="38" src="./assets/images/checkout/nophotouser.jpg"
-                                                 alt="">
-                                        </div>
-                                        <div class="guest-main">
-                                            <div class="guest-name text-uppercase">KHÁNH HỮU NGUYỄN</div>
-                                            <div class="guest-info">
-                                                <span>Visitor Rate</span>
-                                                <span class="ml-1">130.00 PLN</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="guest guest-online">
-                                    <div class="guest-wrapper d-flex">
-                                        <div class="guest-avatar mr-3">
-                                            <img width="38" height="38" src="./assets/images/checkout/nophotouser.jpg"
-                                                 alt="">
-                                        </div>
-                                        <div class="guest-main">
-                                            <div class="guest-name text-uppercase">KHÁNH HỮU NGUYỄN</div>
-                                            <div class="guest-info">
-                                                <span>Visitor Rate</span>
-                                                <span class="ml-1">130.00 PLN</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="section-footer text-right">
-                                <div class="checkout-total">
-                                    <span>TOTAL:</span>
-                                    <span id="totle-price">520.00 </span>
-                                    <span>PLN</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="section-card section-card--error shadow-none mb-20">
-                            <div class="section-header border-bottom-0 border-0 pb-0">
-                                <h2 class="section-title text-uppercase">
-                                    Booking error!
-                                </h2>
-                            </div>
-                            <div class="section-body mb-0 border-0">
-                                <p>Players <b>KHÁNH HỮU NGUYỄN</b> reached the online booking limit on the day
-                                    2022-11-03. The booking will not be completed!</p>
-                            </div>
-                        </div>
-
-                        <div class="section-card checkout-guests bg-white mb-20">
-                            <div class="section-header">
-                                <h2 class="section-title text-uppercase">
-                                    SELECT PAYMENT METHOD
-                                </h2>
-                            </div>
-                            <div class="section-body checkout-method">
-                                <div class="custom-control custom-radio">
-                                    <input type="radio" class="custom-control-input" id="methed-1"
-                                           name="payment-method">
-                                    <label class="custom-control-label" for="methed-1">Toggle this custom radio</label>
-                                    <p>Pre-booking required. If the reservation is not paid within 10 minutes, it is
-                                        cancelled!</p>
-                                </div>
-                                <div class="custom-control custom-radio">
-                                    <input type="radio" class="custom-control-input" id="methed-2" name="payment-method"
-                                           checked>
-                                    <label class="custom-control-label" for="methed-2">I pay at reception desk.</label>
-                                    <p>No prepayment needed - pay at the property.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="text-center">
-                            <button type="submit" class="w-100 button-theme checkout-submit mb-20" disabled>
-                                <span>Confirm reservation</span>
-                            </button>
-
-                            <p><small style="font-size: 12px;">By confirming your reservation, you agree to the <a
-                                    href="" class="link-primary">Terms and Conditions</a> and
-                                <a href="" class="link-primary">Privacy Policy</a> of Golf Booking</small></p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="section-card section-card__not-footer bg-white mb-20">
-                            <div class="section-header p-0 border-0">
-                                <div class="checkout-product">
-                                    <div class="checkout-product__media position-relative">
-                                        <img class="w-100 img-fluid" src="./assets/images/booking/banner-1.jpg" alt="">
-                                        <div class="checkout-product__overlay position-absolute w-100 h-100">
-                                            <div class="text-white text-date">
-                                                <span>Thu, 03 Nov, 2022,</span>
-                                                <i class="fas fa-golf-ball"></i>
-                                                <span> 18H</span>
-                                            </div>
-                                            <div class="text-white text-time">17:20</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="section-body">
-                                <div class="mb-10">Armada Golf Club</div>
-                                <div class="text-8 text-gray-500 mb-1">Golfowa 3, 41-907 Bytom</div>
-                                <div class="text-8 text-gray-500">
-                                    <i class="fas fa-mobile-alt text-gray-900"></i>
-                                    <span>668 040 226</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="section-card checkout-guests bg-white">
-                            <div class="section-header">
-                                <h2 class="section-title text-uppercase">
-                                    CANCELLATION POLICY
-                                </h2>
-                            </div>
-                            <div class="section-body checkout-policy">
-                                <div class="text-gray-500">
-                                    There is a 4 hours cancellation policy on all tee times at this facility.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="text-center page-title text-gray-900 font-weight-medium">Thank you for your order!</div>
+                <div class="text-center mb-30 text-gray-500 text-7 font-weight-medium">Booking #TT237265/2863247 is made.</div>
+                <div class="text-center text-8 text-gray-500 mb-30">
+                    <div>We have sent a confirmation message.</div>
+                    <div>If you haven't received any message, please check your spam folder</div>
                 </div>
-            </div>
-        </form>
-    </div>
-</div>
-
-<div class="modal fade theme-modal" id="modal-add-user" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content bg-white">
-            <div class="modal-body">
-                <div class="modal-title">Search for a player</div>
-                <div class="text-gray-500 mb-20">
-                    Search for a player in the database by name and surname. If you do not find results, please click
-                    GUEST in the players field.
+                <div class="text-center">
+                    <a href="" class="link-primary d-inline-flex align-items-center">
+                        <span>Go to my account</span>
+                        <i class="fal fa-angle-double-right ml-2"></i>
+                    </a>
                 </div>
-                <form class="form-search-users">
-                    <label class="d-block form-group mb-0">
-                        <input class="form-control" placeholder="Search for users"/>
-                        <button class="btn">
-                            <i class="far fa-search"></i>
-                        </button>
-                    </label>
-                    <div class="result">
-                        <div class="result-user result-user__not-found">
-                            <div class="result-user__media">
-                                <img width="38" height="38" class="w-100 img-fluid"
-                                     src="./assets/images/checkout/nophoto.jpg" alt="">
-                            </div>
-                            <div class="result-user__name">
-                                <div class="text-8 text-gray-500 text-uppercase">No results found?</div>
-                                <div class="text-8 text-gray-500">Please select <b>GUEST</b> option</div>
-                            </div>
-                            <button class="result-user__add">
-                                <i class="far fa-plus"></i>
-                            </button>
-                        </div>
-                        <div class="result-user">
-                            <div class="result-user__media">
-                                <img width="38" height="38" class="w-100 img-fluid"
-                                     src="./assets/images/checkout/nophotouser.jpg" alt="">
-                            </div>
-                            <div class="result-user__name text-8 text-uppercase">Guest</div>
-                            <button class="result-user__add">
-                                <i class="far fa-plus"></i>
-                            </button>
-                        </div>
-                        <div class="result-user">
-                            <div class="result-user__media">
-                                <img width="38" height="38" class="w-100 img-fluid"
-                                     src="./assets/images/checkout/nophotouser.jpg" alt="">
-                            </div>
-                            <div class="result-user__name text-8 text-uppercase">Guest</div>
-                            <button class="result-user__add">
-                                <i class="far fa-plus"></i>
-                            </button>
-                        </div>
-                        <div class="result-user">
-                            <div class="result-user__media">
-                                <img width="38" height="38" class="w-100 img-fluid"
-                                     src="./assets/images/checkout/nophotouser.jpg" alt="">
-                            </div>
-                            <div class="result-user__name text-8 text-uppercase">Guest</div>
-                            <button class="result-user__add">
-                                <i class="far fa-plus"></i>
-                            </button>
-                        </div>
-                        <div class="result-user">
-                            <div class="result-user__media">
-                                <img width="38" height="38" class="w-100 img-fluid"
-                                     src="./assets/images/checkout/nophotouser.jpg" alt="">
-                            </div>
-                            <div class="result-user__name text-8 text-uppercase">Guest</div>
-                            <button class="result-user__add">
-                                <i class="far fa-plus"></i>
-                            </button>
-                        </div>
-                </form>
-                <button type="button" class="close" data-dismiss="modal">
-                    <span aria-hidden="true">&times;</span>
-                </button>
             </div>
         </div>
     </div>
 </div>
+
 
 <footer id="footer" class="footer ecm-footer">
     <div class="footer-main">
