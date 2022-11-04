@@ -430,6 +430,74 @@
 						style="background-image: url('assets/images/banner/banner-3.jpg')"></div>
 			</div>
 		</div>
+		<div class="container d-flex justify-content-end">
+			<div class="section-banner__form">
+				<form class="b-form bg-white">
+					<div class="b-form__header mb-0 text-center">
+						ONLINE BOOKING
+					</div>
+					<div class="b-form__body">
+						<div class="b-form__state d-flex mb-3">
+							<div class="state state-date flex-shrink-0">
+								<i class="fas fa-calendar-alt"></i>
+								<span id="step-date">Thu, 03 Nov, 2022</span>
+							</div>
+							<div class="state state-time flex-shrink-0">
+								<i class="fas fa-golf-ball"></i>
+								<span id="step-time">9H</span>
+							</div>
+							<div class="state state-guests flex-shrink-0">
+								<i class="fas fa-user-friends"></i>
+								<span id="step-player">1</span>
+								<span>player</span>
+								<i class="fas fa-circle icon-dot"></i>
+							</div>
+							<div class="state state-hour flex-shrink-0">
+								<i class="fas fa-clock"></i>
+								<span id="step-hour">13:50</span>
+							</div>
+						</div>
+						<div class="b-form__services">
+							<div class="card overflow-hidden">
+								<div id="service-1" class="collapse show b-form__collapse">
+									<div class="card-body p-0">
+										<div class="form-group">
+											<label for="date-picker">Chọn ngày chơi</label>
+											<input id="date-picker" class="form-control bg-white" type="text" readonly/>
+										</div>
+										<div class="form-group">
+											<label for="hole">Số lỗ</label>
+											<input type="hidden" value="" id="hole">
+											<div class="btn-group btn-group-hole d-flex">
+												<button type="button" class="btn btn-hole active w-50">9H
+												</button>
+												<button type="button" class="btn btn-hole w-50">18H</button>
+											</div>
+										</div>
+										<div class="form-group mb-0">
+											<label for="hole">Số người chơi</label>
+											<input type="hidden" value="" id="golfers">
+											<div class="btn-group btn-group-hole d-flex">
+												<button type="button" class="btn btn-golfer active ww">1
+												</button>
+												<button type="button" class="btn btn-golfer ww">2</button>
+												<button type="button" class="btn btn-golfer ww">3</button>
+												<button type="button" class="btn btn-golfer ww">4</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="b-form__footer">
+							<button type="submit" class="b-btn b-btn--primary" disabled>
+								Search
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
 	</div>
 	<div class="section-introduction position-relative overflow-hidden section-gap">
 		<div class="container">

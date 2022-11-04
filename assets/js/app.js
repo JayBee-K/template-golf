@@ -190,6 +190,20 @@
 		});
 	};
 
+	const handleDatePicker = function (selectorId) {
+		if(!$(selectorId).length) return false;
+		$(selectorId).flatpickr({
+			dateFormat: 'd-m-Y',
+			defaultDate: 'today',
+			enable: [
+				{
+					from: 'today',
+					to: new Date().fp_incr(60)
+				}
+			]
+		});
+	}
+
 	$(function () {
 		initSliderBanner();
 		initSliderTestimonials();
@@ -205,6 +219,7 @@
 		initSwiperBookingPreview();
 		showModalSearchUser();
 
-		$('#date-picker').flatpickr();
+		handleDatePicker('#date-picker');
+
 	});
 })(jQuery);
