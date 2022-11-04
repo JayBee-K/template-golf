@@ -381,8 +381,8 @@
 
 .header .header-profile__toggle {
 	display: inline-block;
-	width: 32px;
-	height: 32px;
+	width: 28px;
+	height: 28px;
 	border-radius: 50%;
 	overflow: hidden;
 	transition: var(--transition-default);
@@ -393,6 +393,7 @@
 }
 
 .header .header-profile .dropdown-menu {
+	top: 19px!important;
 	border: 1px solid var(--gray-300);
 	border-radius: 0.25rem;
 	padding: 0;
@@ -1008,7 +1009,7 @@
 
 .page .page-filter .dropdown .dropdown-item {
 	padding: 0.5rem 1rem;
-	font-size: 13px;
+	font-size: 14px;
 	transition: var(--transition-default);
 }
 
@@ -1841,11 +1842,11 @@
 	font-weight: 400;
 }
 
-.page-auth .header-auth {
+.header .header-auth {
 	margin-left: 20px;
 }
 
-.page-auth .btn-login {
+.header .btn-login {
 	padding: 0.25rem 1rem;
 	border: 1px solid #ffffff;
 	color: #ffffff;
