@@ -325,7 +325,9 @@
 .header .header-navigation > ul > li > ul > li + li {
 	border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
-
+.header .header-toggle {
+	display: none;
+}
 .header .header-toggle,
 .header .header-cart,
 .header .header-auth {
@@ -557,6 +559,9 @@ body.nav-is-show .header::after {
 
 
 @media (max-width: 1199px) {
+	.header .header-toggle {
+		display: block;
+	}
 	.header .header-wrapper > .header-logo > a {
 		padding: 10px 0;
 	}
@@ -635,11 +640,28 @@ body.nav-is-show .header::after {
 	.header .header-navigation > ul  {
 		flex-grow: 1;
 		flex-flow: column nowrap;
-		overflow-y: scroll;
+		overflow-y: auto;
 		overflow-x: hidden;
 		scroll-snap-type: y mandatory;
 		scroll-snap-stop: always;
 		touch-action: manipulation;
+	}
+
+	.header .header-navigation > ul::-webkit-scrollbar {
+		width: 4px;
+		height: 4px;
+	}
+
+	.header .header-navigation > ul::-webkit-scrollbar-track {
+		background: transparent;
+	}
+
+	.header .header-navigation > ul::-webkit-scrollbar-thumb {
+		background: rgba(255, 255, 255, 0.1);
+	}
+
+	.header .header-navigation > ul::-webkit-scrollbar-thumb:hover {
+		background: rgba(255, 255, 255, 0.3);
 	}
 
 	.header .header-navigation > ul > li {
@@ -1514,7 +1536,7 @@ body.nav-is-show .header::after {
 
 .page .page-filter .dropdown .dropdown-item {
 	padding: 0.5rem 1rem;
-	font-size: 14px;
+	font-size: var(--size-theme-7);
 	transition: var(--transition-default);
 }
 
