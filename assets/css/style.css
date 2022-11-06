@@ -501,6 +501,7 @@
 
 .header .nav-mobile-header .header-logo img {
 	max-width: 160px;
+	height: auto;
 }
 
 .header .btn-show-nav,
@@ -689,11 +690,23 @@ body.nav-is-show .header::after {
 	.header .header-auth {
 		margin-left: 15px;
 	}
+
+	.header .header-cart .header-cart__list {
+		position: absolute;
+		top: calc(100% + 16px);
+	}
+
+	.header .header-profile .dropdown-menu {
+		top: 15px!important;
+	}
 }
 
 @media (max-width: 991px) {
 	.header .header-wrapper > .header-logo img {
 		max-width: 120px;
+	}
+	.header .header-profile .dropdown-menu {
+		top: 10px!important;
 	}
 }
 
@@ -709,6 +722,19 @@ body.nav-is-show .header::after {
 	}
 	.header .header-wrapper > .header-logo img {
 		max-width: 100px;
+	}
+	.header .header-profile .dropdown-menu {
+		top: 7px!important;
+	}
+
+	.header .header-wrapper {
+		position: relative;
+	}
+	.header .header-cart {
+		position: static;
+	}
+	.header .header-cart .header-cart__list {
+		top: 100%;
 	}
 }
 
@@ -1293,7 +1319,6 @@ body.nav-is-show .header::after {
 	padding: 10px 0;
 	font-weight: 500;
 	color: var(--gray-700);
-	display: inline-flex;
 }
 
 .nav-breadcrumb .breadcrumb .breadcrumb-item > a > i {
@@ -1311,6 +1336,15 @@ body.nav-is-show .header::after {
 .nav-breadcrumb .breadcrumb .breadcrumb-item > a:hover {
 	color: var(--primary-color);
 }
+
+@media (max-width: 991px) {
+	.nav-breadcrumb .breadcrumb .breadcrumb-item > a {
+		padding: 8px 0;
+		color: var(--gray-700);
+	}
+}
+
+/*========== PAGINATION============================*/
 
 .nav-pagination .pagination {
 	justify-content: center;
@@ -1687,7 +1721,7 @@ body.nav-is-show .header::after {
 	border-radius: 0.25rem;
 	font-size: var(--size-theme-body);
 	text-transform: capitalize;
-	width: 100%;
+	width: calc(50% - 4px);
 	padding-top: 16px;
 	padding-bottom: 16px;
 }
@@ -1768,6 +1802,17 @@ body.nav-is-show .header::after {
 .product-tabs .nav-tabs {
 	border-bottom: none;
 	margin-bottom: 1.5rem;
+	flex-flow: nowrap;
+	overflow-x: auto;
+	overflow-y: hidden;
+	scroll-snap-type: x mandatory;
+	scroll-snap-stop: always;
+	touch-action: manipulation;
+	padding-bottom: 8px;
+}
+.product-tabs .nav-tabs .nav-item {
+	flex-shrink: 0;
+	scroll-snap-align: start;
 }
 
 .product-tabs .nav-tabs .nav-item .nav-link,
@@ -1855,6 +1900,56 @@ body.nav-is-show .header::after {
 	.page-booking-golf .container,
 	.page-product-detail .container {
 		max-width: 1230px;
+	}
+}
+
+@media (max-width: 1199px) {
+
+	.page-product-detail .product-detail-sidebar {
+		margin-top: 20px;
+	}
+
+	.page-product-detail .product-detail-sidebar {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.page-product-detail .product-detail-sidebar > .sidebar + .sidebar {
+		margin-top: 0;
+	}
+
+	.page-product-detail .product-actions {
+		gap: 4px;
+	}
+	.page-product-detail .product-actions .button-theme {
+		padding: 16px;
+	}
+}
+
+@media  (max-width: 991px) {
+	.product-tabs .nav-tabs {
+		margin-bottom: 1.25rem;
+	}
+}
+
+@media (max-width: 767px) {
+	.page-product-detail .product-detail-sidebar {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(2, auto);
+	}
+
+	.page-product-detail .product-detail-sidebar > .sidebar + .sidebar {
+		padding: 15px 0;
+	}
+}
+
+@media (max-width: 575px) {
+	.page-product-detail .product-actions {
+		flex-wrap: wrap;
+	}
+	.page-product-detail .product-actions .button-theme {
+		width: 100%;
 	}
 }
 
