@@ -2470,8 +2470,14 @@ body.nav-is-show .header::after {
 		grid-template-columns: 400px 1fr;
 		grid-gap: 40px;
 	}
+
 	.page-auth.page-auth__register .page-auth__banner {
 		padding: 20px 40px;
+		grid-template-columns: 1fr 400px;
+	}
+
+	.page-auth.page-auth__login .page-auth__wrapper {
+		grid-gap: 40px;
 	}
 }
 @media (max-width: 991px) {
@@ -2479,6 +2485,7 @@ body.nav-is-show .header::after {
 	.page-auth .page-auth__title {
 		text-align: center;
 	}
+
 	.page-auth .page-auth__main {
 		max-width: 480px;
 		margin: 0 auto;
@@ -2496,6 +2503,14 @@ body.nav-is-show .header::after {
 
 	.page-auth.page-auth__register .page-auth__banner {
 		display: none;
+	}
+
+	.page-auth.page-auth__login .page-auth__wrapper {
+		grid-template-columns: 0 1fr;
+		grid-gap: 0;
+	}
+	.page-auth .page-auth__main {
+		padding-top: 0;
 	}
 }
 
