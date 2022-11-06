@@ -720,13 +720,43 @@ body.nav-is-show .header::after {
 	padding-top: 600px;
 }
 
-@media (max-width: 479px){
-	#slider-banner .b-form .b-form__header,
-	#slider-banner.b-form .b-form__body {
-		padding: 15px 15px;
+@media (max-width: 479px) {
+	#slider-banner .b-form .b-form__state {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		grid-gap: 4px 8px;
+		margin-bottom: 15px;
+	}
+
+	#slider-banner .b-form .b-form__state > .state + .state {
+		margin-left: 0;
+	}
+
+	#slider-banner .b-form .b-form__state > .state:nth-child(1) {
+		grid-column: 1 / 2;
+		grid-row: 1 / 2;
+	}
+
+	#slider-banner .b-form .b-form__state > .state:nth-child(2) {
+		grid-column: 1 / 2;
+		grid-row: 2 / -1;
+	}
+
+	#slider-banner .b-form .b-form__state > .state:nth-child(3) {
+		grid-column: 2 / -1;
+		grid-row: 1 / 2;
+	}
+
+	#slider-banner .b-form .b-form__state > .state:nth-child(4) {
+		grid-column: 2 / -1;
+		grid-row: 2 / -1;
+	}
+
+	#slider-banner .b-form .b-form__footer {
+		margin-top: 15px;
 	}
 }
-
 /*
 ========== SECTION INTRODUCTION ==========
 */
@@ -2033,6 +2063,11 @@ body.nav-is-show .header::after {
 	font-size: var(--size-theme-5);
 	margin-bottom: 15px;
 	border-bottom: 1px solid var(--gray-200);
+}
+
+.b-form .b-form__state {
+	display: flex;
+	margin-bottom: 1rem;
 }
 
 .b-form .b-form__state .state {
