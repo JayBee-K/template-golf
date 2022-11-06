@@ -463,7 +463,7 @@
 }
 
 .header .header-profile__toggle:hover {
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
 }
 
 .header .header-profile .dropdown-menu {
@@ -1613,7 +1613,21 @@ body.nav-is-show .header::after {
     .page-title {
         font-size: calc(var(--size-theme-ratio) * 1.5);
     }
+    .page-gap--xl {
+        padding: 40px 0;
+    }
 }
+
+@media (max-width: 767px) {
+    .page-title {
+        font-size: calc(var(--size-theme-ratio) * 1.5);
+    }
+    .page-gap--xl {
+        padding: 30px 0;
+    }
+}
+
+
 
 /* ======== PAGE PRODUCT DETAIL ======== */
 
@@ -2229,7 +2243,7 @@ body.nav-is-show .header::after {
 /*========== BOOKING GOLF ========*/
 
 .page-booking-golf .section-wrapper {
-    padding: 20px;
+    padding: 15px;
 }
 
 .b-form {
@@ -2239,7 +2253,7 @@ body.nav-is-show .header::after {
 
 .b-form .b-form__header,
 .b-form .b-form__body {
-    padding: 15px 20px;
+    padding: 15px 15px;
 }
 
 .b-form .b-form__header {
@@ -2368,11 +2382,13 @@ body.nav-is-show .header::after {
     justify-content: center;
     align-items: center;
     width: 100%;
+    max-width: 120px;
     background-color: #ffffff;
     border-radius: 0.25rem;
     padding: 0.5rem 1rem;
     border: 1px solid var(--gray-300);
     color: var(--gray-500);
+    margin-left: auto;
 }
 
 .b-form .b-btn.b-btn--primary,
@@ -2461,7 +2477,7 @@ body.nav-is-show .header::after {
 }
 
 .b-map .b-map__wrapper {
-    padding: 25px;
+    padding: 20px 15px 15px 15px;
     position: relative;
     border: 1px solid var(--gray-200);
 }
@@ -2539,6 +2555,11 @@ body.nav-is-show .header::after {
 
     .page-booking-golf .b-form .b-form__state {
         display: flex;
+    }
+}
+@media (max-width: 479px) {
+    .page-booking-golf .b-form .b-form__state {
+        display: grid;
     }
 }
 
