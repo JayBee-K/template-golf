@@ -1424,7 +1424,7 @@ body.nav-is-show .header::after {
 }
 
 .page-title {
-	font-size: 2em;
+	font-size: calc(var(--size-theme-ratio) * 2);
 	font-weight: 700;
 	margin-bottom: 0.5rem;
 }
@@ -1552,6 +1552,17 @@ body.nav-is-show .header::after {
 .page .page-filter .dropdown-menu .dropdown-item:hover {
 	background-color: var(--primary-hover);
 	color: #ffffff;
+}
+
+@media (max-width: 1199px){
+	.page-title {
+		font-size: calc(var(--size-theme-ratio) * 1.75);
+	}
+}
+@media (max-width: 991px){
+	.page-title {
+		font-size: calc(var(--size-theme-ratio) * 1.5);
+	}
 }
 
 /* ======== PAGE PRODUCT DETAIL ======== */
