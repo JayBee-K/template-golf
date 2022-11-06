@@ -177,6 +177,10 @@ textarea:focus {
     padding: 7.5px;
 }
 
+.row-25 > [class*='col'] {
+    padding: 5px;
+}
+
 .row-10 {
     margin-top: -10px;
     margin-left: -10px;
@@ -195,6 +199,12 @@ textarea:focus {
 
 .row-15 > [class*='col'] {
     padding: 15px;
+}
+
+@media  (min-width: 576px) {
+    .row-sm-75 > [class*='col'] {
+        padding: 7.5px;
+    }
 }
 
 .limit {
