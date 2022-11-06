@@ -41,7 +41,8 @@
         }
     </style>
 </head>
-<body class="page page-light-2 page-single">
+<body class="page page-light-2 page-single page-notification">
+
 <div id="header" class="header">
     <div class="container">
         <div class="row">
@@ -53,6 +54,16 @@
                         </a>
                     </div>
                     <div class="header-navigation ml-auto">
+                        <div class="nav-mobile-header">
+                            <div class="header-logo">
+                                <a href="" class="d-inline-block">
+                                    <img height="60" src="./assets/images/logo.png" alt=""/>
+                                </a>
+                            </div>
+                            <button type="button" class="btn-close-nav">
+                                <i class="fal fa-times"></i>
+                            </button>
+                        </div>
                         <ul class="list-unstyled mb-0">
                             <li>
                                 <a class="active" href="">TRANG CHỦ</a>
@@ -116,6 +127,15 @@
                                 <a href="">LIÊN HỆ</a>
                             </li>
                         </ul>
+                        <div class="nav-mobile-footer">
+                            <a href="tel:0000000000">
+                                <span>(000)</span>
+                                <span>000 0000</span>
+                            </a>
+                            <a href="tel:example@example.com">
+                                <span>Example@example.com</span>
+                            </a>
+                        </div>
                     </div>
                     <div class="header-actions d-flex">
                         <div class="header-cart">
@@ -472,6 +492,11 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="header-toggle">
+                            <button class="btn-show-nav">
+                                <i class="fal fa-bars"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -480,13 +505,13 @@
 </div>
 
 <div id="main" class="main">
-    <div class="page-main h-100 d-flex justify-content-center align-items-center">
+    <div class="page-main section-gap h-100 d-flex justify-content-center align-items-center">
         <div class="container">
             <div class="mx-auto" style="max-width: 450px;">
                 <div class="text-center mb-3">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                         class="feather feather-check-square text-success" style="width:90px;height:90px;">
+                         class="feather text-success">
                         <polyline points="9 11 12 14 22 4"></polyline>
                         <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
                     </svg>
