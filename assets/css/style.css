@@ -2505,6 +2505,9 @@ body.nav-is-show .header::after {
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 20px;
     }
+    .page-booking-golf .page-booking-golf__sidebar > *  {
+        margin-bottom: 0;
+    }
 }
 
 @media (max-width: 991px) {
