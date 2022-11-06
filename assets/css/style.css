@@ -2465,6 +2465,53 @@ body.nav-is-show .header::after {
 	margin-bottom: 30px;
 }
 
+@media (max-width: 1199px) {
+	.page-auth.page-auth__register .page-auth__wrapper {
+		grid-template-columns: 400px 1fr;
+		grid-gap: 40px;
+	}
+	.page-auth.page-auth__register .page-auth__banner {
+		padding: 20px 40px;
+	}
+}
+@media (max-width: 991px) {
+	.page-auth.page-auth__register .page-auth__subtitle,
+	.page-auth .page-auth__title {
+		text-align: center;
+	}
+	.page-auth .page-auth__main {
+		max-width: 480px;
+		margin: 0 auto;
+	}
+
+	.page-auth.page-auth__register .page-auth__subtitle {
+		margin-bottom: 20px;
+	}
+
+	.page-auth.page-auth__register .page-auth__wrapper {
+		grid-template-columns: 1fr 0;
+		grid-gap: 0;
+		padding: 0 20px;
+	}
+
+	.page-auth.page-auth__register .page-auth__banner {
+		display: none;
+	}
+}
+
+@media (max-width: 767px) {
+	.page-auth .main {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+}
+
+@media (max-width: 479px) {
+	.page-auth.page-auth__register .page-auth__wrapper {
+		padding: 0;
+	}
+}
+
 /*======= THEME FORM =======*/
 
 .theme-form .form-group label {
