@@ -161,8 +161,10 @@
 
     const handleSlideProduct = function () {
         let [avatarThumb, avatarPhoto] = [];
+        const productPreview = $('#product-preview');
+        const productThumbs = $('#product-thumbs');
 
-        if (!$('#product-preview').length && $('#product-thumbs').length > 0) {
+        if (!productPreview.length && productThumbs.length > 0) {
             avatarPhoto = new Swiper('#product-thumbs > .swiper', {
                 slidesPerView: 1,
                 navigation: {
@@ -173,7 +175,7 @@
             return false;
         }
 
-        if (!$('#product-preview').length && !$('#product-thumbs').length) {
+        if (!productPreview.length && !productThumbs.length) {
             return false;
         }
 
@@ -185,7 +187,7 @@
                 320: {
                     slidesPerView: 2.5,
                 },
-                525: {
+                575: {
                     slidesPerView: 3.5,
                 },
                 991: {
@@ -258,9 +260,6 @@
             ]
         });
     };
-
-
-
 
     $(function () {
 		handleMenuMobile(windowWidth);

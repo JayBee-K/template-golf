@@ -42,6 +42,7 @@
     </style>
 </head>
 <body class="page page-light page-booking-golf">
+
 <div id="header" class="header">
     <div class="container">
         <div class="row">
@@ -53,6 +54,16 @@
                         </a>
                     </div>
                     <div class="header-navigation ml-auto">
+                        <div class="nav-mobile-header">
+                            <div class="header-logo">
+                                <a href="" class="d-inline-block">
+                                    <img height="60" src="./assets/images/logo.png" alt=""/>
+                                </a>
+                            </div>
+                            <button type="button" class="btn-close-nav">
+                                <i class="fal fa-times"></i>
+                            </button>
+                        </div>
                         <ul class="list-unstyled mb-0">
                             <li>
                                 <a class="active" href="">TRANG CHỦ</a>
@@ -116,6 +127,15 @@
                                 <a href="">LIÊN HỆ</a>
                             </li>
                         </ul>
+                        <div class="nav-mobile-footer">
+                            <a href="tel:0000000000">
+                                <span>(000)</span>
+                                <span>000 0000</span>
+                            </a>
+                            <a href="tel:example@example.com">
+                                <span>Example@example.com</span>
+                            </a>
+                        </div>
                     </div>
                     <div class="header-actions d-flex">
                         <div class="header-cart">
@@ -472,6 +492,11 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="header-toggle">
+                            <button class="btn-show-nav">
+                                <i class="fal fa-bars"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -498,139 +523,141 @@
         </div>
         <div class="page-main page-gap">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <form id="booking-golf" class="b-form bg-white mb-20">
-                            <div class="b-form__header mb-0">
-                                ONLINE BOOKING
-                            </div>
-                            <div class="b-form__body">
-                                <div class="b-form__state d-flex mb-3">
-                                    <div class="state state-date flex-shrink-0">
-                                        <i class="fas fa-calendar-alt"></i>
-                                        <span id="step-date">Thu, 03 Nov, 2022</span>
-                                    </div>
-                                    <div class="state state-time flex-shrink-0">
-                                        <i class="fas fa-golf-ball"></i>
-                                        <span id="step-time">9H</span>
-                                    </div>
-                                    <div class="state state-guests flex-shrink-0">
-                                        <i class="fas fa-user-friends"></i>
-                                        <span id="step-player">1</span>
-                                        <span>player</span>
-                                        <i class="fas fa-circle icon-dot"></i>
-                                    </div>
-                                    <div class="state state-hour flex-shrink-0">
-                                        <i class="fas fa-clock"></i>
-                                        <span id="step-hour">13:50</span>
-                                    </div>
+                <div class="row row-10">
+                    <div class="col-12 col-xl-4">
+                        <div class="page-booking-golf__sidebar">
+                            <form id="booking-golf" class="b-form bg-white mb-20">
+                                <div class="b-form__header mb-0">
+                                    ONLINE BOOKING
                                 </div>
-                                <div class="b-form__services">
-                                    <div class="card overflow-hidden">
-                                        <div id="service-1" class="collapse show b-form__collapse">
-                                            <div class="card-body p-0">
-                                                <div class="form-group">
-                                                    <label for="date-picker">Chọn ngày chơi</label>
-                                                    <input id="date-picker" class="form-control bg-white" type="text" readonly/>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="hole">Số lỗ</label>
-                                                    <input type="hidden" value="" id="hole">
-                                                    <div class="btn-group btn-group-hole d-flex">
-                                                        <button type="button" class="btn btn-hole active w-50">9H
-                                                        </button>
-                                                        <button type="button" class="btn btn-hole w-50">18H</button>
+                                <div class="b-form__body">
+                                    <div class="b-form__state">
+                                        <div class="state state-date flex-shrink-0">
+                                            <i class="fas fa-calendar-alt"></i>
+                                            <span id="step-date">Thu, 03 Nov, 2022</span>
+                                        </div>
+                                        <div class="state state-time flex-shrink-0">
+                                            <i class="fas fa-golf-ball"></i>
+                                            <span id="step-time">9H</span>
+                                        </div>
+                                        <div class="state state-guests flex-shrink-0">
+                                            <i class="fas fa-user-friends"></i>
+                                            <span id="step-player">1</span>
+                                            <span>player</span>
+                                            <i class="fas fa-circle icon-dot"></i>
+                                        </div>
+                                        <div class="state state-hour flex-shrink-0">
+                                            <i class="fas fa-clock"></i>
+                                            <span id="step-hour">13:50</span>
+                                        </div>
+                                    </div>
+                                    <div class="b-form__services">
+                                        <div class="card overflow-hidden">
+                                            <div id="service-1" class="collapse show b-form__collapse">
+                                                <div class="card-body p-0">
+                                                    <div class="form-group">
+                                                        <label for="date-picker">Chọn ngày chơi</label>
+                                                        <input id="date-picker" class="form-control bg-white" type="text" readonly/>
                                                     </div>
-                                                </div>
-                                                <div class="form-group mb-0">
-                                                    <label for="hole">Số người chơi</label>
-                                                    <input type="hidden" value="" id="golfers">
-                                                    <div class="btn-group btn-group-hole d-flex">
-                                                        <button type="button" class="btn btn-golfer active ww">1
-                                                        </button>
-                                                        <button type="button" class="btn btn-golfer ww">2</button>
-                                                        <button type="button" class="btn btn-golfer ww">3</button>
-                                                        <button type="button" class="btn btn-golfer ww">4</button>
+                                                    <div class="form-group">
+                                                        <label for="hole">Số lỗ</label>
+                                                        <input type="hidden" value="" id="hole">
+                                                        <div class="btn-group btn-group-hole d-flex">
+                                                            <button type="button" class="btn btn-hole active w-50">9H
+                                                            </button>
+                                                            <button type="button" class="btn btn-hole w-50">18H</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group mb-0">
+                                                        <label for="hole">Số người chơi</label>
+                                                        <input type="hidden" value="" id="golfers">
+                                                        <div class="btn-group btn-group-hole d-flex">
+                                                            <button type="button" class="btn btn-golfer active ww">1
+                                                            </button>
+                                                            <button type="button" class="btn btn-golfer ww">2</button>
+                                                            <button type="button" class="btn btn-golfer ww">3</button>
+                                                            <button type="button" class="btn btn-golfer ww">4</button>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="b-form__footer">
+                                        <button type="submit" class="b-btn b-btn--primary" disabled>
+                                            Search
+                                        </button>
+                                    </div>
                                 </div>
-                                <div class="b-form__footer">
-                                    <button type="submit" class="b-btn b-btn--primary" disabled>
-                                        Search
-                                    </button>
+                            </form>
+                            <div class="b-form bg-white d-none d-lg-block">
+                                <div class="b-form__header mb-0">
+                                    CONTACT AND OPENING HOURS
                                 </div>
-                            </div>
-                        </form>
-                        <div class="b-form bg-white">
-                            <div class="b-form__header">
-                                CONTACT AND OPENING HOURS
-                            </div>
-                            <div class="b-form__body">
-                                <div class="row mb-20 align-items-center">
-                                    <div class="col-8">
-                                        <div class="d-flex align-items-center">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                                 stroke-linecap="round" stroke-linejoin="round"
-                                                 class="feather feather-smartphone">
-                                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-                                                <line x1="12" y1="18" x2="12" y2="18"></line>
-                                            </svg>
-                                            <span class="ml-2">
+                                <div class="b-form__body">
+                                    <div class="row mb-20 align-items-center">
+                                        <div class="col-8">
+                                            <div class="d-flex align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                     stroke-linecap="round" stroke-linejoin="round"
+                                                     class="feather feather-smartphone">
+                                                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                                                    <line x1="12" y1="18" x2="12" y2="18"></line>
+                                                </svg>
+                                                <span class="ml-2">
                                                 <a class="link" href="tel:0000000000">000 0000 0000</a>
                                             </span>
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <a href="tel:0000000000" class="b-btn">
+                                                Call us
+                                            </a>
                                         </div>
                                     </div>
-                                    <div class="col-4">
-                                        <a href="tel:0000000000" class="b-btn">
-                                            Call us
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="mb-20">
-                                    <div class="row mb-10">
-                                        <div class="col-7">Monday</div>
-                                        <div class="col-5 text-right">08:00 - 20:00
+                                    <div class="mb-20">
+                                        <div class="row mb-10">
+                                            <div class="col-7">Monday</div>
+                                            <div class="col-5 text-right">08:00 - 20:00
+                                            </div>
+                                        </div>
+                                        <div class="row mb-10">
+                                            <div class="col-7">Monday</div>
+                                            <div class="col-5 text-right">08:00 - 20:00
+                                            </div>
+                                        </div>
+                                        <div class="row mb-10">
+                                            <div class="col-7">Monday</div>
+                                            <div class="col-5 text-right">08:00 - 20:00
+                                            </div>
+                                        </div>
+                                        <div class="row mb-10">
+                                            <div class="col-7">Monday</div>
+                                            <div class="col-5 text-right">08:00 - 20:00
+                                            </div>
+                                        </div>
+                                        <div class="row mb-10">
+                                            <div class="col-7">Monday</div>
+                                            <div class="col-5 text-right">08:00 - 20:00
+                                            </div>
+                                        </div>
+                                        <div class="row mb-10">
+                                            <div class="col-7">Monday</div>
+                                            <div class="col-5 text-right">08:00 - 20:00
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="row mb-10">
-                                        <div class="col-7">Monday</div>
-                                        <div class="col-5 text-right">08:00 - 20:00
-                                        </div>
+                                    <div>More information:</div>
+                                    <div class="hovered">
+                                        <a class="link-primary" href="">https://golfox.com</a>
                                     </div>
-                                    <div class="row mb-10">
-                                        <div class="col-7">Monday</div>
-                                        <div class="col-5 text-right">08:00 - 20:00
-                                        </div>
-                                    </div>
-                                    <div class="row mb-10">
-                                        <div class="col-7">Monday</div>
-                                        <div class="col-5 text-right">08:00 - 20:00
-                                        </div>
-                                    </div>
-                                    <div class="row mb-10">
-                                        <div class="col-7">Monday</div>
-                                        <div class="col-5 text-right">08:00 - 20:00
-                                        </div>
-                                    </div>
-                                    <div class="row mb-10">
-                                        <div class="col-7">Monday</div>
-                                        <div class="col-5 text-right">08:00 - 20:00
-                                        </div>
-                                    </div>
-                                </div>
-                                <div>More information:</div>
-                                <div class="hovered">
-                                    <a class="link-primary" href="">https://golfox.com</a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-8">
-                        <div class="section-wrapper bg-white">
+                    <div class="col-12 col-xl-8">
+                        <div class="section-wrapper bg-white mb-20">
                             <h2 class="page-title">ARMADA GOLF CLUB</h2>
                             <div class="page-subtitle mb-20">Golfowa 3, 41-907 Bytom</div>
                             <div class="b-preview position-relative" id="booking-preview">
@@ -691,6 +718,70 @@
                                                 width="100%" height="450" style="border:0;" allowfullscreen=""
                                                 loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="b-form bg-white d-block d-lg-none">
+                            <div class="b-form__header">
+                                CONTACT AND OPENING HOURS
+                            </div>
+                            <div class="b-form__body">
+                                <div class="row mb-20 align-items-center">
+                                    <div class="col-8">
+                                        <div class="d-flex align-items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                 stroke-linecap="round" stroke-linejoin="round"
+                                                 class="feather feather-smartphone">
+                                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                                                <line x1="12" y1="18" x2="12" y2="18"></line>
+                                            </svg>
+                                            <span class="ml-2">
+                                                <a class="link" href="tel:0000000000">000 0000 0000</a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="tel:0000000000" class="b-btn">
+                                            Call us
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="mb-20">
+                                    <div class="row mb-10">
+                                        <div class="col-7">Monday</div>
+                                        <div class="col-5 text-right">08:00 - 20:00
+                                        </div>
+                                    </div>
+                                    <div class="row mb-10">
+                                        <div class="col-7">Monday</div>
+                                        <div class="col-5 text-right">08:00 - 20:00
+                                        </div>
+                                    </div>
+                                    <div class="row mb-10">
+                                        <div class="col-7">Monday</div>
+                                        <div class="col-5 text-right">08:00 - 20:00
+                                        </div>
+                                    </div>
+                                    <div class="row mb-10">
+                                        <div class="col-7">Monday</div>
+                                        <div class="col-5 text-right">08:00 - 20:00
+                                        </div>
+                                    </div>
+                                    <div class="row mb-10">
+                                        <div class="col-7">Monday</div>
+                                        <div class="col-5 text-right">08:00 - 20:00
+                                        </div>
+                                    </div>
+                                    <div class="row mb-10">
+                                        <div class="col-7">Monday</div>
+                                        <div class="col-5 text-right">08:00 - 20:00
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>More information:</div>
+                                <div class="hovered">
+                                    <a class="link-primary" href="">https://golfox.com</a>
                                 </div>
                             </div>
                         </div>
