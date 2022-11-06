@@ -1,6 +1,8 @@
 (function ($) {
     'use strict';
     const windowWidth = $(window).width();
+    const page = $('.page');
+    const header = $('#header');
 
     const handleMenuMobile = function (currentWindow) {
         if (currentWindow >= 1200) return false;
@@ -127,16 +129,14 @@
         });
     };
 
-    const addPaddingSinglePage = function () {
-        const container = $('.page');
-        const header = $('#header');
-        if (!container.length || !header.length) return false;
-        container.css({'padding-top': `${header.outerHeight(true)}px`});
+    const addPaddingPage = function () {
+        if (!page.length || !header.length) return false;
+        page.css({'padding-top': `${header.outerHeight(true)}px`});
     };
 
     const handleWindowResize = function () {
         $(window).resize(function () {
-            addPaddingSinglePage();
+            addPaddingPage();
         });
     };
 
@@ -266,7 +266,7 @@
         initSliderBanner();
         initSliderTestimonials();
         initSliderNews();
-        addPaddingSinglePage();
+        addPaddingPage();
         handleWindowResize();
 
         // PAGE PRODUCT DETAIL
