@@ -3213,7 +3213,9 @@ body.nav-is-show .header::after {
         align-items: center;
         margin-top: 0.5rem;
     }
-
+    .tee-times .tee-time .tee-time__list .item {
+        font-size: var(--size-theme-7);
+    }
     .tee-time .tee-time__price {
         margin-bottom: 0;
     }
