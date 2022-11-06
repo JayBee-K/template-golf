@@ -2314,7 +2314,7 @@ body.nav-is-show .header::after {
 }
 
 .b-form .b-form__state .state + .state {
-    margin-left: 10px;
+    margin-left: 15px;
 }
 
 .b-form .b-form__state .state .icon-dot {
@@ -2517,25 +2517,25 @@ body.nav-is-show .header::after {
 }
 
 .b-map .b-map__wrapper {
-    padding: 20px 15px 15px 15px;
+    /*padding: 20px 15px 15px 15px;*/
     position: relative;
-    border: 1px solid var(--gray-200);
+    /*border: 1px solid var(--gray-200);*/
 }
 
-.b-map .b-map__wrapper::after {
-    content: attr(data-label);
-    display: block;
-    position: absolute;
-    top: -8px;
-    left: 6px;
-    font-size: var(--size-theme-8);
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: var(--gray-500);
-    padding: 0 5px;
-    background-color: #fff;
-}
+/*.b-map .b-map__wrapper::after {*/
+/*    content: attr(data-label);*/
+/*    display: block;*/
+/*    position: absolute;*/
+/*    top: -8px;*/
+/*    left: 6px;*/
+/*    font-size: var(--size-theme-8);*/
+/*    font-weight: 600;*/
+/*    letter-spacing: 1px;*/
+/*    text-transform: uppercase;*/
+/*    color: var(--gray-500);*/
+/*    padding: 0 5px;*/
+/*    background-color: #fff;*/
+/*}*/
 
 .b-form .form-group label {
     font-size: var(--size-theme-body);
