@@ -3014,13 +3014,13 @@ body.nav-is-show .header::after {
 
 .tee-times .tee-time .tee-time__date {
     font-size: var(--size-theme-4);
-    color: var(--primary-color);
+    color: var(--dark-color);
     margin-bottom: 0.5rem;
 }
 
 .tee-times .tee-time .tee-time__date > span {
     font-size: 0.75em;
-    margin-left: -0.5rem;
+    margin-left: -0.35rem;
 }
 
 .tee-times .tee-time .tee-time__list .item {
@@ -3039,7 +3039,6 @@ body.nav-is-show .header::after {
     font-weight: 500;
     transform: translateY(-50%);
 }
-
 
 .tee-times .tee-time .tee-time__state {
     text-align: center;
@@ -3141,6 +3140,10 @@ body.nav-is-show .header::after {
 @media (max-width: 991px) {
     .page-search .page-search__sidebar {
         grid-template-columns: 1fr;
+    }
+
+    .page-notification .page-main .mb-30 {
+        margin-bottom: 15px;
     }
 }
 
