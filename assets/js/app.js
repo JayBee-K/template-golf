@@ -9,13 +9,13 @@
 
         const btnToggle = $('#header .btn-show-nav, #header .btn-close-nav');
         const Body = $('body');
-		const headerNavigation = $('#header .header-wrapper .header-navigation');
+        const headerNavigation = $('#header .header-wrapper .header-navigation');
 
         headerNavigation.find('ul > li > ul').each(function (index) {
             $(this).prev().attr({
                 "href": "#subMenu" + index,
                 "data-toggle": "collapse",
-                "aria-expanded" : false,
+                "aria-expanded": false,
                 "aria-controls": "subMenu" + index,
             });
             $(this).attr({
@@ -37,7 +37,7 @@
             }
         });
 
-        headerNavigation.find('ul > li > a').on('click',function () {
+        headerNavigation.find('ul > li > a').on('click', function () {
             if ($(this).next('ul').hasClass('show')) {
                 let _ul = $(this).next('ul');
                 _ul.find('ul.show').removeClass('show');
@@ -53,7 +53,7 @@
         });
 
         $(document).on('click', function (event) {
-            if(!$('#header .header-wrapper')[0].contains(event.target)){
+            if (!$('#header .header-wrapper')[0].contains(event.target)) {
                 Body.removeClass('nav-is-show');
             }
         });
@@ -261,8 +261,23 @@
         });
     };
 
+    const handleSelectGroup = function (idSelector, target) {
+        const container = $(idSelector);
+        const holeList = container.find(target);
+        const input = container.find('input');
+
+        holeList.on('click', function () {
+            const _this = $(this);
+            if (!_this.hasClass('active')) {
+                holeList.removeClass('active');
+                _this.addClass('active');
+                input.val(_this.attr('data-value'));
+            }
+        });
+    }
+
     $(function () {
-		handleMenuMobile(windowWidth);
+        handleMenuMobile(windowWidth);
         initSliderBanner();
         initSliderTestimonials();
         initSliderNews();
@@ -278,6 +293,10 @@
         showModalSearchUser();
 
         handleDatePicker('#date-picker');
+
+        //FORM GROUP HOLES
+        handleSelectGroup('#form-group-holes', '.btn-hole');
+        handleSelectGroup('#form-group-golfers', '.btn-golfer');
 
     });
 })(jQuery);
