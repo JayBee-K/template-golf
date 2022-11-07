@@ -3022,9 +3022,11 @@ body.nav-is-show .header::after {
 }
 
 .tee-times .tee-time {
-    padding: 15px;
-    grid-template-columns: 4fr 8fr;
+    padding: 10px 15px;
     display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 20px;
+    align-items: center;
     border-radius: 0.25rem;
     border: solid 1px #E3E3E3;
     cursor: pointer;
@@ -3196,6 +3198,10 @@ body.nav-is-show .header::after {
 }
 
 @media (max-width: 991px) {
+    .tee-times {
+        grid-gap: 15px;
+    }
+
     .page-search .page-search__sidebar {
         grid-template-columns: 1fr;
     }
@@ -3207,15 +3213,16 @@ body.nav-is-show .header::after {
 
 @media (max-width: 767px) {
     .tee-times .tee-time {
-        grid-template-columns: 1fr;
+        grid-template-columns: auto 1fr;
         grid-template-rows: repeat(2, auto);
+        grid-gap: 10px;
     }
 
     .tee-times .tee-time .tee-time__right {
+        grid-column: 1 / -1;
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        margin-top: 0.5rem;
+        justify-content: flex-end;
     }
 
     .tee-times .tee-time .tee-time__list .item {
@@ -3227,22 +3234,41 @@ body.nav-is-show .header::after {
     }
 }
 
-@media (max-width: 479px) {
-    .page-search .page-search__sidebar .b-form .b-form__state {
-        display: grid;
-    }
-
-    .tee-time .tee-time__price {
-        flex-flow: column;
-        grid-gap: 0.25rem;
-    }
-
+@media (max-width: 575px) {
     .tee-time .tee-time__price .price-final {
         font-size: var(--size-theme-6);
     }
 
     .tee-time .tee-time__price .price-original {
         font-size: var(--size-theme-7);
+    }
+}
+
+@media (max-width: 479px) {
+    .page-search .page-search__sidebar .b-form .b-form__state {
+        display: grid;
+    }
+    .tee-times .tee-time .tee-time__date {
+        margin-bottom: 0;
+    }
+    .tee-times .tee-time .tee-time__left {
+        grid-column: 1 / -1;
+    }
+    .tee-times .tee-time .tee-time__mid {
+        grid-column: 1 / 2;
+    }
+    .tee-times .tee-time .tee-time__right {
+        grid-column: 2 / -1;
+    }
+
+    .tee-times .tee-time {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .tee-time .tee-time__price {
+        flex-flow: column;
+        grid-gap: 0.25rem;
     }
 
     .section-banner .section-banner__form {
