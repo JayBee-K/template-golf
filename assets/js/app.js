@@ -294,7 +294,6 @@
 
         handleDatePicker('#date-picker');
 
-        //FORM GROUP HOLES
         handleSelectGroup('#form-group-holes', '.btn-hole');
         handleSelectGroup('#form-group-golfers', '.btn-golfer');
 
