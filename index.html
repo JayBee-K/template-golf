@@ -553,32 +553,30 @@
                                             <label for="date-picker">Chọn ngày chơi</label>
                                             <input id="date-picker" class="form-control bg-white" type="text" readonly/>
                                         </div>
-                                        <div class="form-group">
-                                            <label for="hole">Số lỗ</label>
-                                            <input type="hidden" value="" id="hole">
+                                        <div id="form-group-holes" class="form-group">
+                                            <label for="holes">Số lỗ</label>
+                                            <input type="hidden" value="" id="holes" name="holes">
                                             <div class="btn-group btn-group-hole d-flex">
-                                                <button type="button" class="btn btn-hole active w-50">9H
-                                                </button>
-                                                <button type="button" class="btn btn-hole w-50">18H</button>
+                                                <button data-value="9" type="button" class="btn btn-hole active w-50">9H</button>
+                                                <button data-value="18" type="button" class="btn btn-hole w-50">18H</button>
                                             </div>
                                         </div>
-                                        <div class="form-group mb-0">
-                                            <label for="hole">Số người chơi</label>
-                                            <input type="hidden" value="" id="golfers">
-                                            <div class="btn-group btn-group-hole d-flex">
-                                                <button type="button" class="btn btn-golfer active ww">1
-                                                </button>
-                                                <button type="button" class="btn btn-golfer ww">2</button>
-                                                <button type="button" class="btn btn-golfer ww">3</button>
-                                                <button type="button" class="btn btn-golfer ww">4</button>
+                                        <div id="form-group-golfers" class="form-group mb-0">
+                                            <label for="golfers">Số người chơi</label>
+                                            <input type="hidden" value="" name="golfers" id="golfers">
+                                            <div class="btn-group btn-group-golfer d-flex">
+                                                <button data-value="1" type="button" class="btn btn-golfer active">1</button>
+                                                <button data-value="2" type="button" class="btn btn-golfer">2</button>
+                                                <button data-value="3" type="button" class="btn btn-golfer">3</button>
+                                                <button data-value="4" type="button" class="btn btn-golfer">4</button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="b-form__footer">
-                            <button type="submit" class="b-btn b-btn--primary" disabled>
+                        <div class="b-form__footer ">
+                            <button type="submit" class="b-btn b-btn--primary mx-auto" disabled>
                                 Search
                             </button>
                         </div>

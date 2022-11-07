@@ -559,26 +559,37 @@
                                                     <div class="card-body p-0">
                                                         <div class="form-group">
                                                             <label for="date-picker">Chọn ngày chơi</label>
-                                                            <input id="date-picker" class="form-control bg-white" type="text" readonly/>
+                                                            <input id="date-picker" class="form-control bg-white"
+                                                                   type="text" readonly/>
                                                         </div>
-                                                        <div class="form-group">
-                                                            <label for="hole">Số lỗ</label>
-                                                            <input type="hidden" value="" id="hole">
+                                                        <div id="form-group-holes" class="form-group">
+                                                            <label for="holes">Số lỗ</label>
+                                                            <input type="hidden" value="" id="holes" name="holes">
                                                             <div class="btn-group btn-group-hole d-flex">
-                                                                <button type="button" class="btn btn-hole active w-50">9H
+                                                                <button data-value="9" type="button"
+                                                                        class="btn btn-hole active w-50">9H
                                                                 </button>
-                                                                <button type="button" class="btn btn-hole w-50">18H</button>
+                                                                <button data-value="18" type="button"
+                                                                        class="btn btn-hole w-50">18H
+                                                                </button>
                                                             </div>
                                                         </div>
-                                                        <div class="form-group">
-                                                            <label for="hole">Số người chơi</label>
+                                                        <div id="form-group-golfers" class="form-group">
+                                                            <label for="golfers">Số người chơi</label>
                                                             <input type="hidden" value="" id="golfers">
                                                             <div class="btn-group btn-group-hole d-flex">
-                                                                <button type="button" class="btn btn-golfer active ww">1
+                                                                <button data-value="1" type="button"
+                                                                        class="btn btn-golfer active">1
                                                                 </button>
-                                                                <button type="button" class="btn btn-golfer ww">2</button>
-                                                                <button type="button" class="btn btn-golfer ww">3</button>
-                                                                <button type="button" class="btn btn-golfer ww">4</button>
+                                                                <button data-value="2" type="button"
+                                                                        class="btn btn-golfer">2
+                                                                </button>
+                                                                <button data-value="3" type="button"
+                                                                        class="btn btn-golfer">3
+                                                                </button>
+                                                                <button data-value="4" type="button"
+                                                                        class="btn btn-golfer">4
+                                                                </button>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -602,7 +613,8 @@
                                         <div class="col-8">
                                             <div class="d-flex align-items-center">
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                     viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                     stroke-width="2"
                                                      stroke-linecap="round" stroke-linejoin="round"
                                                      class="feather feather-smartphone">
                                                     <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
@@ -680,21 +692,22 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="tee-time__right">
-                                        <div class="tee-time__price d-flex justify-content-end mb-10">
-                                            <div class="price-final flex-shrink-0 align-items-center">
-                                                <span>15,000,000</span>
-                                                <sup>đ</sup>
-                                            </div>
-                                            <div class="price-original flex-shrink-0">
-                                                <del>
-                                                    <span>17,000,000</span>
-                                                    <sup>đ</sup>
-                                                </del>
-                                            </div>
+                                    <div class="tee-time__mid tee-time__price d-flex justify-content-center">
+                                        <div class="price-final flex-shrink-0 align-items-center">
+                                            <span>15,000,000</span>
+                                            <sup>đ</sup>
                                         </div>
+                                        <div class="price-original flex-shrink-0">
+                                            <del>
+                                                <span>17,000,000</span>
+                                                <sup>đ</sup>
+                                            </del>
+                                        </div>
+                                    </div>
+                                    <div class="tee-time__right">
                                         <div class="d-flex justify-content-end">
-                                            <a class="button-theme button-theme_small button-theme_square tee-time__btn" href="">
+                                            <a class="button-theme button-theme_small button-theme_square tee-time__btn"
+                                               href="">
                                                 <span>Booking</span>
                                             </a>
                                         </div>
@@ -717,15 +730,16 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="tee-time__right">
-                                        <div class="tee-time__price d-flex justify-content-end mb-10">
-                                            <div class="price-final flex-shrink-0 align-items-center">
-                                                <span>15,000,000</span>
-                                                <sup>đ</sup>
-                                            </div>
+                                    <div class="tee-time__mid tee-time__price d-flex justify-content-center">
+                                        <div class="price-final flex-shrink-0 align-items-center">
+                                            <span>15,000,000</span>
+                                            <sup>đ</sup>
                                         </div>
+                                    </div>
+                                    <div class="tee-time__right">
                                         <div class="d-flex justify-content-end">
-                                            <a class="button-theme button-theme_small button-theme_square tee-time__btn" href="">
+                                            <a class="button-theme button-theme_small button-theme_square tee-time__btn"
+                                               href="">
                                                 <span>Booking</span>
                                             </a>
                                         </div>
@@ -748,21 +762,22 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="tee-time__right">
-                                        <div class="tee-time__price d-flex justify-content-end mb-10">
-                                            <div class="price-final flex-shrink-0 align-items-center">
-                                                <span>15,000,000</span>
-                                                <sup>đ</sup>
-                                            </div>
-                                            <div class="price-original flex-shrink-0">
-                                                <del>
-                                                    <span>17,000,000</span>
-                                                    <sup>đ</sup>
-                                                </del>
-                                            </div>
+                                    <div class="tee-time__mid tee-time__price d-flex justify-content-center">
+                                        <div class="price-final flex-shrink-0 align-items-center">
+                                            <span>15,000,000</span>
+                                            <sup>đ</sup>
                                         </div>
+                                        <div class="price-original flex-shrink-0">
+                                            <del>
+                                                <span>17,000,000</span>
+                                                <sup>đ</sup>
+                                            </del>
+                                        </div>
+                                    </div>
+                                    <div class="tee-time__right">
                                         <div class="d-flex justify-content-end">
-                                            <a class="button-theme button-theme_small button-theme_square tee-time__btn" href="">
+                                            <a class="button-theme button-theme_small button-theme_square tee-time__btn"
+                                               href="">
                                                 <span>Booking</span>
                                             </a>
                                         </div>
@@ -785,15 +800,22 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="tee-time__right">
-                                        <div class="tee-time__price d-flex justify-content-end mb-10">
-                                            <div class="price-final flex-shrink-0 align-items-center">
-                                                <span>15,000,000</span>
-                                                <sup>đ</sup>
-                                            </div>
+                                    <div class="tee-time__mid tee-time__price d-flex justify-content-center">
+                                        <div class="price-final flex-shrink-0 align-items-center">
+                                            <span>15,000,000</span>
+                                            <sup>đ</sup>
                                         </div>
+                                        <div class="price-original flex-shrink-0">
+                                            <del>
+                                                <span>17,000,000</span>
+                                                <sup>đ</sup>
+                                            </del>
+                                        </div>
+                                    </div>
+                                    <div class="tee-time__right">
                                         <div class="d-flex justify-content-end">
-                                            <a class="button-theme button-theme_small button-theme_square tee-time__btn" href="">
+                                            <a class="button-theme button-theme_small button-theme_square tee-time__btn"
+                                               href="">
                                                 <span>Booking</span>
                                             </a>
                                         </div>
@@ -816,21 +838,22 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="tee-time__right">
-                                        <div class="tee-time__price d-flex justify-content-end mb-10">
-                                            <div class="price-final flex-shrink-0 align-items-center">
-                                                <span>15,000,000</span>
-                                                <sup>đ</sup>
-                                            </div>
-                                            <div class="price-original flex-shrink-0">
-                                                <del>
-                                                    <span>17,000,000</span>
-                                                    <sup>đ</sup>
-                                                </del>
-                                            </div>
+                                    <div class="tee-time__mid tee-time__price d-flex justify-content-center">
+                                        <div class="price-final flex-shrink-0 align-items-center">
+                                            <span>15,000,000</span>
+                                            <sup>đ</sup>
                                         </div>
+                                        <div class="price-original flex-shrink-0">
+                                            <del>
+                                                <span>17,000,000</span>
+                                                <sup>đ</sup>
+                                            </del>
+                                        </div>
+                                    </div>
+                                    <div class="tee-time__right">
                                         <div class="d-flex justify-content-end">
-                                            <a class="button-theme button-theme_small button-theme_square tee-time__btn" href="">
+                                            <a class="button-theme button-theme_small button-theme_square tee-time__btn"
+                                               href="">
                                                 <span>Booking</span>
                                             </a>
                                         </div>
@@ -853,21 +876,98 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="tee-time__right">
-                                        <div class="tee-time__price d-flex justify-content-end mb-10">
-                                            <div class="price-final flex-shrink-0 align-items-center">
-                                                <span>15,000,000</span>
+                                    <div class="tee-time__mid tee-time__price d-flex justify-content-center">
+                                        <div class="price-final flex-shrink-0 align-items-center">
+                                            <span>15,000,000</span>
+                                            <sup>đ</sup>
+                                        </div>
+                                        <div class="price-original flex-shrink-0">
+                                            <del>
+                                                <span>17,000,000</span>
                                                 <sup>đ</sup>
+                                            </del>
+                                        </div>
+                                    </div>
+                                    <div class="tee-time__right">
+                                        <div class="d-flex justify-content-end">
+                                            <a class="button-theme button-theme_small button-theme_square tee-time__btn"
+                                               href="">
+                                                <span>Booking</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tee-time">
+                                    <div class="tee-time__left">
+                                        <div class="tee-time__date">
+                                            <strong>8:00</strong>
+                                            <span>AM</span>
+                                        </div>
+                                        <div class="tee-time__list">
+                                            <div class="item">
+                                                <strong>Người chơi:</strong>
+                                                <span>01</span>
                                             </div>
-                                            <div class="price-original flex-shrink-0">
-                                                <del>
-                                                    <span>17,000,000</span>
-                                                    <sup>đ</sup>
-                                                </del>
+                                            <div class="item">
+                                                <strong>Số lỗ:</strong>
+                                                <span>9</span>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="tee-time__mid tee-time__price d-flex justify-content-center">
+                                        <div class="price-final flex-shrink-0 align-items-center">
+                                            <span>15,000,000</span>
+                                            <sup>đ</sup>
+                                        </div>
+                                        <div class="price-original flex-shrink-0">
+                                            <del>
+                                                <span>17,000,000</span>
+                                                <sup>đ</sup>
+                                            </del>
+                                        </div>
+                                    </div>
+                                    <div class="tee-time__right">
                                         <div class="d-flex justify-content-end">
-                                            <a class="button-theme button-theme_small button-theme_square tee-time__btn" href="">
+                                            <a class="button-theme button-theme_small button-theme_square tee-time__btn"
+                                               href="">
+                                                <span>Booking</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tee-time">
+                                    <div class="tee-time__left">
+                                        <div class="tee-time__date">
+                                            <strong>8:00</strong>
+                                            <span>AM</span>
+                                        </div>
+                                        <div class="tee-time__list">
+                                            <div class="item">
+                                                <strong>Người chơi:</strong>
+                                                <span>01</span>
+                                            </div>
+                                            <div class="item">
+                                                <strong>Số lỗ:</strong>
+                                                <span>9</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tee-time__mid tee-time__price d-flex justify-content-center">
+                                        <div class="price-final flex-shrink-0 align-items-center">
+                                            <span>15,000,000</span>
+                                            <sup>đ</sup>
+                                        </div>
+                                        <div class="price-original flex-shrink-0">
+                                            <del>
+                                                <span>17,000,000</span>
+                                                <sup>đ</sup>
+                                            </del>
+                                        </div>
+                                    </div>
+                                    <div class="tee-time__right">
+                                        <div class="d-flex justify-content-end">
+                                            <a class="button-theme button-theme_small button-theme_square tee-time__btn"
+                                               href="">
                                                 <span>Booking</span>
                                             </a>
                                         </div>
