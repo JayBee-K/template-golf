@@ -546,70 +546,96 @@
                 </div>
                 <div class="row row-10">
                     <div class="co-12 col-xl-8">
+                        <div class="section-card section-card__not-footer checkout-guests bg-white mb-20">
+                            <div class="section-header">
+                                <h2 class="section-title text-uppercase">
+                                    Thông Tin Người Đặt Chổ
+                                </h2>
+                            </div>
+                            <div class="section-body section-body_wrapper">
+                                <div class="row row-75 row-cols-1 row-cols-lg-3">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label class="font-weight-medium" for="form-hoten">Họ & Tên:</label>
+                                            <input id="form-hoten" type="text" class="form-control"
+                                                   placeholder="Nhập họ & tên"/>
+                                            <div class="invalid-feedback">Vui lòng nhập Họ & Tên.</div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label class="font-weight-medium" for="form-email">Email:</label>
+                                            <input id="form-email" type="email" class="form-control"
+                                                   placeholder="Nhập Email"/>
+                                            <div class="invalid-feedback">Vui lòng nhập Email.</div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <label class="font-weight-medium" for="form-sdt">Số điện thoại:</label>
+                                            <input id="form-sdt" type="tel" minlength="10" maxlength="10"
+                                                   class="form-control" placeholder="Nhập số điện thoại"/>
+                                            <div class="invalid-feedback">Vui lòng nhập số điện thoại.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="section-card checkout-guests bg-white mb-20">
                             <div class="section-header">
                                 <h2 class="section-title text-uppercase">
-                                    YOUR BOOKING DETAILS
+                                    Danh Sách Người Chơi
                                 </h2>
                             </div>
-                            <div class="section-body">
-                                <div class="guest guest-offline">
-                                    <div class="guest-wrapper d-flex">
-                                        <div class="guest-avatar mr-3">
-                                            <img width="38" height="38" src="./assets/images/checkout/nophotouser.jpg"
-                                                 alt="">
-                                        </div>
-                                        <div class="guest-main">
-                                            <div class="guest-name text-uppercase">KHÁNH HỮU NGUYỄN</div>
-                                            <div class="guest-info">
-                                                <span>Visitor Rate</span>
-                                                <span class="ml-1">130.00 PLN</span>
+                            <div class="section-body section-body_wrapper">
+                                <div class="participants-list row row-75 row-cols-1 row-cols-lg-2">
+                                    <div class="col">
+                                        <div class="participant-group">
+                                            <div class="participant-title">
+                                                <i class="far fa-user"></i>
+                                                <span>Người tham gia 1:</span>
                                             </div>
+                                            <label class="d-block form-group">
+                                                <input class="form-control" name="participant-1" type="text"
+                                                       placeholder="Tên người tham gia"/>
+                                            </label>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="guest guest-online">
-                                    <div class="guest-wrapper d-flex">
-                                        <div class="guest-avatar mr-3">
-                                            <img width="38" height="38" src="./assets/images/checkout/nophotouser.jpg"
-                                                 alt="">
-                                        </div>
-                                        <div class="guest-main">
-                                            <div class="guest-name text-uppercase">KHÁNH HỮU NGUYỄN</div>
-                                            <div class="guest-info">
-                                                <span>Visitor Rate</span>
-                                                <span class="ml-1">130.00 PLN</span>
+                                    <div class="col">
+                                        <div class="participant-group">
+                                            <div class="participant-title">
+                                                <i class="far fa-user"></i>
+                                                <span>Người tham gia 2:</span>
                                             </div>
+                                            <label class="d-block form-group">
+                                                <input class="form-control" name="participant-2" type="text"
+                                                       placeholder="Tên người tham gia"/>
+                                            </label>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="guest guest-offline">
-                                    <div class="guest-wrapper d-flex">
-                                        <div class="guest-avatar mr-3">
-                                            <img width="38" height="38" src="./assets/images/checkout/nophotouser.jpg"
-                                                 alt="">
-                                        </div>
-                                        <div class="guest-main">
-                                            <div class="guest-name text-uppercase">KHÁNH HỮU NGUYỄN</div>
-                                            <div class="guest-info">
-                                                <span>Visitor Rate</span>
-                                                <span class="ml-1">130.00 PLN</span>
+                                    <div class="col">
+                                        <div class="participant-group">
+                                            <div class="participant-title">
+                                                <i class="far fa-user"></i>
+                                                <span>Người tham gia 3:</span>
                                             </div>
+                                            <label class="d-block form-group">
+                                                <input class="form-control" name="participant-3" type="text"
+                                                       placeholder="Tên người tham gia"/>
+                                            </label>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="guest guest-online">
-                                    <div class="guest-wrapper d-flex">
-                                        <div class="guest-avatar mr-3">
-                                            <img width="38" height="38" src="./assets/images/checkout/nophotouser.jpg"
-                                                 alt="">
-                                        </div>
-                                        <div class="guest-main">
-                                            <div class="guest-name text-uppercase">KHÁNH HỮU NGUYỄN</div>
-                                            <div class="guest-info">
-                                                <span>Visitor Rate</span>
-                                                <span class="ml-1">130.00 PLN</span>
+                                    <div class="col">
+                                        <div class="participant-group">
+                                            <div class="participant-title">
+                                                <i class="far fa-user"></i>
+                                                <span>Người tham gia 4:</span>
                                             </div>
+                                            <label class="d-block form-group">
+                                                <input class="form-control" name="participant-4" type="text"
+                                                       placeholder="Tên người tham gia"/>
+                                            </label>
                                         </div>
                                     </div>
                                 </div>
@@ -713,161 +739,83 @@
                                     </div>
                                 </div>
                             </div>
-                           	<div class="d-flex flex-column">
-								<div class="section-card section-card__not-footer checkout-guests bg-white flex-shrink-0 mb-20">
-									<div class="section-header ">
-										<h2 class="section-title text-uppercase">
-											CANCELLATION POLICY
-										</h2>
-									</div>
-									<div class="section-body section-body_wrapper checkout-policy">
-										<div class="text-gray-500">
-											There is a 4 hours cancellation policy on all tee times at this facility.
-										</div>
-									</div>
-								</div>
-								<div class="section-card section-card__not-footer checkout-guests bg-white flex-grow-1 d-flex flex-column">
-									<div class="section-header flex-shrink-0">
-										<h2 class="section-title text-uppercase">
-											CONTACT AND SUPPORT
-										</h2>
-									</div>
-									<div class="section-body section-body_wrapper checkout-policy flex-grow-1">
-										<div class="row mb-20 align-items-center">
-											<div class="col-8">
-												<div class="d-flex align-items-center">
-													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-														 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-														 stroke-linecap="round" stroke-linejoin="round"
-														 class="feather feather-smartphone">
-														<rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-														<line x1="12" y1="18" x2="12" y2="18"></line>
-													</svg>
-													<span class="ml-2">
+                            <div class="d-flex flex-column">
+                                <div class="section-card section-card__not-footer checkout-guests bg-white flex-shrink-0 mb-20">
+                                    <div class="section-header ">
+                                        <h2 class="section-title text-uppercase">
+                                            CANCELLATION POLICY
+                                        </h2>
+                                    </div>
+                                    <div class="section-body section-body_wrapper checkout-policy">
+                                        <div class="text-gray-500">
+                                            There is a 4 hours cancellation policy on all tee times at this facility.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="section-card section-card__not-footer checkout-guests bg-white flex-grow-1 d-flex flex-column">
+                                    <div class="section-header flex-shrink-0">
+                                        <h2 class="section-title text-uppercase">
+                                            CONTACT AND SUPPORT
+                                        </h2>
+                                    </div>
+                                    <div class="section-body section-body_wrapper checkout-policy flex-grow-1">
+                                        <div class="row mb-20 align-items-center">
+                                            <div class="col-8">
+                                                <div class="d-flex align-items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                         viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                         stroke-width="2"
+                                                         stroke-linecap="round" stroke-linejoin="round"
+                                                         class="feather feather-smartphone">
+                                                        <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                                                        <line x1="12" y1="18" x2="12" y2="18"></line>
+                                                    </svg>
+                                                    <span class="ml-2">
                                                 <a class="link" href="tel:0000000000">000 0000 0000</a>
                                             </span>
-												</div>
-											</div>
-											<div class="col-4">
-												<a href="tel:0000000000" class="b-btn">
-													Hotline
-												</a>
-											</div>
-										</div>
-										<div class="row mb-20 align-items-center">
-											<div class="col-8">
-												<div class="d-flex align-items-center">
-													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-														 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-														 stroke-linecap="round" stroke-linejoin="round"
-														 class="feather feather-smartphone">
-														<rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-														<line x1="12" y1="18" x2="12" y2="18"></line>
-													</svg>
-													<span class="ml-2">
+                                                </div>
+                                            </div>
+                                            <div class="col-4">
+                                                <a href="tel:0000000000" class="b-btn">
+                                                    Hotline
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-20 align-items-center">
+                                            <div class="col-8">
+                                                <div class="d-flex align-items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                         viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                         stroke-width="2"
+                                                         stroke-linecap="round" stroke-linejoin="round"
+                                                         class="feather feather-smartphone">
+                                                        <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                                                        <line x1="12" y1="18" x2="12" y2="18"></line>
+                                                    </svg>
+                                                    <span class="ml-2">
                                                 <a class="link" href="tel:0000000000">000 0000 0000</a>
                                             </span>
-												</div>
-											</div>
-											<div class="col-4">
-												<a href="tel:0000000000" class="b-btn">
-													Hotline
-												</a>
-											</div>
-										</div>
-										<div>More information:</div>
-										<div class="hovered">
-											<a class="link-primary d-block" href="">https://golfox.com</a>
-											<a class="link-primary d-block" href="">Example@example.com</a>
-										</div>
-									</div>
-								</div>
-							</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-4">
+                                                <a href="tel:0000000000" class="b-btn">
+                                                    Hotline
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div>More information:</div>
+                                        <div class="hovered">
+                                            <a class="link-primary d-block" href="">https://golfox.com</a>
+                                            <a class="link-primary d-block" href="">Example@example.com</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </form>
-    </div>
-</div>
-
-<div class="modal fade theme-modal" id="modal-add-user" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content bg-white">
-            <div class="modal-body">
-                <div class="modal-title">Search for a player</div>
-                <div class="text-gray-500 mb-20">
-                    Search for a player in the database by name and surname. If you do not find results, please click
-                    GUEST in the players field.
-                </div>
-                <form class="form-search-users">
-                    <label class="d-block form-group mb-0">
-                        <input class="form-control" placeholder="Search for users"/>
-                        <button class="btn">
-                            <i class="far fa-search"></i>
-                        </button>
-                    </label>
-                    <div class="result">
-                        <div class="result-user result-user__not-found">
-                            <div class="result-user__media">
-                                <img width="38" height="38" class="w-100 img-fluid"
-                                     src="./assets/images/checkout/nophoto.jpg" alt="">
-                            </div>
-                            <div class="result-user__name">
-                                <div class="text-8 text-gray-500 text-uppercase">No results found?</div>
-                                <div class="text-8 text-gray-500">Please select <b>GUEST</b> option</div>
-                            </div>
-                            <button class="result-user__add">
-                                <i class="far fa-plus"></i>
-                            </button>
-                        </div>
-                        <div class="result-user">
-                            <div class="result-user__media">
-                                <img width="38" height="38" class="w-100 img-fluid"
-                                     src="./assets/images/checkout/nophotouser.jpg" alt="">
-                            </div>
-                            <div class="result-user__name text-8 text-uppercase">Guest</div>
-                            <button class="result-user__add">
-                                <i class="far fa-plus"></i>
-                            </button>
-                        </div>
-                        <div class="result-user">
-                            <div class="result-user__media">
-                                <img width="38" height="38" class="w-100 img-fluid"
-                                     src="./assets/images/checkout/nophotouser.jpg" alt="">
-                            </div>
-                            <div class="result-user__name text-8 text-uppercase">Guest</div>
-                            <button class="result-user__add">
-                                <i class="far fa-plus"></i>
-                            </button>
-                        </div>
-                        <div class="result-user">
-                            <div class="result-user__media">
-                                <img width="38" height="38" class="w-100 img-fluid"
-                                     src="./assets/images/checkout/nophotouser.jpg" alt="">
-                            </div>
-                            <div class="result-user__name text-8 text-uppercase">Guest</div>
-                            <button class="result-user__add">
-                                <i class="far fa-plus"></i>
-                            </button>
-                        </div>
-                        <div class="result-user">
-                            <div class="result-user__media">
-                                <img width="38" height="38" class="w-100 img-fluid"
-                                     src="./assets/images/checkout/nophotouser.jpg" alt="">
-                            </div>
-                            <div class="result-user__name text-8 text-uppercase">Guest</div>
-                            <button class="result-user__add">
-                                <i class="far fa-plus"></i>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-                <button type="button" class="close" data-dismiss="modal">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-        </div>
     </div>
 </div>
 

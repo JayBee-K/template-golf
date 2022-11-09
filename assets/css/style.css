@@ -2787,60 +2787,10 @@ body.nav-is-show .header::after {
     border-radius: 0.25rem;
 }
 
-.page-checkout-golf .checkout-guests .section-body {
-    padding: 5px;
-}
-
-.page-checkout-golf .checkout-guests .section-body.section-body_wrapper {
-    padding: 15px;
-}
-
-.checkout-guests .guest {
-    padding: 10px;
-}
-
-.checkout-guests .guest:not(:first-child) {
-    cursor: pointer;
-}
-
-.checkout-guests .guest .guest-wrapper {
-    padding: 10px
-}
-
-.checkout-guests .guest:not(:first-child) .guest-wrapper {
-    border: 1px dashed #e9e9e9;
-    border-radius: 0.25rem;
-    background-color: #f4f7f7;
-}
-
-.checkout-guests .guest .guest-avatar img,
-.checkout-guests .guest .guest-avatar {
-    border-radius: 50%;
-    position: relative;
-}
-
-.checkout-guests .guest .guest-avatar::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    right: 2px;
-    width: 8px;
-    height: 8px;
-    border-radius: 100%;
-    box-shadow: 0 0 0 2px #fff
-}
-
-.checkout-guests .guest.guest-offline .guest-avatar::after {
-    background-color: #7f7f81;
-}
-
-.checkout-guests .guest.guest-online .guest-avatar::after {
-    background-color: var(--success-color);
-}
-
-.checkout-guests .guest .guest-main .guest-info span:last-child {
-    font-size: 0.9em;
-    color: var(--gray-500);
+.participants-list .participant-group .participant-title {
+    margin-bottom: 5px;
+    font-weight: 500;
+    margin-left: 2px;
 }
 
 .checkout-method .custom-radio .custom-control-label {
