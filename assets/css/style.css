@@ -2032,16 +2032,7 @@ body.nav-is-show .header::after {
     margin: 10px 0;
 }
 
-@media (min-width: 1440px) {
-    .page-search .container,
-    .page-booking-golf .container,
-    .page-product-detail .container {
-        max-width: 1230px;
-    }
-}
-
 @media (max-width: 1199px) {
-
     .page-product-detail .product-detail-sidebar {
         margin-top: 20px;
     }
