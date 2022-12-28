@@ -73,6 +73,35 @@
 		}
 	};
 
+	const initSliderGolf = function () {
+		if ($('#slider-golf').length) {
+			new Swiper('#slider-golf > .swiper', {
+				slidesPerView: 3,
+				spaceBetween: 15,
+				speed: 1000,
+				loop: !1,
+				pagination: {
+					el: '#slider-golf  .swiper-pagination',
+					clickable: 1,
+				},
+				breakpoints: {
+					320: {
+						slidesPerView: 1,
+					},
+					375: {
+						slidesPerView: 1.25,
+					},
+					768: {
+						slidesPerView: 2.5,
+					},
+					1200: {
+						slidesPerView: 3,
+					},
+				},
+			});
+		}
+	};
+
 	const initSliderTestimonials = function () {
 		if ($('#slider-testimonials').length) {
 			new Swiper('#slider-testimonials .swiper', {
@@ -279,6 +308,7 @@
 	$(function () {
 		handleMenuMobile(windowWidth);
 		initSliderBanner();
+		initSliderGolf();
 		initSliderTestimonials();
 		initSliderNews();
 		addPaddingPage();
