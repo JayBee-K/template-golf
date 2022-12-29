@@ -6,7 +6,7 @@
 }
 
 .section-heading.section-heading_center {
-	max-width: 600px;
+	max-width: 768px;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
@@ -1103,83 +1103,35 @@ body.nav-is-show .header::after {
 }
 
 /*
-========== SECTION TESTIMONIALS ==========
+========== SECTION PARTNER ==========
 */
-.section-testimonials {
+.section-partner {
 	background-color: #e5f2ef;
 }
 
-.testimonial-card .card-header {
-	background-color: var(--primary-color);
-	padding: 40px 30px 50px 30px;
-	border-radius: 10px;
-	box-shadow: 0 3px 24px rgba(0, 0, 0, 0.1);
+.partner-item {
+	border-radius: 8px;
+	background-color: var(--white);
+	padding: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: 100%;
+	transition: var(--transition-default);
 }
 
-.testimonial-card .card-header::before {
-	content: '\f0dd';
-	position: absolute;
-	font-family: 'Font Awesome 5 Pro', sans-serif;
-	bottom: -25px;
-	left: 40px;
-	font-weight: bold;
-	font-size: 70px;
-	color: var(--primary-color);
-	line-height: 1;
+.partner-item .partner-item_image {
+	transition: 1.1s cubic-bezier(.15, .75, .5, 1);
 }
 
-.testimonial-card .card-header p {
-	margin-bottom: 0;
-	font-size: var(--size-theme-6);
-	color: var(--white);
-	line-height: 1.6;
+.partner-item:hover {
+	border-color: transparent;
+	box-shadow: 0 0 25px rgb(0 0 0 / 10%);
 }
 
-.testimonial-card .card-header .card-header_icon {
-	position: absolute;
-	right: 20px;
-	bottom: 10px;
-	width: 40px;
-}
-
-.testimonial-card .card-body {
-	margin-top: 30px;
-	margin-left: 20px;
-	gap: 15px;
-}
-
-.testimonial-card .card-body .card-image {
-	width: 80px;
-	padding: 5px;
-	border-radius: 50px;
-	border: 2px dashed var(--primary-color);
-}
-
-.testimonial-card .card-body .card-content .card-title {
-	font-size: var(--size-theme-4);
-	color: var(--gray-900);
-	font-weight: 700;
-	margin-bottom: 0;
-}
-
-.testimonial-card .card-body .card-content .card-text {
-	font-size: var(--size-theme-6);
-	color: var(--gray-500);
-}
-
-.testimonial-card .card-body .card-content .card-stars {
-	margin-top: 2px;
-	color: #f69323;
-}
-
-.testimonial-card .card-body .card-content .card-stars .checked ~ * {
-	color: var(--gray-400);
-}
-
-@media (max-width: 1199px) {
-	.testimonial-card .card-header {
-		padding: 30px 20px 40px 20px;
-	}
+.partner-item:hover .partner-item_image {
+	transform: scale3d(1.1, 1.1, 1.1);
 }
 
 /* ============ SECTION NEWS CARD ============ */

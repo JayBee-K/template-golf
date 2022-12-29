@@ -102,34 +102,6 @@
 		}
 	};
 
-	const initSliderTestimonials = function () {
-		if ($('#slider-testimonials').length) {
-			new Swiper('#slider-testimonials .swiper', {
-				spaceBetween: 15,
-				speed: 1000,
-				loop: !1,
-				breakpoints: {
-					320: {
-						slidesPerView: 1,
-					},
-					375: {
-						slidesPerView: 1.5,
-					},
-					768: {
-						slidesPerView: 2.5,
-					},
-					1499: {
-						slidesPerView: 3,
-					},
-				},
-				pagination: {
-					el: '#slider-testimonials .swiper-pagination',
-					clickable: 1,
-				},
-			});
-		}
-	};
-
 	const initSliderNews = function () {
 		if (!$('#slider-news').length) return false;
 		new Swiper('#slider-news > .swiper', {
@@ -157,6 +129,34 @@
 			},
 		});
 	};
+
+	const initSliderPartner = function () {
+		if ($('#slider-partner .swiper').length) {
+			new Swiper('#slider-partner .swiper', {
+				slidesPerView: 1.5,
+				spaceBetween: 15,
+				speeds: 750,
+				autoplay: {
+					delay: 4000,
+				},
+				pagination: {
+					el: '#slider-partner > .swiper-actions > .swiper-pagination',
+					clickable: 1,
+				},
+				breakpoints: {
+					375: {
+						slidesPerView: 2.5
+					},
+					992: {
+						slidesPerView: 3.5
+					},
+					1200: {
+						slidesPerView: 5
+					}
+				}
+			});
+		}
+	}
 
 	const addPaddingPage = function () {
 		if (!page.length || !header.length) return false;
@@ -305,12 +305,13 @@
 		});
 	}
 
+
 	$(function () {
 		handleMenuMobile(windowWidth);
 		initSliderBanner();
 		initSliderGolf();
-		initSliderTestimonials();
 		initSliderNews();
+		initSliderPartner();
 		addPaddingPage();
 		handleWindowResize();
 
