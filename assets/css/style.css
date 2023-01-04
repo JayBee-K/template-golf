@@ -2984,7 +2984,7 @@ body.nav-is-show .header::after {
 }
 
 .section-banner .section-banner__form {
-	max-width: 768px;
+	max-width: 991px;
 	min-width: 420px;
 	width: 100%;
 	padding: 10px;
@@ -3038,7 +3038,7 @@ body.nav-is-show .header::after {
 }
 
 .section-banner .section-banner__form .b-form .b-form__body .card .card-body > * {
-	width: 33.33333%;
+	width: 25%;
 	margin-bottom: 0;
 }
 
