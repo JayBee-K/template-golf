@@ -84,6 +84,10 @@
 					el: '#slider-golf  .swiper-pagination',
 					clickable: 1,
 				},
+				navigation: {
+					nextEl: '#slider-golf .button-next',
+					prevEl: '#slider-golf .button-prev',
+				},
 				breakpoints: {
 					320: {
 						slidesPerView: 1,
