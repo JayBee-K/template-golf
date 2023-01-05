@@ -531,22 +531,20 @@
 							<div class="card overflow-hidden">
 								<div id="service-1" class="collapse show b-form__collapse">
 									<div class="card-body p-0">
-										<div class="form-group">
+										<div class="form-group form-group_date">
 											<label for="date-picker">Chọn ngày chơi</label>
 											<input id="date-picker" class="form-control bg-white" type="text" readonly/>
 										</div>
-										<div id="form-group-holes" class="form-group">
+										<div id="form-group-holes" class="form-group form-group_holes">
 											<label for="holes">Số lỗ</label>
-											<input type="hidden" value="" id="holes" name="holes">
-											<div class="btn-group btn-group-hole d-flex">
-												<button data-value="9" type="button" class="btn btn-hole active w-50">
-													9H
-												</button>
-												<button data-value="18" type="button" class="btn btn-hole w-50">18H
-												</button>
-											</div>
+											<select name="holes" id="holes" class="form-control">
+												<option value="9">9H</option>
+												<option value="18">18H</option>
+												<option value="9">9H</option>
+												<option value="18">18H</option>
+											</select>
 										</div>
-										<div id="form-group-golfers" class="form-group mb-0">
+										<div id="form-group-golfers" class="form-group form-group_golfers mb-0">
 											<label for="golfers">Số người chơi</label>
 											<select name="golfers" id="golfers" class="form-control">
 												<option value="1">1</option>
@@ -576,8 +574,10 @@
 											</select>
 										</div>
 										<div class="form-group form-group_btn align-self-end flex-grow-1 flex-shrink-0">
-											<button type="submit" class="b-btn b-btn--primary ml-0">
-												Search
+											<button type="submit" class="button-theme button-theme_small ml-0">
+												<span>
+													Đặt chỗ
+												</span>
 											</button>
 										</div>
 									</div>
@@ -828,89 +828,11 @@
 									<div class="card-icons d-flex align-items-center">
 										<div class="card-icons_item">
 											<i class="far fa-golf-ball"></i>
-											Số lỗ: <b>9 lỗ</b>
+											<span class="d-none d-lg-inline">Số lỗ:</span><b>9 lỗ</b>
 										</div>
 										<div class="card-icons_item">
 											<i class="far fa-ruler-triangle"></i>
-											Diện tích: <b>90 hecta</b>
-										</div>
-									</div>
-									<div class="card-text">
-										<i class="far fa-map-marker-alt"></i>&nbsp;Tuyền Lâm, Phường 4, Thành phố Đà
-										Lạt, Lâm
-										Đồng
-									</div>
-									<div class="card-button">
-										<div class="card-price">
-											<i class="far fa-tag fa-rotate-90"></i>&nbsp;Giá từ:
-											<span>1.280.000đ</span>
-										</div>
-										<a href="#" class="button-theme button-theme_small">
-											<span>Xem chi tiết</span>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="swiper-slide">
-							<div class="golf-card card transition-default border-0">
-								<div class="card-header p-0 border-0 bg-transparent overflow-hidden">
-									<a href="">
-										<img class="img-fluid" src="./assets/images/golf/05.jpg"
-											 alt="Card image cap"/>
-									</a>
-								</div>
-								<div class="card-body">
-									<div class="card-title">
-										<a href=""> Sân Golf Diamond </a>
-									</div>
-									<div class="card-icons d-flex align-items-center">
-										<div class="card-icons_item">
-											<i class="far fa-golf-ball"></i>
-											Số lỗ: <b>18 lỗ</b>
-										</div>
-										<div class="card-icons_item">
-											<i class="far fa-ruler-triangle"></i>
-											Diện tích: <b>90 hecta</b>
-										</div>
-									</div>
-									<div class="card-text">
-										<i class="far fa-map-marker-alt"></i>&nbsp;Tuyền Lâm, Phường 4, Thành phố Đà
-										Lạt, Lâm
-										Đồng
-									</div>
-									<div class="card-button">
-										<div class="card-price">
-											<i class="far fa-tag fa-rotate-90"></i>&nbsp;Giá từ:
-											<span>1.280.000đ</span>
-										</div>
-										<a href="#" class="button-theme button-theme_small">
-											<span>Xem chi tiết</span>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="swiper-slide">
-							<div class="golf-card card transition-default border-0">
-								<div class="card-header p-0 border-0 bg-transparent overflow-hidden">
-									<a href="">
-										<img class="img-fluid" src="./assets/images/golf/05.jpg"
-											 alt="Card image cap"/>
-									</a>
-								</div>
-								<div class="card-body">
-									<div class="card-title">
-										<a href=""> Sân Golf VIP </a>
-									</div>
-									<div class="card-icons d-flex align-items-center">
-										<div class="card-icons_item">
-											<i class="far fa-golf-ball"></i>
-											Số lỗ: <b>18 lỗ</b>
-										</div>
-										<div class="card-icons_item">
-											<i class="far fa-ruler-triangle"></i>
-											Diện tích: <b>90 hecta</b>
+											<span class="d-none d-lg-inline">Diện tích:</span> <b>90 hecta</b>
 										</div>
 									</div>
 									<div class="card-text">
@@ -945,11 +867,11 @@
 									<div class="card-icons d-flex align-items-center">
 										<div class="card-icons_item">
 											<i class="far fa-golf-ball"></i>
-											Số lỗ: <b>9 lỗ</b>
+											<span class="d-none d-lg-inline">Số lỗ:</span><b>9 lỗ</b>
 										</div>
 										<div class="card-icons_item">
 											<i class="far fa-ruler-triangle"></i>
-											Diện tích: <b>90 hecta</b>
+											<span class="d-none d-lg-inline">Diện tích:</span> <b>90 hecta</b>
 										</div>
 									</div>
 									<div class="card-text">
@@ -979,16 +901,16 @@
 								</div>
 								<div class="card-body">
 									<div class="card-title">
-										<a href=""> Sân Golf Diamond </a>
+										<a href=""> Sân Golf Gold </a>
 									</div>
 									<div class="card-icons d-flex align-items-center">
 										<div class="card-icons_item">
 											<i class="far fa-golf-ball"></i>
-											Số lỗ: <b>18 lỗ</b>
+											<span class="d-none d-lg-inline">Số lỗ:</span><b>9 lỗ</b>
 										</div>
 										<div class="card-icons_item">
 											<i class="far fa-ruler-triangle"></i>
-											Diện tích: <b>90 hecta</b>
+											<span class="d-none d-lg-inline">Diện tích:</span> <b>90 hecta</b>
 										</div>
 									</div>
 									<div class="card-text">
@@ -1018,16 +940,133 @@
 								</div>
 								<div class="card-body">
 									<div class="card-title">
-										<a href=""> Sân Golf VIP </a>
+										<a href=""> Sân Golf Gold </a>
 									</div>
 									<div class="card-icons d-flex align-items-center">
 										<div class="card-icons_item">
 											<i class="far fa-golf-ball"></i>
-											Số lỗ: <b>18 lỗ</b>
+											<span class="d-none d-lg-inline">Số lỗ:</span><b>9 lỗ</b>
 										</div>
 										<div class="card-icons_item">
 											<i class="far fa-ruler-triangle"></i>
-											Diện tích: <b>90 hecta</b>
+											<span class="d-none d-lg-inline">Diện tích:</span> <b>90 hecta</b>
+										</div>
+									</div>
+									<div class="card-text">
+										<i class="far fa-map-marker-alt"></i>&nbsp;Tuyền Lâm, Phường 4, Thành phố Đà
+										Lạt, Lâm
+										Đồng
+									</div>
+									<div class="card-button">
+										<div class="card-price">
+											<i class="far fa-tag fa-rotate-90"></i>&nbsp;Giá từ:
+											<span>1.280.000đ</span>
+										</div>
+										<a href="#" class="button-theme button-theme_small">
+											<span>Xem chi tiết</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="golf-card card transition-default border-0">
+								<div class="card-header p-0 border-0 bg-transparent overflow-hidden">
+									<a href="">
+										<img class="img-fluid" src="./assets/images/golf/05.jpg"
+											 alt="Card image cap"/>
+									</a>
+								</div>
+								<div class="card-body">
+									<div class="card-title">
+										<a href=""> Sân Golf Gold </a>
+									</div>
+									<div class="card-icons d-flex align-items-center">
+										<div class="card-icons_item">
+											<i class="far fa-golf-ball"></i>
+											<span class="d-none d-lg-inline">Số lỗ:</span><b>9 lỗ</b>
+										</div>
+										<div class="card-icons_item">
+											<i class="far fa-ruler-triangle"></i>
+											<span class="d-none d-lg-inline">Diện tích:</span> <b>90 hecta</b>
+										</div>
+									</div>
+									<div class="card-text">
+										<i class="far fa-map-marker-alt"></i>&nbsp;Tuyền Lâm, Phường 4, Thành phố Đà
+										Lạt, Lâm
+										Đồng
+									</div>
+									<div class="card-button">
+										<div class="card-price">
+											<i class="far fa-tag fa-rotate-90"></i>&nbsp;Giá từ:
+											<span>1.280.000đ</span>
+										</div>
+										<a href="#" class="button-theme button-theme_small">
+											<span>Xem chi tiết</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="golf-card card transition-default border-0">
+								<div class="card-header p-0 border-0 bg-transparent overflow-hidden">
+									<a href="">
+										<img class="img-fluid" src="./assets/images/golf/05.jpg"
+											 alt="Card image cap"/>
+									</a>
+								</div>
+								<div class="card-body">
+									<div class="card-title">
+										<a href=""> Sân Golf Gold </a>
+									</div>
+									<div class="card-icons d-flex align-items-center">
+										<div class="card-icons_item">
+											<i class="far fa-golf-ball"></i>
+											<span class="d-none d-lg-inline">Số lỗ:</span><b>9 lỗ</b>
+										</div>
+										<div class="card-icons_item">
+											<i class="far fa-ruler-triangle"></i>
+											<span class="d-none d-lg-inline">Diện tích:</span> <b>90 hecta</b>
+										</div>
+									</div>
+									<div class="card-text">
+										<i class="far fa-map-marker-alt"></i>&nbsp;Tuyền Lâm, Phường 4, Thành phố Đà
+										Lạt, Lâm
+										Đồng
+									</div>
+									<div class="card-button">
+										<div class="card-price">
+											<i class="far fa-tag fa-rotate-90"></i>&nbsp;Giá từ:
+											<span>1.280.000đ</span>
+										</div>
+										<a href="#" class="button-theme button-theme_small">
+											<span>Xem chi tiết</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="golf-card card transition-default border-0">
+								<div class="card-header p-0 border-0 bg-transparent overflow-hidden">
+									<a href="">
+										<img class="img-fluid" src="./assets/images/golf/05.jpg"
+											 alt="Card image cap"/>
+									</a>
+								</div>
+								<div class="card-body">
+									<div class="card-title">
+										<a href=""> Sân Golf Gold </a>
+									</div>
+									<div class="card-icons d-flex align-items-center">
+										<div class="card-icons_item">
+											<i class="far fa-golf-ball"></i>
+											<span class="d-none d-lg-inline">Số lỗ:</span><b>9 lỗ</b>
+										</div>
+										<div class="card-icons_item">
+											<i class="far fa-ruler-triangle"></i>
+											<span class="d-none d-lg-inline">Diện tích:</span> <b>90 hecta</b>
 										</div>
 									</div>
 									<div class="card-text">
