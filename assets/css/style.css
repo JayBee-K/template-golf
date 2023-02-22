@@ -557,14 +557,13 @@ body.nav-is-show .header::after {
 	z-index: 9;
 }
 
-
 @media (max-width: 1199px) {
-
-
 	.header .header-toggle {
 		display: block;
 	}
-
+	.header .header-wrapper {
+		width: 100%;
+	}
 	.header .header-wrapper > .header-logo > a {
 		padding: 10px 0;
 	}
@@ -3067,7 +3066,7 @@ body.nav-is-show .header::after {
 }
 
 .section-banner .section-banner__form .b-form .b-form__body .card .card-body .form-group_holes,
-.section-banner .section-banner__form .b-form .b-form__body .card .card-body .form-group_golfers{
+.section-banner .section-banner__form .b-form .b-form__body .card .card-body .form-group_golfers {
 	width: 20%;
 }
 
@@ -3548,4 +3547,402 @@ body.nav-is-show .header::after {
 	margin-top: 10px;
 	font-size: 1.05em;
 	color: var(--gray-600);
+}
+
+.section-tours {
+	background-color: #e5f2ef;
+}
+
+.card-tour {
+	border-radius: 8px;
+	box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+	background-color: var(--white);
+	border: 0;
+	position: relative;
+	overflow: hidden;
+	height: 100%;
+	transition: var(--transition-default);
+}
+
+.card-tour .card-header {
+	padding: 0;
+	background-color: var(--white);
+	border-radius: 8px 8px 0 0;
+	border-bottom: 0;
+	margin: 0;
+	position: relative;
+	overflow: hidden;
+}
+
+.card-tour .card-header .card-image {
+	position: relative;
+	overflow: hidden;
+	border-radius: 8px 8px 0 0;
+}
+
+.card-tour .card-header .card-image:before {
+	display: block;
+	content: "";
+	padding-top: 66.66667%;
+}
+
+.card-tour .card-header .card-image .card-img-top {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: var(--transition-default);
+}
+
+.card-tour .card-header .card-rate {
+	position: absolute;
+	z-index: 2;
+	top: 10px;
+	right: 10px;
+	background-color: var(--accent-color);
+	color: var(--white);
+	font-size: 1em;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 24px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.card-tour .card-header .card-rate:before {
+	content: "";
+	display: block;
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-top: 5px solid var(--accent-color);
+	position: absolute;
+	top: 100%;
+	right: 0;
+	z-index: 1;
+}
+
+.card-tour .card-header .card-review {
+	position: absolute;
+	z-index: 2;
+	right: 10px;
+	top: 44px;
+	text-align: center;
+	background-color: rgba(0, 0, 0, .2);
+	color: var(--gray-200);
+	padding: 4px 8px;
+	border-radius: 8px;
+	font-size: .85em;
+	line-height: 1.3;
+}
+
+.card-tour .card-header .card-review .value {
+	font-weight: 500;
+	color: var(--white);
+	font-size: 1.1em;
+}
+
+.card-tour .card-header .card-favourite {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	background-color: var(--white);
+	height: 35px;
+	width: 35px;
+	-webkit-transition: all .25s cubic-bezier(.645, .045, .355, 1);
+	transition: all .25s cubic-bezier(.645, .045, .355, 1);
+	display: inline-block;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	opacity: 1;
+	z-index: 2;
+}
+
+.card-tour .card-header .card-favourite > button {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	width: 35px;
+	height: 35px;
+	background-color: var(--white);
+	border-radius: 50%;
+	border: 0;
+	outline: 0;
+	box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05) !important;
+	cursor: pointer;
+}
+
+.card-tour .card-header .card-favourite > button > svg {
+	width: 18px;
+	height: auto;
+	stroke: var(--gray-900);
+	transition: var(--transition-default);
+}
+
+.card-tour .card-header .card-favourite > button.is-selected > svg {
+	fill: var(--accent-color);
+	stroke: var(--accent-color);
+}
+
+.card-tour .card-header .card-time {
+	position: absolute;
+	top: 57px;
+	left: 0;
+	border-radius: 0 5px 5px 0;
+	color: #EF4444;
+	background-color: var(--white);
+	display: inline-block;
+	padding: 5px 10px;
+	z-index: 2;
+	font-weight: 500;
+	box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+	font-size: 0.9em;
+}
+
+.card-tour .card-body {
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+}
+
+.card-tour .card-body .card-day {
+	color: var(--gray-500);
+	font-size: .95em;
+	margin-bottom: 5px;
+}
+
+.card-tour .card-body .card-title {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-line-clamp: 3;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	margin-bottom: 15px;
+	line-height: 1.3;
+}
+
+.card-tour .card-body .card-title > a {
+	color: var(--gray-800);
+	font-weight: 700;
+	font-size: var(--size-theme-6);
+}
+
+.card-tour .card-body .card-desc {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.card-tour .card-body .card-desc > .text {
+	display: flex;
+	align-items: center;
+	color: var(--gray-600);
+	font-size: 0.9em;
+}
+
+.card-tour .card-body .card-desc > .text > i {
+	width: 18px;
+}
+
+.card-tour .card-body .card-desc > .value {
+	margin-left: 5px;
+	font-weight: 500;
+}
+
+.card-tour .card-body .card-desc + .card-desc {
+	margin-top: 4px;
+}
+
+.card-tour .card-body .card-price {
+	margin-top: 15px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.card-tour .card-body .card-price .price {
+	display: flex;
+	flex-direction: column;
+	padding-right: 8px;
+}
+
+.card-tour .card-body .card-price .price .old {
+	font-size: 1em;
+	color: var(--gray-500);
+}
+
+.card-tour .card-body .card-price .price .old .value {
+	text-decoration: line-through;
+}
+
+.card-tour .card-body .card-price .price .current .value {
+	color: #EF4444;
+	font-weight: 700;
+	font-size: 1.3em;
+}
+
+.card-tour .card-body .card-price .badge {
+	margin-left: auto;
+	margin-bottom: 5px;
+	color: var(--white);
+	font-size: .95em;
+	background-color: #EF4444;
+	border-radius: 4px;
+	padding: 6px 8px;
+	font-weight: 700;
+	align-self: flex-end;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.card-tour .card-body .card-time {
+	margin-top: 15px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid var(--accent-color);
+	background: rgba(247, 147, 33, 0.05);
+	color: var(--accent-color);
+	border-radius: 4px;
+	padding: 10px;
+	font-weight: 700;
+}
+
+.card-tour:hover {
+	box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+.card-tour .card-header:hover .card-image .card-img-top {
+	transform: scale(1.1);
+	opacity: .8;
+}
+
+.card-tour .card-body .card-title > a:hover {
+	color: var(--primary-color);
+}
+
+.card-popular {
+	height: 100%;
+	border: 0;
+	border-radius: 8px;
+	box-shadow: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -2px rgb(0 0 0 / 10%);
+}
+
+.card-popular .card-img {
+	padding-top: calc(2 / 3 * 100%);
+	background-position: 50%;
+	background-size: cover;
+	transition: all .3s ease-out;
+}
+
+.card-popular .card-img .card-rating {
+	top: -1px;
+	right: -1px;
+	z-index: 1;
+}
+
+.card-popular .card-img .card-rating .rating-value {
+	position: relative;
+}
+
+.card-popular .card-img .card-rating .rating-value p {
+	position: absolute;
+	top: calc(50% - 3px);
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	font-size: .90em;
+}
+
+.card-popular .card-img .card-rating .rating-value p small {
+	margin-right: 3px;
+	line-height: 1;
+	margin-top: -2px;
+}
+
+.card-popular .card-body {
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+}
+
+.card-popular .card-body .card-title {
+	color: var(--gray-800);
+	font-weight: 700;
+	font-size: var(--size-theme-6);
+	transition: all .3s ease-out;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-line-clamp: 3;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	margin-bottom: 5px;
+	line-height: 1.3;
+}
+
+.card-popular .card-body .card-star {
+	display: flex;
+	gap: 4px;
+	align-items: center;
+	font-size: .9em;
+	color: rgb(255, 188, 57);
+}
+
+.card-popular .card-body .card-desc {
+	margin-top: 9px;
+	color: var(--gray-600);
+	font-size: 0.9em;
+}
+
+.card-popular .card-body .card-desc i{
+	width: 18px;
+}
+
+.card-popular .card-body .card-price {
+	text-align: right;
+	transition: all .3s ease-out;
+}
+
+.card-popular .card-body .card-price .card-price_old {
+	font-size: 1em;
+	color: var(--gray-500);
+	text-decoration: line-through;
+}
+
+.card-popular .card-body .card-price .card-price_current {
+	color: #EF4444;
+	font-weight: 700;
+	font-size: 1.3em;
+}
+
+.card-popular:hover .card-img {
+	opacity: .8;
+}
+
+.card-popular:hover .card-body .card-title,
+.card-popular:hover .card-body .card-price {
+	color: #232323;
 }
