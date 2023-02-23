@@ -332,6 +332,9 @@
 		handleSelectGroup('#form-group-holes', '.btn-hole');
 		handleSelectGroup('#form-group-golfers', '.btn-golfer');
 
+		handleDatePicker('#date-picker-tours');
+		handleDatePicker('#date-picker-hotel');
+
 
 		const handleFullPage = () => {
 			if (windowWidth >= 1280) {
