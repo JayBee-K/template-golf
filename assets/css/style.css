@@ -2228,13 +2228,14 @@ body.nav-is-show .header::after {
 	font-size: var(--size-theme-5);
 	border-radius: 0.25rem .25rem 0 0;
 	padding: 10px 15px;
-	background: rgba(255, 255, 255, 0.35);
+	background: rgb(238, 255, 251);
 	border: 0;
 	margin-bottom: 0;
 }
 
 .b-form .b-form_tabs .b-form_tabs__item .nav-link:hover {
-	background: rgba(255, 255, 255, 0.65);
+	color: var(--white);
+	background-color: var(--primary-color);
 }
 
 .b-form .b-form_tabs .b-form_tabs__item .nav-link.active {
