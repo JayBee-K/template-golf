@@ -3973,3 +3973,58 @@ body.nav-is-show .header::after {
 .card-popular:hover .card-body .card-price {
 	color: #232323;
 }
+
+.detail-tours .detail-tours_description .tours-description_inner {
+	background-color: var(--white);
+	border-radius: 5px;
+	padding: 30px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.detail-tours .detail-tours_description .tours-description_inner .tours-description_left {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.detail-tours .detail-tours_description .tours-description_inner .tours-description_right {
+	padding-left: 10px;
+}
+
+.detail-tours .detail-tours_description .tours-description_inner .tours-description_right .button-theme {
+	padding: 8px 10px;
+	font-size: .95em;
+	font-weight: 500;
+}
+
+.detail-tours .detail-tours_description .tours-description_box {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 15px;
+}
+
+.detail-tours .detail-tours_description .tours-description_box .tours-description_box--item{
+	width: calc(50% - 15px);
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 15px;
+}
+
+.detail-tours .detail-tours_description .tours-description_box .tours-description_box--item > i{
+	color: var(--primary-color);
+	font-size: 1.4em;
+	margin-bottom: 4px;
+}
+
+.detail-tours .detail-tours_description .tours-description_box .tours-description_box--item .tours-description_box--title {
+	font-size: 1em;
+	color: var(--primary-color);
+	font-weight: 500;
+	margin-bottom: 4px;
+}
+
+.detail-tours .detail-tours_description .tours-description_box .tours-description_box--item .tours-description_box--text {
+	color: var(--gray-600);
+}
