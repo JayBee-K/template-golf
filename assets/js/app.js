@@ -309,6 +309,139 @@
 		});
 	}
 
+	const handleExpandedDescription = function () {
+		if ($('#description-expand').length) {
+			let elmDescription = $('#description-expand');
+			let scrollHeight = elmDescription.find('.content')[0].scrollHeight;
+			elmDescription.css('--height', scrollHeight + 'px');
+
+			if (scrollHeight <= elmDescription.innerHeight() + 4) {
+				$('#expand-button').remove();
+			} else {
+				$('#expand-button').click(function () {
+					if (elmDescription.hasClass('is-show')) {
+						elmDescription.removeClass('is-show');
+						$(this).find('span').html('Xem thêm <i class="fal fa-angle-down"></i>');
+					} else {
+						elmDescription.addClass('is-show');
+						$(this).find('span').html('Thu gọn <i class="fal fa-angle-up"></i>');
+					}
+				});
+			}
+		}
+	}
+
+	const handleDropdownQuantity = function () {
+		if ($('.form-group_quantity').length) {
+			$('.form-group_quantity').each(function () {
+				$(this).find('.form-group_quantity_inner').click(function () {
+					if (!$(this).parent().hasClass('is-show')) {
+						$(this).parent().addClass('is-show');
+					}
+				});
+				$(this).find('.quantity-close').click(function () {
+					if ($(this).parents('.form-group_quantity').hasClass('is-show')) {
+						$(this).parents('.form-group_quantity').removeClass('is-show');
+					}
+				});
+			});
+
+			$(document).mouseup(function (e) {
+				let elm = $('.form-group_quantity.is-show');
+				elm.is(e.target) || 0 !== elm.has(e.target).length || (
+					elm.removeClass('is-show')
+				)
+			});
+		}
+	}
+
+	let [popupThumb, popupPhoto] = [];
+	let handleSlideImagePopup = function () {
+		if ($('#popup-detail_images--thumb').length > 0) {
+			popupThumb = new Swiper('#popup-detail_images--thumb .swiper', {
+				loopAdditionalSlides: 0,
+				spaceBetween: 10,
+				slidesPerView: 6,
+				breakpoints: {
+					320: {
+						slidesPerView: 3.5,
+					},
+					991: {
+						slidesPerView: 4.5,
+					},
+				},
+			});
+
+			popupPhoto = new Swiper('#popup-detail_images--photo .swiper', {
+				thumbs: {
+					swiper: popupThumb,
+				},
+				slidesPerView: 1,
+				navigation: {
+					nextEl: '#popup-detail_images--photo .swiper-button.next',
+					prevEl: '#popup-detail_images--photo .swiper-button.prev',
+				},
+			});
+
+			popupPhoto.on('slideChangeTransitionStart', function () {
+				popupThumb.slideTo(popupPhoto.activeIndex);
+			});
+		} else {
+			popupPhoto = new Swiper('#popup-detail_images--photo .swiper', {
+				slidesPerView: 1,
+			});
+		}
+		handleZoomImagePopup($('#detail-avatar_photo [data-fancybox=product-avatar]'), popupPhoto, popupThumb);
+	}
+
+	const handleZoomImagePopup = function (elm, popupPhoto, popupThumb) {
+		let i = 0;
+		elm.click(function () {
+			i = 0;
+		});
+
+		elm.fancybox({
+			touch: true,
+			beforeShow: function (instance, current) {
+				let index = $(`[data-fancybox='popup-detail_images'][href='${current.src}']`).attr('data-index');
+				popupPhoto.slideTo(index - 1);
+				if ($('#popup-detail_images--thumb').length > 0) {
+					popupThumb.slideTo(index - 1);
+				}
+			},
+		});
+	}
+
+	const initSliderImageTourMobile = function () {
+		if ($('#detail-tours_images--mobile').length) {
+			new Swiper('#detail-tours_images--mobile .swiper', {
+				autoplay: {
+					delay: 8000,
+					disableOnInteraction: false,
+				},
+				loop: 1,
+				navigation: {
+					nextEl: '#detail-tours_images--mobile .swiper-button.next',
+					prevEl: '#detail-tours_images--mobile .swiper-button.prev',
+				},
+			});
+		}
+	};
+	const initSliderImageHotelMobile = function () {
+		if ($('#detail-hotel_images--mobile').length) {
+			new Swiper('#detail-hotel_images--mobile .swiper', {
+				autoplay: {
+					delay: 8000,
+					disableOnInteraction: false,
+				},
+				loop: 1,
+				navigation: {
+					nextEl: '#detail-hotel_images--mobile .swiper-button.next',
+					prevEl: '#detail-hotel_images--mobile .swiper-button.prev',
+				},
+			});
+		}
+	};
 
 	$(function () {
 		handleMenuMobile(windowWidth);
@@ -334,6 +467,7 @@
 
 		handleDatePicker('#date-picker-tours');
 		handleDatePicker('#date-picker-hotel');
+		handleDatePicker('#date-picker-hotel_order');
 
 
 		const handleFullPage = () => {
@@ -347,5 +481,11 @@
 
 		handleFullPage();
 		$(window).resize(() => handleFullPage());
+
+		handleExpandedDescription();
+		handleDropdownQuantity();
+		handleSlideImagePopup();
+		initSliderImageTourMobile();
+		initSliderImageHotelMobile();
 	});
 })(jQuery);

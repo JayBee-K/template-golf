@@ -285,6 +285,10 @@ input[type='number'] {
     margin-bottom: 10px;
 }
 
+.mb-15 {
+    margin-bottom: 15px;
+}
+
 .mb-20 {
     margin-bottom: 20px;
 }
@@ -343,4 +347,8 @@ input[type='number'] {
 
 .mt5 {
     margin-top: 0;
+}
+
+.primary-color{
+    color: var(--primary-color);
 }
