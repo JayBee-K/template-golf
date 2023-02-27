@@ -33,11 +33,11 @@
 	<link rel="stylesheet" href="./assets/css/base.css"/>
 
 	<style>
-        :root {
-            --primary-color: #00815e;
-            --primary-hover: #03966e;
-            --primary-rgb: 0, 129, 94;
-        }
+		:root {
+			--primary-color: #00815e;
+			--primary-hover: #03966e;
+			--primary-rgb: 0, 129, 94;
+		}
 	</style>
 </head>
 <body class="page page-light">
@@ -457,7 +457,7 @@
 						<div class="dropdown header-profile d-none" data-toggle="dropdown" aria-expanded="false">
 							<a href="javascript:void(0)" class="header-profile__toggle">
 								<img width="32" height="32" class="w-100 img-fluid"
-								     src="./assets/images/checkout/nophotouser.jpg" alt="">
+									 src="./assets/images/checkout/nophotouser.jpg" alt="">
 							</a>
 							<div class="dropdown-menu dropdown-menu-right">
 								<div class="profile-wrapper">
@@ -531,11 +531,12 @@
 				<div class="container">
 					<div class="detail-tours_info--inner">
 						<h1 class="detail-tours_info--title">Singapore: Khám phá khu phố nhỏ Kampong Glam và Haji
-							Lane
-							(1
-							ngày tự
-							do - bay cùng Bamboo
-							Airways) | Nhân dịp Ngày Hội Du Lịch</h1>
+															 Lane
+															 (1
+															 ngày tự
+															 do - bay cùng Bamboo
+															 Airways) | Nhân dịp Ngày Hội Du Lịch
+						</h1>
 						<div class="detail-tours_info--right">
 							<div class="detail-tours_info--price">
 								<div class="price-old">Giá 6,990,000₫/ khách</div>
@@ -732,8 +733,8 @@
 			</div>
 			<div class="detail-tours_description page-gap--md">
 				<div class="container">
-					<div class="row">
-						<div class="col-lg-6">
+					<div class="row align-items-center">
+						<div class="col-lg-5">
 							<div class="tours-description_inner">
 								<div class="tours-description_left">
 									<div class="tours-description_item">
@@ -756,7 +757,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-6">
+						<div class="col-lg-7">
 							<div class="tours-description_box">
 								<div class="tours-description_box--item">
 									<i class="far fa-car"></i>
@@ -794,6 +795,24 @@
 										Đã bao gồm ưu đãi trong giá tour
 									</div>
 								</div>
+								<div class="tours-description_box--item">
+									<i class="far fa-hat-chef"></i>
+									<div class="tours-description_box--title">
+										Ẩm thực
+									</div>
+									<div class="tours-description_box--text">
+										Bún chả Hà Nội...
+									</div>
+								</div>
+								<div class="tours-description_box--item">
+									<i class="far fa-map-marker-alt"></i>
+									<div class="tours-description_box--title">
+										Địa điểm tham quan
+									</div>
+									<div class="tours-description_box--text">
+										Quốc Tử Giám, Chùa Một Cột, Hồ Hoàn Kiếm...
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -806,87 +825,95 @@
 					<div class="tours-heading">
 						Lịch trình
 					</div>
-					<div class="timeline-inner">
+					<div class="timeline-inner" id="timeline-collapse">
 						<div class="row no-gutters">
 							<div class="col-lg-5">
 								<div class="timeline-left">
-									<ul class="list-unstyled mb-0">
-										<li class="timeline-left_item">
-											<div class="timeline-left_item--number">1</div>
-											<div class="timeline-left_item--text">Ngày</div>
-											<div class="timeline-left_item--content">
-												<div class="timeline-left_item--day">
-													02/03/2023
+									<ul class="list-unstyled mb-0 nav nav-tabs">
+										<li class="timeline-left_item nav-item">
+											<a href="#day-1" data-toggle="tab" class="nav-link active">
+												<div class="timeline-left_item--number">1</div>
+												<div class="timeline-left_item--text">Ngày</div>
+												<div class="timeline-left_item--content">
+													<div class="timeline-left_item--day">
+														02/03/2023
+													</div>
+													<div class="timeline-left_item--activate">
+														TP.HỒ CHÍ MINH - SINGAPORE (Ăn tối)
+													</div>
 												</div>
-												<div class="timeline-left_item--activate">
-													TP.HỒ CHÍ MINH - SINGAPORE (Ăn tối)
-												</div>
-											</div>
+											</a>
 										</li>
-										<li class="timeline-left_item">
-											<div class="timeline-left_item--number">2</div>
-											<div class="timeline-left_item--text">Ngày</div>
-											<div class="timeline-left_item--content">
-												<div class="timeline-left_item--day">
-													03/03/2023
+										<li class="timeline-left_item nav-item">
+											<a href="#day-2" data-toggle="tab" class="nav-link">
+												<div class="timeline-left_item--number">2</div>
+												<div class="timeline-left_item--text">Ngày</div>
+												<div class="timeline-left_item--content">
+													<div class="timeline-left_item--day">
+														03/03/2023
+													</div>
+													<div class="timeline-left_item--activate">
+														SINGAPORE – CITY TOUR (Ăn Sáng, trưa, tối)
+													</div>
 												</div>
-												<div class="timeline-left_item--activate">
-													SINGAPORE – CITY TOUR (Ăn Sáng, trưa, tối)
-												</div>
-											</div>
+											</a>
 										</li>
-										<li class="timeline-left_item">
-											<div class="timeline-left_item--number">1</div>
-											<div class="timeline-left_item--text">Ngày</div>
-											<div class="timeline-left_item--content">
-												<div class="timeline-left_item--day">
-													02/03/2023
+										<li class="timeline-left_item nav-item">
+											<a href="#day-3" data-toggle="tab" class="nav-link">
+												<div class="timeline-left_item--number">1</div>
+												<div class="timeline-left_item--text">Ngày</div>
+												<div class="timeline-left_item--content">
+													<div class="timeline-left_item--day">
+														02/03/2023
+													</div>
+													<div class="timeline-left_item--activate">
+														TP.HỒ CHÍ MINH - SINGAPORE (Ăn tối)
+													</div>
 												</div>
-												<div class="timeline-left_item--activate">
-													TP.HỒ CHÍ MINH - SINGAPORE (Ăn tối)
-												</div>
-											</div>
+											</a>
 										</li>
-										<li class="timeline-left_item">
-											<div class="timeline-left_item--number">2</div>
-											<div class="timeline-left_item--text">Ngày</div>
-											<div class="timeline-left_item--content">
-												<div class="timeline-left_item--day">
-													03/03/2023
+										<li class="timeline-left_item nav-item">
+											<a href="#day-4" data-toggle="tab" class="nav-link">
+												<div class="timeline-left_item--number">2</div>
+												<div class="timeline-left_item--text">Ngày</div>
+												<div class="timeline-left_item--content">
+													<div class="timeline-left_item--day">
+														03/03/2023
+													</div>
+													<div class="timeline-left_item--activate">
+														SINGAPORE – CITY TOUR (Ăn Sáng, trưa, tối)
+													</div>
 												</div>
-												<div class="timeline-left_item--activate">
-													SINGAPORE – CITY TOUR (Ăn Sáng, trưa, tối)
-												</div>
-											</div>
+											</a>
 										</li>
 									</ul>
 								</div>
 							</div>
 							<div class="col-lg-7">
 								<div class="timeline-right">
-									<ul class="list-unstyled mb-0">
-										<li class="timeline-right_item">
+									<div class="list-unstyled mb-0 tab-content">
+										<div class="timeline-right_item tab-pane fade active show" id="day-1">
 											<div class="timeline-right_title">
 												Ngày 1 - TP.HỒ CHÍ MINH - SINGAPORE (Ăn tối)
 											</div>
 											<div class="timeline-right_description">
 												<p>Trưởng đoàn Vietravel đón Quý khách tại cổng hẹn ở sân bay
-													Tân Sơn
-													Nhất làm thủ tục đáp chuyến bay đi Singapore. Đến sân bay
-													Changgi,
-													Quý khách được tận mắt chiêm ngưỡng sự hiện đại của một sân
-													bay được
-													mệnh danh là sân bay bật nhất thế giới, tham quan khu phức
-													hợp Jewel
-													Changi - một công trình kiến trúc được khánh thành từ năm
-													2019. Đây
-													là khu phức hợp được thiết kế hiện đại, cùng sự kết hợp giữa
-													thiên
-													nhiên với sức sáng tạo của con người, đặc sắc nhất Quý khách
-													sẽ được
-													chiêm ngưỡng Rain Vortex – thác nước xoáy trong nhà cao nhất
-													thế
-													giới.
+												   Tân Sơn
+												   Nhất làm thủ tục đáp chuyến bay đi Singapore. Đến sân bay
+												   Changgi,
+												   Quý khách được tận mắt chiêm ngưỡng sự hiện đại của một sân
+												   bay được
+												   mệnh danh là sân bay bật nhất thế giới, tham quan khu phức
+												   hợp Jewel
+												   Changi - một công trình kiến trúc được khánh thành từ năm
+												   2019. Đây
+												   là khu phức hợp được thiết kế hiện đại, cùng sự kết hợp giữa
+												   thiên
+												   nhiên với sức sáng tạo của con người, đặc sắc nhất Quý khách
+												   sẽ được
+												   chiêm ngưỡng Rain Vortex – thác nước xoáy trong nhà cao nhất
+												   thế
+												   giới.
 												</p>
 												<p>
 													Xe và hướng dẫn viên địa phương đón đoàn, khởi hành khám phá
@@ -933,29 +960,29 @@
 													sạn nhận phòng nghỉ ngơi.
 												</p>
 											</div>
-										</li>
-										<li class="timeline-right_item">
+										</div>
+										<div class="timeline-right_item tab-pane fade" id="day-2">
 											<div class="timeline-right_title">
-												Ngày 1 - TP.HỒ CHÍ MINH - SINGAPORE (Ăn tối)
+												Ngày 2 - TP.HỒ CHÍ MINH - SINGAPORE (Ăn tối)
 											</div>
 											<div class="timeline-right_description">
 												<p>Trưởng đoàn Vietravel đón Quý khách tại cổng hẹn ở sân bay
-													Tân Sơn
-													Nhất làm thủ tục đáp chuyến bay đi Singapore. Đến sân bay
-													Changgi,
-													Quý khách được tận mắt chiêm ngưỡng sự hiện đại của một sân
-													bay được
-													mệnh danh là sân bay bật nhất thế giới, tham quan khu phức
-													hợp Jewel
-													Changi - một công trình kiến trúc được khánh thành từ năm
-													2019. Đây
-													là khu phức hợp được thiết kế hiện đại, cùng sự kết hợp giữa
-													thiên
-													nhiên với sức sáng tạo của con người, đặc sắc nhất Quý khách
-													sẽ được
-													chiêm ngưỡng Rain Vortex – thác nước xoáy trong nhà cao nhất
-													thế
-													giới.
+												   Tân Sơn
+												   Nhất làm thủ tục đáp chuyến bay đi Singapore. Đến sân bay
+												   Changgi,
+												   Quý khách được tận mắt chiêm ngưỡng sự hiện đại của một sân
+												   bay được
+												   mệnh danh là sân bay bật nhất thế giới, tham quan khu phức
+												   hợp Jewel
+												   Changi - một công trình kiến trúc được khánh thành từ năm
+												   2019. Đây
+												   là khu phức hợp được thiết kế hiện đại, cùng sự kết hợp giữa
+												   thiên
+												   nhiên với sức sáng tạo của con người, đặc sắc nhất Quý khách
+												   sẽ được
+												   chiêm ngưỡng Rain Vortex – thác nước xoáy trong nhà cao nhất
+												   thế
+												   giới.
 												</p>
 												<p>
 													Xe và hướng dẫn viên địa phương đón đoàn, khởi hành khám phá
@@ -1002,29 +1029,29 @@
 													sạn nhận phòng nghỉ ngơi.
 												</p>
 											</div>
-										</li>
-										<li class="timeline-right_item">
+										</div>
+										<div class="timeline-right_item tab-pane fade" id="day-3">
 											<div class="timeline-right_title">
-												Ngày 1 - TP.HỒ CHÍ MINH - SINGAPORE (Ăn tối)
+												Ngày 3 - TP.HỒ CHÍ MINH - SINGAPORE (Ăn tối)
 											</div>
 											<div class="timeline-right_description">
 												<p>Trưởng đoàn Vietravel đón Quý khách tại cổng hẹn ở sân bay
-													Tân Sơn
-													Nhất làm thủ tục đáp chuyến bay đi Singapore. Đến sân bay
-													Changgi,
-													Quý khách được tận mắt chiêm ngưỡng sự hiện đại của một sân
-													bay được
-													mệnh danh là sân bay bật nhất thế giới, tham quan khu phức
-													hợp Jewel
-													Changi - một công trình kiến trúc được khánh thành từ năm
-													2019. Đây
-													là khu phức hợp được thiết kế hiện đại, cùng sự kết hợp giữa
-													thiên
-													nhiên với sức sáng tạo của con người, đặc sắc nhất Quý khách
-													sẽ được
-													chiêm ngưỡng Rain Vortex – thác nước xoáy trong nhà cao nhất
-													thế
-													giới.
+												   Tân Sơn
+												   Nhất làm thủ tục đáp chuyến bay đi Singapore. Đến sân bay
+												   Changgi,
+												   Quý khách được tận mắt chiêm ngưỡng sự hiện đại của một sân
+												   bay được
+												   mệnh danh là sân bay bật nhất thế giới, tham quan khu phức
+												   hợp Jewel
+												   Changi - một công trình kiến trúc được khánh thành từ năm
+												   2019. Đây
+												   là khu phức hợp được thiết kế hiện đại, cùng sự kết hợp giữa
+												   thiên
+												   nhiên với sức sáng tạo của con người, đặc sắc nhất Quý khách
+												   sẽ được
+												   chiêm ngưỡng Rain Vortex – thác nước xoáy trong nhà cao nhất
+												   thế
+												   giới.
 												</p>
 												<p>
 													Xe và hướng dẫn viên địa phương đón đoàn, khởi hành khám phá
@@ -1071,29 +1098,29 @@
 													sạn nhận phòng nghỉ ngơi.
 												</p>
 											</div>
-										</li>
-										<li class="timeline-right_item">
+										</div>
+										<div class="timeline-right_item tab-pane fade" id="day-4">
 											<div class="timeline-right_title">
-												Ngày 1 - TP.HỒ CHÍ MINH - SINGAPORE (Ăn tối)
+												Ngày 4 - TP.HỒ CHÍ MINH - SINGAPORE (Ăn tối)
 											</div>
 											<div class="timeline-right_description">
 												<p>Trưởng đoàn Vietravel đón Quý khách tại cổng hẹn ở sân bay
-													Tân Sơn
-													Nhất làm thủ tục đáp chuyến bay đi Singapore. Đến sân bay
-													Changgi,
-													Quý khách được tận mắt chiêm ngưỡng sự hiện đại của một sân
-													bay được
-													mệnh danh là sân bay bật nhất thế giới, tham quan khu phức
-													hợp Jewel
-													Changi - một công trình kiến trúc được khánh thành từ năm
-													2019. Đây
-													là khu phức hợp được thiết kế hiện đại, cùng sự kết hợp giữa
-													thiên
-													nhiên với sức sáng tạo của con người, đặc sắc nhất Quý khách
-													sẽ được
-													chiêm ngưỡng Rain Vortex – thác nước xoáy trong nhà cao nhất
-													thế
-													giới.
+												   Tân Sơn
+												   Nhất làm thủ tục đáp chuyến bay đi Singapore. Đến sân bay
+												   Changgi,
+												   Quý khách được tận mắt chiêm ngưỡng sự hiện đại của một sân
+												   bay được
+												   mệnh danh là sân bay bật nhất thế giới, tham quan khu phức
+												   hợp Jewel
+												   Changi - một công trình kiến trúc được khánh thành từ năm
+												   2019. Đây
+												   là khu phức hợp được thiết kế hiện đại, cùng sự kết hợp giữa
+												   thiên
+												   nhiên với sức sáng tạo của con người, đặc sắc nhất Quý khách
+												   sẽ được
+												   chiêm ngưỡng Rain Vortex – thác nước xoáy trong nhà cao nhất
+												   thế
+												   giới.
 												</p>
 												<p>
 													Xe và hướng dẫn viên địa phương đón đoàn, khởi hành khám phá
@@ -1140,8 +1167,8 @@
 													sạn nhận phòng nghỉ ngơi.
 												</p>
 											</div>
-										</li>
-									</ul>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -1159,12 +1186,16 @@
 									Sân golf
 								</div>
 								<div class="tours-box_inner--item">
+									<i class="far fa-golf-club"></i>
+									Tên sân: <b>Sân golf ABC XYZ</b>
+								</div>
+								<div class="tours-box_inner--item">
 									<i class="far fa-golf-ball"></i>
 									Số lỗ: <b>9 lỗ</b>
 								</div>
 								<div class="tours-box_inner--item">
-									<i class="far fa-ruler-triangle"></i>
-									Diện tích: <b>90 hecta</b>
+									<i class="far fa-map-marker-alt"></i>
+									Địa chỉ: <b>Số 152 Trần Vỹ, Mai Dịch, Cầu Giấy, Hà Nội</b>
 								</div>
 							</div>
 						</div>
@@ -1174,12 +1205,16 @@
 									Chuyến Bay
 								</div>
 								<div class="tours-box_inner--item">
-									<i class="far fa-calendar-alt"></i>
-									Ngày giờ tập trung: <b>06:50 02/03/2023</b>
+									<i class="far fa-plane"></i>
+									Hãng bay: <b>Vietnam Airline</b>
 								</div>
 								<div class="tours-box_inner--item">
-									<i class="far fa-map-marker-alt"></i>
-									Nơi tập trung: <b>Sân bay</b>
+									<i class="far fa-plane-departure"></i>
+									Ngày bay: <b>06:50 02/03/2023</b>
+								</div>
+								<div class="tours-box_inner--item">
+									<i class="far fa-plane-arrival"></i>
+									Ngày về: <b>Sân bay</b>
 								</div>
 							</div>
 						</div>
@@ -1187,6 +1222,10 @@
 							<div class="tours-box_inner">
 								<div class="tours-heading">
 									Khách sạn
+								</div>
+								<div class="tours-box_inner--item">
+									<i class="far fa-hotel"></i>
+									Tên khách sạn: <b>Khách sạn ABC XYZ</b>
 								</div>
 								<div class="tours-box_inner--item">
 									<i class="far fa-star"></i>
@@ -1417,8 +1456,8 @@
 								<div class="card-header">
 									<a href="" class="card-image">
 										<img src="./assets/images/tour/lm_220530024445_024907.jpg"
-										     class="card-img-top"
-										     alt="">
+											 class="card-img-top"
+											 alt="">
 									</a>
 									<div class="card-rate">
 										9.4
@@ -1430,9 +1469,9 @@
 									<div class="card-favourite">
 										<button type="button">
 											<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-											     xmlns="http://www.w3.org/2000/svg">
+												 xmlns="http://www.w3.org/2000/svg">
 												<path d="M17.3667 3.84172C16.941 3.41589 16.4357 3.0781 15.8795 2.84763C15.3232 2.61716 14.7271 2.49854 14.125 2.49854C13.5229 2.49854 12.9268 2.61716 12.3705 2.84763C11.8143 3.0781 11.309 3.41589 10.8833 3.84172L10 4.72506L9.11666 3.84172C8.25692 2.98198 7.09086 2.49898 5.875 2.49898C4.65914 2.49898 3.49307 2.98198 2.63333 3.84172C1.77359 4.70147 1.29059 5.86753 1.29059 7.08339C1.29059 8.29925 1.77359 9.46531 2.63333 10.3251L3.51666 11.2084L10 17.6917L16.4833 11.2084L17.3667 10.3251C17.7925 9.89943 18.1303 9.39407 18.3608 8.83785C18.5912 8.28164 18.7099 7.68546 18.7099 7.08339C18.7099 6.48132 18.5912 5.88514 18.3608 5.32893C18.1303 4.77271 17.7925 4.26735 17.3667 3.84172Z"
-												      stroke-linecap="round" stroke-linejoin="round"></path>
+													  stroke-linecap="round" stroke-linejoin="round"></path>
 											</svg>
 										</button>
 									</div>
@@ -1460,7 +1499,7 @@
 									</div>
 									<div class="card-desc">
 										<span class="text"><i class="fal fa-map-marker-alt"></i>Nơi khỏi
-											hành:</span>
+																								hành:</span>
 										<span class="value">TP. Hồ Chí Minh</span>
 									</div>
 									<div class="card-price">
@@ -1488,8 +1527,8 @@
 								<div class="card-header">
 									<a href="" class="card-image">
 										<img src="./assets/images/tour/lm_220530024445_024907.jpg"
-										     class="card-img-top"
-										     alt="">
+											 class="card-img-top"
+											 alt="">
 									</a>
 									<div class="card-rate">
 										9.4
@@ -1501,9 +1540,9 @@
 									<div class="card-favourite">
 										<button type="button" class="is-selected">
 											<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-											     xmlns="http://www.w3.org/2000/svg">
+												 xmlns="http://www.w3.org/2000/svg">
 												<path d="M17.3667 3.84172C16.941 3.41589 16.4357 3.0781 15.8795 2.84763C15.3232 2.61716 14.7271 2.49854 14.125 2.49854C13.5229 2.49854 12.9268 2.61716 12.3705 2.84763C11.8143 3.0781 11.309 3.41589 10.8833 3.84172L10 4.72506L9.11666 3.84172C8.25692 2.98198 7.09086 2.49898 5.875 2.49898C4.65914 2.49898 3.49307 2.98198 2.63333 3.84172C1.77359 4.70147 1.29059 5.86753 1.29059 7.08339C1.29059 8.29925 1.77359 9.46531 2.63333 10.3251L3.51666 11.2084L10 17.6917L16.4833 11.2084L17.3667 10.3251C17.7925 9.89943 18.1303 9.39407 18.3608 8.83785C18.5912 8.28164 18.7099 7.68546 18.7099 7.08339C18.7099 6.48132 18.5912 5.88514 18.3608 5.32893C18.1303 4.77271 17.7925 4.26735 17.3667 3.84172Z"
-												      stroke-linecap="round" stroke-linejoin="round"></path>
+													  stroke-linecap="round" stroke-linejoin="round"></path>
 											</svg>
 										</button>
 									</div>
@@ -1527,7 +1566,7 @@
 									</div>
 									<div class="card-desc">
 										<span class="text"><i class="fal fa-map-marker-alt"></i>Nơi khỏi
-											hành:</span>
+																								hành:</span>
 										<span class="value">TP. Hồ Chí Minh</span>
 									</div>
 									<div class="card-price">
@@ -1555,8 +1594,8 @@
 								<div class="card-header">
 									<a href="" class="card-image">
 										<img src="./assets/images/tour/lm_220530024445_024907.jpg"
-										     class="card-img-top"
-										     alt="">
+											 class="card-img-top"
+											 alt="">
 									</a>
 									<div class="card-rate">
 										9.4
@@ -1568,9 +1607,9 @@
 									<div class="card-favourite">
 										<button type="button" class="is-selected">
 											<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-											     xmlns="http://www.w3.org/2000/svg">
+												 xmlns="http://www.w3.org/2000/svg">
 												<path d="M17.3667 3.84172C16.941 3.41589 16.4357 3.0781 15.8795 2.84763C15.3232 2.61716 14.7271 2.49854 14.125 2.49854C13.5229 2.49854 12.9268 2.61716 12.3705 2.84763C11.8143 3.0781 11.309 3.41589 10.8833 3.84172L10 4.72506L9.11666 3.84172C8.25692 2.98198 7.09086 2.49898 5.875 2.49898C4.65914 2.49898 3.49307 2.98198 2.63333 3.84172C1.77359 4.70147 1.29059 5.86753 1.29059 7.08339C1.29059 8.29925 1.77359 9.46531 2.63333 10.3251L3.51666 11.2084L10 17.6917L16.4833 11.2084L17.3667 10.3251C17.7925 9.89943 18.1303 9.39407 18.3608 8.83785C18.5912 8.28164 18.7099 7.68546 18.7099 7.08339C18.7099 6.48132 18.5912 5.88514 18.3608 5.32893C18.1303 4.77271 17.7925 4.26735 17.3667 3.84172Z"
-												      stroke-linecap="round" stroke-linejoin="round"></path>
+													  stroke-linecap="round" stroke-linejoin="round"></path>
 											</svg>
 										</button>
 									</div>
@@ -1596,7 +1635,7 @@
 									</div>
 									<div class="card-desc">
 										<span class="text"><i class="fal fa-map-marker-alt"></i>Nơi khỏi
-											hành:</span>
+																								hành:</span>
 										<span class="value">TP. Hồ Chí Minh</span>
 									</div>
 									<div class="card-price">
@@ -1624,8 +1663,8 @@
 								<div class="card-header">
 									<a href="" class="card-image">
 										<img src="./assets/images/tour/lm_220530024445_024907.jpg"
-										     class="card-img-top"
-										     alt="">
+											 class="card-img-top"
+											 alt="">
 									</a>
 									<div class="card-rate">
 										9.4
@@ -1637,9 +1676,9 @@
 									<div class="card-favourite">
 										<button type="button" class="is-selected">
 											<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-											     xmlns="http://www.w3.org/2000/svg">
+												 xmlns="http://www.w3.org/2000/svg">
 												<path d="M17.3667 3.84172C16.941 3.41589 16.4357 3.0781 15.8795 2.84763C15.3232 2.61716 14.7271 2.49854 14.125 2.49854C13.5229 2.49854 12.9268 2.61716 12.3705 2.84763C11.8143 3.0781 11.309 3.41589 10.8833 3.84172L10 4.72506L9.11666 3.84172C8.25692 2.98198 7.09086 2.49898 5.875 2.49898C4.65914 2.49898 3.49307 2.98198 2.63333 3.84172C1.77359 4.70147 1.29059 5.86753 1.29059 7.08339C1.29059 8.29925 1.77359 9.46531 2.63333 10.3251L3.51666 11.2084L10 17.6917L16.4833 11.2084L17.3667 10.3251C17.7925 9.89943 18.1303 9.39407 18.3608 8.83785C18.5912 8.28164 18.7099 7.68546 18.7099 7.08339C18.7099 6.48132 18.5912 5.88514 18.3608 5.32893C18.1303 4.77271 17.7925 4.26735 17.3667 3.84172Z"
-												      stroke-linecap="round" stroke-linejoin="round"></path>
+													  stroke-linecap="round" stroke-linejoin="round"></path>
 											</svg>
 										</button>
 									</div>
@@ -1663,7 +1702,7 @@
 									</div>
 									<div class="card-desc">
 										<span class="text"><i class="fal fa-map-marker-alt"></i>Nơi khỏi
-											hành:</span>
+																								hành:</span>
 										<span class="value">TP. Hồ Chí Minh</span>
 									</div>
 									<div class="card-price">
@@ -1768,7 +1807,7 @@
 									data-hide-cover="false"
 									data-show-facepile="true">
 								<blockquote cite="https://www.facebook.com/facebook"
-								            class="fb-xfbml-parse-ignore">
+											class="fb-xfbml-parse-ignore">
 									<a href="https://www.facebook.com/facebook">Facebook</a>
 								</blockquote>
 							</div>
@@ -1833,7 +1872,7 @@
 								<img height="22px" width="22px" src="./assets/images/translate.svg" alt="">
 							</button>
 							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownLanguage"
-							     style="">
+								 style="">
 								<label for="ngonngu_en" class="dropdown-item">
 									<input type="radio" name="ngonngu" id="ngonngu_en" value="en">
 									<span>
