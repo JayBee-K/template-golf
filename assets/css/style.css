@@ -2211,6 +2211,10 @@ body.nav-is-show .header::after {
 	border-radius: 0.25rem;
 }
 
+.b-form .b-form__header {
+	padding: 10px 15px !important;
+}
+
 .b-form .b-form__header,
 .b-form .b-form__body {
 	padding: 15px 15px;
@@ -4136,7 +4140,7 @@ body.nav-is-show .header::after {
 .timeline-inner .timeline-left {
 	background-color: #eee;
 	border-right: 1px solid var(--gray-200);
-	padding: 30px;
+	padding: 15px;
 	height: 100%;
 }
 
@@ -4144,7 +4148,7 @@ body.nav-is-show .header::after {
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	gap: 30px;
+	gap: 5px;
 	border-bottom: 0;
 }
 
@@ -4155,7 +4159,7 @@ body.nav-is-show .header::after {
 	width: 1px;
 	border-left: 1px dotted var(--gray-300);
 	top: 0;
-	left: 57.5px;
+	left: 64px;
 }
 
 .timeline-inner .timeline-left .timeline-left_item > .nav-link {
@@ -4164,9 +4168,9 @@ body.nav-is-show .header::after {
 	align-items: center;
 	gap: 45px;
 	cursor: pointer;
-	padding: 0;
+	padding: 10px;
 	border: 0;
-	border-radius: 0;
+	border-radius: 5px;
 	background: transparent !important;
 	margin-bottom: 0;
 }
@@ -4184,7 +4188,7 @@ body.nav-is-show .header::after {
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
-	left: 45.5px;
+	left: 53px;
 	font-size: .95em;
 }
 
@@ -4208,9 +4212,18 @@ body.nav-is-show .header::after {
 }
 
 
+.timeline-inner .timeline-left .timeline-left_item > .nav-link.active {
+	background: var(--primary-color) !important;
+}
+
 .timeline-inner .timeline-left .timeline-left_item > .nav-link.active .timeline-left_item--text,
 .timeline-inner .timeline-left .timeline-left_item > .nav-link.active .timeline-left_item--content .timeline-left_item--day,
 .timeline-inner .timeline-left .timeline-left_item > .nav-link.active .timeline-left_item--content .timeline-left_item--activate {
+	color: var(--white);
+}
+
+.timeline-inner .timeline-left .timeline-left_item > .nav-link.active .timeline-left_item--number {
+	background: var(--white);
 	color: var(--primary-color);
 }
 
@@ -4991,7 +5004,7 @@ body.nav-is-show .header::after {
 
 	.timeline-inner .timeline-left,
 	.timeline-inner .timeline-right {
-		padding: 20px;
+		padding: 15px;
 	}
 
 	.timeline-inner .timeline-right > ul {
