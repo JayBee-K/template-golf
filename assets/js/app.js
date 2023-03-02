@@ -391,7 +391,9 @@
 				slidesPerView: 1,
 			});
 		}
-		handleZoomImagePopup($('#detail-avatar_photo [data-fancybox=product-avatar]'), popupPhoto, popupThumb);
+		if ($('#detail-avatar_photo [data-fancybox=product-avatar]').length) {
+			handleZoomImagePopup($('#detail-avatar_photo [data-fancybox=product-avatar]'), popupPhoto, popupThumb);
+		}
 	}
 
 	const handleZoomImagePopup = function (elm, popupPhoto, popupThumb) {
