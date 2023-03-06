@@ -48,7 +48,9 @@
 				<div class="header-wrapper d-flex align-items-center justify-content-between">
 					<div class="header-logo">
 						<a href="" class="d-inline-block">
-							<img height="60" src="./assets/images/logo.png" alt=""/>
+							<img height="60" src="./assets/images/logo-white.png" class="header-logo_is--noSticky"
+								 alt="">
+							<img height="60" src="./assets/images/logo.png" class="header-logo_is--sticky" alt="">
 						</a>
 					</div>
 					<div class="header-navigation ml-auto">
@@ -138,7 +140,8 @@
 					<div class="header-actions d-flex">
 						<div class="header-cart">
 							<button type="button" id="toggle-cart-list" class="header-cart__btn">
-								<img src="./assets/images/icon/cart.png" alt="">
+								<img src="./assets/images/icon/cart.png" class="header-cart_is--noSticky" alt="">
+								<img src="./assets/images/icon/cart-dark.png" class="header-cart_is--sticky" alt="">
 								<span>10</span>
 							</button>
 							<div class="header-cart__list">
@@ -447,13 +450,13 @@
 								</div>
 							</div>
 						</div>
-						<div class="header-auth">
+						<div class="header-auth d-none">
 							<a href="" class="btn btn-login">
 								<i class="fal fa-sign-in"></i>
 								<span>Đăng nhập</span>
 							</a>
 						</div>
-						<div class="dropdown header-profile d-none" data-toggle="dropdown" aria-expanded="false">
+						<div class="dropdown header-profile" data-toggle="dropdown" aria-expanded="false">
 							<a href="javascript:void(0)" class="header-profile__toggle">
 								<img width="32" height="32" class="w-100 img-fluid"
 									 src="./assets/images/checkout/nophotouser.jpg" alt="">

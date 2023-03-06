@@ -59,6 +59,19 @@
 		});
 	}
 
+	const handleStickyHeader = () => {
+		const header = $('#header');
+		const position = $('#slider-banner').length ? $('#slider-banner').height() : header.offset().top;
+		$(window).scroll(function () {
+			const scrollValue = $(window).scrollTop();
+			if (scrollValue > position) {
+				header.addClass('is-sticky');
+			} else {
+				header.removeClass('is-sticky');
+			}
+		});
+	}
+
 	const initSliderBanner = function () {
 		if ($('#slider-banner').length) {
 			new Swiper('#slider-banner .swiper', {
@@ -447,6 +460,7 @@
 
 	$(function () {
 		handleMenuMobile(windowWidth);
+		handleStickyHeader();
 		initSliderBanner();
 		initSliderGolf();
 		initSliderNews();
