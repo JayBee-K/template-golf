@@ -875,6 +875,12 @@ body.nav-is-show .header::after {
 	.header .header-profile .dropdown-menu {
 		top: 15px !important;
 	}
+
+
+	.header .nav-mobile-header .btn-close-nav {
+		background: #f5f5f5;
+		color: #333;
+	}
 }
 
 @media (max-width: 991px) {
@@ -886,11 +892,6 @@ body.nav-is-show .header::after {
 		border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 		padding: 13px 15px;
 		background: var(--white);
-	}
-
-	.header .nav-mobile-header .btn-close-nav {
-		background: #f5f5f5;
-		color: #333;
 	}
 }
 
