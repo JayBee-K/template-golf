@@ -4895,6 +4895,7 @@ body.nav-is-show .header::after {
 	opacity: 0;
 	visibility: hidden;
 	transition: var(--transition-default);
+	z-index: 2;
 }
 
 .form-group_quantity.is-show .form-group_quantity_dropdown {
