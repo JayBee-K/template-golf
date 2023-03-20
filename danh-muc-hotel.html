@@ -548,14 +548,14 @@
 																   type="text"
 																   readonly/>
 														</div>
-														<div class="form-group form-group_quantity">
+														<div class="form-group form-group_quantity quantity-wrapper">
 															<label>Số lượng</label>
 															<div class="form-group_quantity_inner">
 																<span class="quantity-adult">1</span> người lớn - <span
 																	class="quantity-child">1</span> trẻ em
 															</div>
 															<div class="form-group_quantity_dropdown">
-																<div class="quantity-dropdown_item">
+																<div class="quantity-dropdown_item" data-type="adult">
 																	<div class="quantity-dropdown_item--left">
 																		<div class="quantity-dropdown_item--title">
 																			Người lớn
@@ -565,16 +565,19 @@
 																		</div>
 																	</div>
 																	<div class="quantity-dropdown_item--right">
-																		<button type="button" class="quantity-minus"><i
-																				class="fal fa-minus"></i></button>
+																		<button type="button" data-type="0"
+																				class="quantity-button quantity-minus">
+																			<i
+																					class="fal fa-minus"></i></button>
 																		<div class="quantity-count">
 																			1
 																		</div>
-																		<button type="button" class="quantity-plus"><i
+																		<button type="button" data-type="1"
+																				class="quantity-button quantity-plus"><i
 																				class="fal fa-plus"></i></button>
 																	</div>
 																</div>
-																<div class="quantity-dropdown_item">
+																<div class="quantity-dropdown_item" data-type="child">
 																	<div class="quantity-dropdown_item--left">
 																		<div class="quantity-dropdown_item--title">
 																			Trẻ em
@@ -584,21 +587,29 @@
 																		</div>
 																	</div>
 																	<div class="quantity-dropdown_item--right">
-																		<button type="button" class="quantity-minus"><i
-																				class="fal fa-minus"></i></button>
+																		<button type="button" data-type="0"
+																				class="quantity-button quantity-minus">
+																			<i
+																					class="fal fa-minus"></i></button>
 																		<div class="quantity-count">
 																			1
 																		</div>
-																		<button type="button" class="quantity-plus"><i
+																		<button type="button" data-type="1"
+																				class="quantity-button quantity-plus"><i
 																				class="fal fa-plus"></i></button>
 																	</div>
 																</div>
 																<div class="quantity-dropdown_item">
-																	<a href="javascript:void(0)" class="button-theme button-theme_small quantity-close">Xong</a>
+																	<a href="javascript:void(0)"
+																	   class="button-theme button-theme_small quantity-close">Xong</a>
 																</div>
 															</div>
-															<input class="form-control bg-white" type="hidden"
-															       placeholder="Số lượng"/>
+															<input class="form-control bg-white quantity-input"
+																   data-type="child"
+																   type="hidden" value="1"/>
+															<input class="form-control bg-white quantity-input"
+																   data-type="adult"
+																   type="hidden" value="1"/>
 														</div>
 														<div class="form-group form-group_holes mb-0">
 															<label for="golfers">Tỉnh thành</label>
@@ -641,10 +652,10 @@
 										<div class="col-8 text-nowrap">
 											<div class="d-flex align-items-center">
 												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-												     viewBox="0 0 24 24" fill="none" stroke="currentColor"
-												     stroke-width="2"
-												     stroke-linecap="round" stroke-linejoin="round"
-												     class="feather feather-smartphone">
+													 viewBox="0 0 24 24" fill="none" stroke="currentColor"
+													 stroke-width="2"
+													 stroke-linecap="round" stroke-linejoin="round"
+													 class="feather feather-smartphone">
 													<rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
 													<line x1="12" y1="18" x2="12" y2="18"></line>
 												</svg>
@@ -718,7 +729,8 @@
 														  d="M0.763855 0C0.78115 0.151691 0.796747 0.305769 0.810614 0.462263C0.995736 2.55133 1.10013 4.88231 1.21108 7.35957C2.03304 25.7124 3.21456 52.0935 40.2446 47.6133C46.4899 46.8577 51.6026 45.9947 55.7636 45.0705V5C55.7636 2.23858 53.525 0 50.7636 0H0.763855Z"
 														  fill="url(#paint0_linear)"></path>
 													<defs>
-														<linearGradient id="paint0_linear" x1="28.2637" y1="0" x2="28.2637"
+														<linearGradient id="paint0_linear" x1="28.2637" y1="0"
+																		x2="28.2637"
 																		y2="48.1171" gradientUnits="userSpaceOnUse">
 															<stop stop-color="#ffaa4f"></stop>
 															<stop offset="1" stop-color="#FE8200"></stop>
@@ -770,7 +782,8 @@
 														  d="M0.763855 0C0.78115 0.151691 0.796747 0.305769 0.810614 0.462263C0.995736 2.55133 1.10013 4.88231 1.21108 7.35957C2.03304 25.7124 3.21456 52.0935 40.2446 47.6133C46.4899 46.8577 51.6026 45.9947 55.7636 45.0705V5C55.7636 2.23858 53.525 0 50.7636 0H0.763855Z"
 														  fill="url(#paint0_linear)"></path>
 													<defs>
-														<linearGradient id="paint0_linear" x1="28.2637" y1="0" x2="28.2637"
+														<linearGradient id="paint0_linear" x1="28.2637" y1="0"
+																		x2="28.2637"
 																		y2="48.1171" gradientUnits="userSpaceOnUse">
 															<stop stop-color="#ffaa4f"></stop>
 															<stop offset="1" stop-color="#FE8200"></stop>
@@ -822,7 +835,8 @@
 														  d="M0.763855 0C0.78115 0.151691 0.796747 0.305769 0.810614 0.462263C0.995736 2.55133 1.10013 4.88231 1.21108 7.35957C2.03304 25.7124 3.21456 52.0935 40.2446 47.6133C46.4899 46.8577 51.6026 45.9947 55.7636 45.0705V5C55.7636 2.23858 53.525 0 50.7636 0H0.763855Z"
 														  fill="url(#paint0_linear)"></path>
 													<defs>
-														<linearGradient id="paint0_linear" x1="28.2637" y1="0" x2="28.2637"
+														<linearGradient id="paint0_linear" x1="28.2637" y1="0"
+																		x2="28.2637"
 																		y2="48.1171" gradientUnits="userSpaceOnUse">
 															<stop stop-color="#ffaa4f"></stop>
 															<stop offset="1" stop-color="#FE8200"></stop>
@@ -874,7 +888,8 @@
 														  d="M0.763855 0C0.78115 0.151691 0.796747 0.305769 0.810614 0.462263C0.995736 2.55133 1.10013 4.88231 1.21108 7.35957C2.03304 25.7124 3.21456 52.0935 40.2446 47.6133C46.4899 46.8577 51.6026 45.9947 55.7636 45.0705V5C55.7636 2.23858 53.525 0 50.7636 0H0.763855Z"
 														  fill="url(#paint0_linear)"></path>
 													<defs>
-														<linearGradient id="paint0_linear" x1="28.2637" y1="0" x2="28.2637"
+														<linearGradient id="paint0_linear" x1="28.2637" y1="0"
+																		x2="28.2637"
 																		y2="48.1171" gradientUnits="userSpaceOnUse">
 															<stop stop-color="#ffaa4f"></stop>
 															<stop offset="1" stop-color="#FE8200"></stop>

@@ -4954,6 +4954,10 @@ body.nav-is-show .header::after {
 	color: var(--white);
 }
 
+.form-group_quantity .form-group_quantity_dropdown .quantity-dropdown_item .quantity-dropdown_item--right .quantity-count {
+	min-width: 12px;
+}
+
 .form-group_quantity .form-group_quantity_dropdown .quantity-dropdown_item .button-theme {
 	color: var(--primary-color);
 	border: 1px solid var(--primary-color);

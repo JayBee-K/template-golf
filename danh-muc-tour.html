@@ -548,14 +548,14 @@
 																   type="text"
 																   readonly/>
 														</div>
-														<div class="form-group form-group_quantity">
+														<div class="form-group form-group_quantity quantity-wrapper">
 															<label>Số lượng</label>
 															<div class="form-group_quantity_inner">
 																<span class="quantity-adult">1</span> người lớn - <span
 																	class="quantity-child">1</span> trẻ em
 															</div>
 															<div class="form-group_quantity_dropdown">
-																<div class="quantity-dropdown_item">
+																<div class="quantity-dropdown_item" data-type="adult">
 																	<div class="quantity-dropdown_item--left">
 																		<div class="quantity-dropdown_item--title">
 																			Người lớn
@@ -565,16 +565,19 @@
 																		</div>
 																	</div>
 																	<div class="quantity-dropdown_item--right">
-																		<button type="button" class="quantity-minus"><i
-																				class="fal fa-minus"></i></button>
+																		<button type="button" data-type="0"
+																				class="quantity-button quantity-minus">
+																			<i
+																					class="fal fa-minus"></i></button>
 																		<div class="quantity-count">
 																			1
 																		</div>
-																		<button type="button" class="quantity-plus"><i
+																		<button type="button" data-type="1"
+																				class="quantity-button quantity-plus"><i
 																				class="fal fa-plus"></i></button>
 																	</div>
 																</div>
-																<div class="quantity-dropdown_item">
+																<div class="quantity-dropdown_item" data-type="child">
 																	<div class="quantity-dropdown_item--left">
 																		<div class="quantity-dropdown_item--title">
 																			Trẻ em
@@ -584,21 +587,29 @@
 																		</div>
 																	</div>
 																	<div class="quantity-dropdown_item--right">
-																		<button type="button" class="quantity-minus"><i
-																				class="fal fa-minus"></i></button>
+																		<button type="button" data-type="0"
+																				class="quantity-button quantity-minus">
+																			<i
+																					class="fal fa-minus"></i></button>
 																		<div class="quantity-count">
 																			1
 																		</div>
-																		<button type="button" class="quantity-plus"><i
+																		<button type="button" data-type="1"
+																				class="quantity-button quantity-plus"><i
 																				class="fal fa-plus"></i></button>
 																	</div>
 																</div>
 																<div class="quantity-dropdown_item">
-																	<a href="javascript:void(0)" class="button-theme button-theme_small quantity-close">Xong</a>
+																	<a href="javascript:void(0)"
+																	   class="button-theme button-theme_small quantity-close">Xong</a>
 																</div>
 															</div>
-															<input class="form-control bg-white" type="hidden"
-															       placeholder="Số lượng"/>
+															<input class="form-control bg-white quantity-input"
+																   data-type="child"
+																   type="hidden" value="1"/>
+															<input class="form-control bg-white quantity-input"
+																   data-type="adult"
+																   type="hidden" value="1"/>
 														</div>
 														<div class="form-group form-group_holes mb-0">
 															<label for="golfers">Tỉnh thành</label>

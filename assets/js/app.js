@@ -368,6 +368,30 @@
 		}
 	}
 
+	const handleChangQuantity = function () {
+		$('.quantity-button').click(function () {
+			let type = $(this).attr('data-type'),
+				count = $(this).parent().find('.quantity-count'),
+				countValue = parseInt(count.html()),
+				typeQuantity = $(this).closest('.quantity-dropdown_item').attr('data-type');
+
+			if (type == 0) {
+				if (countValue == 0) {
+					return false;
+				}
+
+				countValue -= 1;
+				count.html(countValue);
+			} else {
+				countValue += 1;
+				count.html(countValue);
+			}
+
+			$(this).closest('.quantity-wrapper').find('.quantity-' + typeQuantity).html(countValue);
+			$(this).closest('.quantity-wrapper').find('.quantity-input[data-type=' + typeQuantity + ']').val(countValue);
+		});
+	}
+
 	let [popupThumb, popupPhoto] = [];
 	let handleSlideImagePopup = function () {
 		if ($('#popup-detail_images--thumb').length > 0) {
@@ -500,6 +524,7 @@
 
 		handleExpandedDescription();
 		handleDropdownQuantity();
+		handleChangQuantity();
 		handleSlideImagePopup();
 		initSliderImageTourMobile();
 		initSliderImageHotelMobile();
