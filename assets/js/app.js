@@ -482,6 +482,19 @@
 		}
 	};
 
+	let handleOrderCollapse = function () {
+		if($('.order-column_collapse').length){
+			$('.order-column_collapse').click(function () {
+				$(this).toggleClass('flag');
+				if($(this).is('.flag')) {
+					$(this).html('Thu gọn');
+				} else {
+					$(this).html('Xem thêm');
+				}
+			});
+		};
+	}
+
 	$(function () {
 		handleMenuMobile(windowWidth);
 		handleStickyHeader();
@@ -528,5 +541,6 @@
 		handleSlideImagePopup();
 		initSliderImageTourMobile();
 		initSliderImageHotelMobile();
+		handleOrderCollapse();
 	});
 })(jQuery);
