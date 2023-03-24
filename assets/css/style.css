@@ -5025,6 +5025,50 @@ body.nav-is-show .header::after {
 	gap: 5px;
 }
 
+.detail-hotel_order .hotel-order_list__wrapper .hotel-order_list--booking .booking-body .booking-option {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.detail-hotel_order .hotel-order_list__wrapper .hotel-order_list--booking .booking-body .booking-option_item:first-child {
+	margin-top: 0;
+}
+
+.detail-hotel_order .hotel-order_list__wrapper .hotel-order_list--booking .booking-body .booking-option_item {
+	display: flex;
+	gap: 8px;
+	font-size: 0.9em;
+}
+
+.detail-hotel_order .hotel-order_list__wrapper .hotel-order_list--booking .booking-body .booking-option_item .icon {
+	font-size: 1.15em;
+	flex-shrink: 0;
+	margin-top: 3px;
+	width: 18px;
+}
+
+.detail-hotel_order .hotel-order_list__wrapper .hotel-order_list--booking .booking-body .booking-option_item .booking-option_item__circle {
+	position: relative;
+}
+
+.detail-hotel_order .hotel-order_list__wrapper .hotel-order_list--booking .booking-body .booking-option_item .booking-option_item__circle:before {
+	display: block;
+	border-radius: 50%;
+	height: 5px;
+	width: 5px;
+	background-color: var(--gray-800);
+	position: absolute;
+	top: 2px;
+	left: 50%;
+	transform: translateX(-50%);
+	content: "";
+}
+
+.detail-hotel_order .hotel-order_list__wrapper .hotel-order_list--booking .booking-body .booking-option_item.text-danger .booking-option_item__circle:before {
+	background-color: var(--danger);
+}
+
 .form-group_quantity {
 	position: relative;
 }
