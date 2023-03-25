@@ -483,16 +483,46 @@
 	};
 
 	let handleOrderCollapse = function () {
-		if($('.order-column_collapse').length){
+		if ($('.order-column_collapse').length) {
 			$('.order-column_collapse').click(function () {
 				$(this).toggleClass('flag');
-				if($(this).is('.flag')) {
+				if ($(this).is('.flag')) {
 					$(this).html('Thu gọn');
 				} else {
 					$(this).html('Xem thêm');
 				}
 			});
-		};
+		}
+		;
+	}
+
+	let handleBookingMobile = function () {
+		if ($('.callBooking').length) {
+			$('.callBooking').click(function () {
+				if (!$('body').hasClass('is-booking')) {
+					$('body').addClass('is-booking')
+				}
+			});
+
+			$('#closeBooking').click(function () {
+				if ($('body').hasClass('is-booking')) {
+					$('body').removeClass('is-booking')
+				}
+			})
+		}
+	}
+
+	let handleHeightLastColumnTableBooking = function () {
+		if ($('.hotel-order_list__multi').length) {
+			let temp = 0;
+			$('.hotel-order_list__multi .hotel-order_list--header .order-column').each(function () {
+				if(temp < $(this).outerHeight()) {
+					temp = $(this).outerHeight();
+				}
+			});
+
+			$('.hotel-order_list__multi').parent().find('.hotel-order_list--booking .booking-header').css('height', temp + 'px');
+		}
 	}
 
 	$(function () {
@@ -533,7 +563,11 @@
 		}
 
 		handleFullPage();
-		$(window).resize(() => handleFullPage());
+		handleHeightLastColumnTableBooking();
+		$(window).resize(function () {
+			handleFullPage();
+			handleHeightLastColumnTableBooking();
+		});
 
 		handleExpandedDescription();
 		handleDropdownQuantity();
@@ -542,5 +576,6 @@
 		initSliderImageTourMobile();
 		initSliderImageHotelMobile();
 		handleOrderCollapse();
+		handleBookingMobile();
 	});
 })(jQuery);

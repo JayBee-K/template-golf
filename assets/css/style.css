@@ -5475,6 +5475,51 @@ body.nav-is-show .header::after {
 	}
 
 	.detail-hotel_order .hotel-order_list__wrapper .hotel-order_list--booking {
+		position: fixed;
+		bottom: -120%;
+		transition: var(--transition-default);
+		left: 0;
+		background-color: var(--white);
+		width: 100%;
+		z-index: 10000000000;
+		border-top: 1px solid var(--gray-300);
+	}
+
+	.is-booking .detail-hotel_order .hotel-order_list__wrapper .hotel-order_list--booking {
+		bottom: 0;
+	}
+
+	.is-booking > .main {
+		z-index: 11;
+	}
+
+	.detail-hotel_order .hotel-order_list__wrapper .hotel-order_list--booking .booking-body .close-booking{
+		border-radius: 50%;
+		height: 35px;
+		width: 35px;
+		border: 1px solid var(--gray-300);
+		background-color: var(--white);
+		font-size: 1.1em;
+		color: var(--gray-800);
+		align-items: center;justify-content: center;
+		position: absolute;
+		top: -17.5px;
+		right: 5px;
+	}
+
+	.detail-hotel_order .hotel-order_list__wrapper .hotel-order_list--booking .booking-body {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		top: unset;
+	}
+
+	.detail-hotel_order .hotel-order_list__wrapper .hotel-order_list--booking .booking-body .button-theme{
+		order: 3;
+		margin-top: 10px;
+	}
+
+	.detail-hotel_order .hotel-order_list__wrapper .hotel-order_list--booking .booking-header {
 		display: none;
 	}
 
