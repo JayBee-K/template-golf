@@ -1,6 +1,30 @@
+@font-face {
+	font-family: 'SVN-Gilroy';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url(../fonts/svn-gilroy/SVN-Gilroy-Regular.woff2) format('woff2');
+}
+
+@font-face {
+	font-family: 'SVN-Gilroy';
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+	src: url(../fonts/svn-gilroy/SVN-Gilroy-Medium.woff2) format('woff2');
+}
+
+@font-face {
+	font-family: 'SVN-Gilroy';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url(../fonts/svn-gilroy/SVN-Gilroy-Bold.woff2) format('woff2');
+}
+
 :root {
 	--transition-default: 0.3s all ease-in-out;
-	--font-theme: 'Nunito', Arial, Helvetica, sans-serif;
+	--font-theme: 'SVN-Gilroy', Arial, Helvetica, sans-serif;
 	--size-theme: 14px;
 	--text-color: #121212;
 	--desc-color: #767676;

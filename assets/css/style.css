@@ -21,14 +21,14 @@
 }
 
 .section-heading .heading-title {
-	font-size: 2.825em;
+	font-size: 2.5em;
 	color: var(--bs-black);
 	font-weight: 700;
 }
 
 .section-heading .heading-desc {
 	font-size: 1.15em;
-	color: #6c757d;
+	color: #404346;
 	margin-top: 8px;
 }
 
@@ -218,7 +218,7 @@
 
 .article-card .card-body .card-desc {
 	font-size: 1.15em;
-	color: #7A7A7A;
+	color: #404346;
 	--line: 3;
 	margin-bottom: 20px;
 }
@@ -250,6 +250,101 @@
 .footer {
 	padding: 80px 0 50px;
 	background: var(--primary-hover);
+}
+
+.footer .footer-logo {
+	margin-bottom: 15px;
+}
+
+.footer .footer-item .footer-text {
+	color: var(--bs-white);
+	font-size: 1.075em;
+	font-weight: 500;
+}
+
+.footer .footer-item .footer-social {
+	margin-top: 16px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	gap: 8px;
+}
+
+.footer .footer-item .footer-social .footer-social_item > img {
+	width: 32px;
+	height: 32px;
+	overflow: hidden;
+}
+
+.footer .footer-item .footer-title {
+	font-size: 1.3em;
+	font-weight: 700;
+	color: var(--bs-white);
+	margin-bottom: 15px;
+}
+
+.footer .footer-item .footer-link {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.footer .footer-item .footer-link .footer-link_item {
+	color: var(--bs-white);
+	font-size: 1.075em;
+	font-weight: 500;
+}
+
+.footer .footer-item .footer-link .footer-link_item:hover {
+	padding-left: 10px;
+	color: var(--secondary-color);
+}
+
+.footer .footer-item .footer-form {
+	margin-top: 15px;
+}
+
+.footer .footer-item .footer-form .footer-form_inner {
+	position: relative;
+}
+
+.footer .footer-item .footer-form .footer-form_inner .form-control {
+	background: transparent;
+	height: 48px;
+	padding: 15px;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	font-size: 1.15em;
+	color: var(--bs-white);
+	border-radius: 6px;
+	padding-right: 63px;
+}
+
+.footer .footer-item .footer-form .footer-form_inner .form-control::placeholder {
+	color: var(--bs-white);
+	opacity: .6;
+}
+
+.footer .footer-item .footer-form .footer-form_inner .form-control:focus {
+	border: 1px solid rgba(255, 255, 255, 0.6) !important;
+	box-shadow: none !important;
+}
+
+.footer .footer-item .footer-form .footer-form_inner button {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+	background: var(--bs-white);
+	width: 48px;
+	height: 48px;
+	font-size: 1.3em;
+	color: var(--primary-color);
+	border: 0;
+	outline: none;
+	border-radius: 0 6px 6px 0;
 }
 
 .footer .footer-bottom {
