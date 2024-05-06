@@ -1,0 +1,39 @@
+.section-box {
+	background-color: #020202;
+	padding: 80px 0;
+	color: var(--bs-white);
+}
+
+.section-box:after {
+	pointer-events: none;
+	background: url('../images/bg-box.png') bottom right/cover no-repeat;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	opacity: 0.1;
+}
+
+.section-box .box-item {
+	display: flex;
+	gap: 25px;
+}
+
+.section-box .box-item .box-icon {
+	color: var(--secondary-color);
+	font-size: 3.5em;
+	flex-shrink: 0;
+}
+
+.section-box .box-item .box-content .box-title {
+	font-size: 1.3em;
+	font-weight: 700;
+	line-height: 1.3;
+}
+
+.section-box .box-item .box-content .box-desc {
+	margin-top: 7px;
+	color: #C2C2C2;
+	font-size: 1.075em;
+}
