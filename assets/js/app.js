@@ -200,6 +200,36 @@ const handleSwiper = function (elm, obj = {}) {
 	});
 }
 
+const handleCounter = function (parent, elm) {
+	if (parent.length && elm.length) {
+		let i = 0;
+		$(window).scroll(function () {
+			let counterOffsetTop = parent.offset().top - window.innerHeight;
+			if (i === 0 && $(window).scrollTop() > counterOffsetTop) {
+				elm.each(function () {
+					let counterItem = $(this),
+						counterItemValue = counterItem.attr('data-value'),
+						counterItemDecor = counterItem.attr('data-decor') ?? '';
+					$({countNum: counterItem.text()}).animate(
+						{countNum: counterItemValue},
+						{
+							duration: 2000,
+							easing: 'swing',
+							step: function () {
+								counterItem.text(Math.floor(this.countNum));
+							},
+							complete:
+								function () {
+									counterItem.html(this.countNum + ((counterItemDecor != '') ? counterItemDecor : ''));
+								}
+						});
+				});
+				i = 1;
+			}
+		});
+	}
+}
+
 $(function () {
 	handleApplyCollapse($('#header-navigation > ul'), true, true);
 	handleCallMenu();
@@ -214,4 +244,6 @@ $(function () {
 	handleInitFancybox();
 
 	handleContentDetail();
+
+	handleCounter($('#handleCounter'), $('#handleCounter .handleCounterItem'));
 });

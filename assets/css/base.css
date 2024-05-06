@@ -199,6 +199,10 @@ input[type='number'] {
 	--bs-aspect-ratio: calc(2 / 3 * 100%);
 }
 
+.ratio-3x4 {
+	--bs-aspect-ratio: calc(4 / 3 * 100%);
+}
+
 .gap-5px {
 	gap: 5px;
 }
